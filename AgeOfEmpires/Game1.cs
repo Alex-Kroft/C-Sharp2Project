@@ -3,7 +3,11 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoGame.Extended;
+
+using MonoGame.Extended.Content;
 using MonoGame.Extended.Entities;
+using MonoGame.Extended.Serialization;
+using MonoGame.Extended.Sprites;
 using MonoGame.Extended.Tiled;
 using MonoGame.Extended.Tiled.Renderers;
 using MonoGame.Extended.ViewportAdapters;
@@ -22,6 +26,9 @@ namespace AgeOfEmpires
         private OrthographicCamera _camera;
         private Vector2 _cameraPosition;
 
+        private AnimatedSprite _LightBanditRun;
+        private Vector2 _LightBanditRunPosition;
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -39,22 +46,75 @@ namespace AgeOfEmpires
 
         protected override void LoadContent()
         {
-            _tiledMap = Content.Load<TiledMap>("C:\\Users\\Máté\\source\\repos\\AgeOfEmpires\\Content\\bin\\DesktopGL\\Content\\editedTilesSet");
-            _tiledMapRenderer = new TiledMapRenderer(GraphicsDevice, _tiledMap);
+            //_tiledMap = Content.Load<TiledMap>("editedTilesSet");
+            //_tiledMapRenderer = new TiledMapRenderer(GraphicsDevice, _tiledMap);
+            _spriteBatch = new SpriteBatch(GraphicsDevice);
+            var spriteSheet = Content.Load<SpriteSheet>("LightBandit.sf", new JsonContentLoader());
+            var sprite = new AnimatedSprite(spriteSheet);
+
+            sprite.Play("run");
+            _LightBanditRunPosition = new Vector2(100, 100);
+            _LightBanditRun = sprite;
+
+
         }
 
         protected override void Update(GameTime gameTime)
         {
-            _tiledMapRenderer.Update(gameTime);
-            
-           MoveCamera(gameTime);
+            //_tiledMapRenderer.Update(gameTime);
+
+            MoveCamera(gameTime);
            _camera.LookAt(_cameraPosition);
+            base.Update(gameTime);
+
+            var deltaSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            var walkSpeed = deltaSeconds * 128;
+            var keyboardState = Keyboard.GetState();
+            var animation = "idle";
+
+            if (keyboardState.IsKeyDown(Keys.W) || keyboardState.IsKeyDown(Keys.Up))
+            {
+                animation = "run";
+                _LightBanditRunPosition.Y -= walkSpeed;
+            }
+
+            if (keyboardState.IsKeyDown(Keys.S) || keyboardState.IsKeyDown(Keys.Down))
+            {
+                animation = "run";
+                _LightBanditRunPosition.Y += walkSpeed;
+            }
+
+            if (keyboardState.IsKeyDown(Keys.A) || keyboardState.IsKeyDown(Keys.Left))
+            {
+                animation = "injured";
+                _LightBanditRunPosition.X -= walkSpeed;
+            }
+
+            if (keyboardState.IsKeyDown(Keys.D) || keyboardState.IsKeyDown(Keys.Right))
+            {
+                animation = "attack";
+                _LightBanditRunPosition.X += walkSpeed;
+            }
+
+            _LightBanditRun.Play(animation);
+
+           
+
+            _LightBanditRun.Update(deltaSeconds);
+
+
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            _tiledMapRenderer.Draw(_camera.GetViewMatrix());
+            //_tiledMapRenderer.Draw(_camera.GetViewMatrix());
+
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            _spriteBatch.Begin(samplerState: SamplerState.PointClamp);
+            _spriteBatch.Draw(_LightBanditRun, _LightBanditRunPosition);
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }

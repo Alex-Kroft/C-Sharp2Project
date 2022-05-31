@@ -15,7 +15,32 @@
 #---------------------------------- Content ---------------------------------#
 
 #begin editedTilesSet.tmx
-/importer:TiledMapImporter
-/processor:TiledMapProcessor
-/build:editedTilesSet.tmx
+/copy:editedTilesSet.tmx
+
+#begin LightBandit.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:LightBandit.png
+
+#begin LightBandit.sf
+/copy:LightBandit.sf
+
+#begin Standard Green Raw Tiles_0.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Standard Green Raw Tiles_0.png
 

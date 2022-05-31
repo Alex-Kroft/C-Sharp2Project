@@ -4,9 +4,11 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Máté/source/repos/AgeOfEmpires/Content/editedTilesSet.tmx</File>
+    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.png</File>
+    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles_0.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>
