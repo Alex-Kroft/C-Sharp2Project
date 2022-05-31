@@ -22,7 +22,7 @@ namespace AgeOfEmpires.Systems
         private ComponentMapper<Resource> _resourceMapper;
 
         public UnitSystem() 
-            :base(Aspect.All(typeof(UnitDistance)))
+            :base(Aspect.All(typeof(UnitDistance) ))
         { }
         public override void Initialize(IComponentMapperService mapperService)
         {

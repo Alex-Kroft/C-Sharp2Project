@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/Máté/source/repos/AgeOfEmpires/Content/editedTilesSet.tmx</SourceFile>
-  <SourceTime>2022-05-29T09:24:54.2846619+02:00</SourceTime>
+  <SourceTime>2022-05-31T09:15:38.1837881+02:00</SourceTime>
   <DestFile>C:/Users/Máté/source/repos/AgeOfEmpires/Content/bin/DesktopGL/editedTilesSet.xnb</DestFile>
-  <DestTime>2022-05-29T09:25:23.5301178+02:00</DestTime>
+  <DestTime>2022-05-31T09:17:40.7105012+02:00</DestTime>
   <Importer>TiledMapImporter</Importer>
   <ImporterTime>2020-08-29T19:17:30+02:00</ImporterTime>
   <Processor>TiledMapProcessor</Processor>
   <ProcessorTime>2020-08-29T19:17:30+02:00</ProcessorTime>
   <Dependencies />
   <BuildAsset>
-    <string>C:/Users/Máté/source/repos/AgeOfEmpires/Content/bin/DesktopGL/../../../../Desktop/Tiles/Standard Green Raw Tiles_0.xnb</string>
+    <string>C:/Users/Máté/source/repos/AgeOfEmpires/Content/bin/DesktopGL/Standard Green Raw Tiles_0.xnb</string>
   </BuildAsset>
   <BuildOutput />
 </PipelineBuildEvent>

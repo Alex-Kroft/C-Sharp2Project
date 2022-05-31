@@ -1,5 +1,1 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/editedTilesSet.tmx","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\Content\editedTilesSet.tmx","CopyItem","File",25103,25103,0.0022564
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/LightBandit.xnb","TextureProcessor","Texture2DContent",7837,368725,0.1456661
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.sf","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\Content\LightBandit.sf","CopyItem","File",638,638,0.0027888
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles_0.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/Standard Green Raw Tiles_0.xnb","TextureProcessor","Texture2DContent",84068,1048661,0.1273695

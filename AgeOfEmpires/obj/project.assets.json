@@ -30,78 +30,11 @@
           "lib/netstandard2.0/MonoGame.Extended.dll": {}
         },
         "contentFiles": {
-          "contentFiles/any/netstandard2.0/CppNet.dll": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netstandard2.0/SharpDX.D3DCompiler.dll": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netstandard2.0/SharpDX.D3DCompiler.xml": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netstandard2.0/SharpDX.dll": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netstandard2.0/SharpDX.xml": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netstandard2.0/libmojoshader_64.dll": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netstandard2.0/mgfxc.deps.json": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netstandard2.0/mgfxc.dll": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netstandard2.0/mgfxc.exe": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netstandard2.0/mgfxc.pdb": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netstandard2.0/mgfxc.runtimeconfig.dev.json": {
-            "buildAction": "Content",
-            "codeLanguage": "any",
-            "copyToOutput": false
-          },
-          "contentFiles/any/netstandard2.0/mgfxc.runtimeconfig.json": {
-            "buildAction": "Content",
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
             "codeLanguage": "any",
             "copyToOutput": false
           }
-        }
-      },
-      "MonoGame.Extended.Animations/3.7.0": {
-        "type": "package",
-        "dependencies": {
-          "MonoGame.Extended": "3.7.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/MonoGame.Extended.Animations.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/MonoGame.Extended.Animations.dll": {}
         }
       },
       "MonoGame.Extended.Content.Pipeline/3.8.0": {
@@ -410,18 +343,6 @@
         "monogame.extended.nuspec"
       ]
     },
-    "MonoGame.Extended.Animations/3.7.0": {
-      "sha512": "UuZwWK4etHTkY/ZctazyBNL2orVTUdw3GtPPs09onU+izBLxO3/PqooqfRXjWEV/iHT+bocjLUucw48ZwACNMg==",
-      "type": "package",
-      "path": "monogame.extended.animations/3.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/MonoGame.Extended.Animations.dll",
-        "monogame.extended.animations.3.7.0.nupkg.sha512",
-        "monogame.extended.animations.nuspec"
-      ]
-    },
     "MonoGame.Extended.Content.Pipeline/3.8.0": {
       "sha512": "Kt21Ux4Hdkgm7FMiGhQ7C0+rMS0wMQM63TxWsNBa8DjEDwX1pKIUORxvQBgh89J4TiMSmmK+U6VfxV2kh5PPpg==",
       "type": "package",
@@ -559,34 +480,25 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "MonoGame.Content.Builder.Task >= 3.8.0.1641",
-      "MonoGame.Extended >= 3.8.0",
-      "MonoGame.Extended.Animations >= 3.7.0",
       "MonoGame.Extended.Content.Pipeline >= 3.8.0",
       "MonoGame.Extended.Entities >= 3.8.0",
-      "MonoGame.Extended.Graphics >= 3.8.0",
-      "MonoGame.Extended.Tiled >= 3.8.0",
       "MonoGame.Framework.DesktopGL >= 3.8.0.1641"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\matte\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Máté\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Github\\C-Sharp2Project\\AgeOfEmpires\\AgeOfEmpires.csproj",
+      "projectUniqueName": "C:\\Users\\Máté\\source\\repos\\AgeOfEmpires\\AgeOfEmpires.csproj",
       "projectName": "AgeOfEmpires",
-      "projectPath": "E:\\Github\\C-Sharp2Project\\AgeOfEmpires\\AgeOfEmpires.csproj",
-      "packagesPath": "C:\\Users\\matte\\.nuget\\packages\\",
-      "outputPath": "E:\\Github\\C-Sharp2Project\\AgeOfEmpires\\obj\\",
+      "projectPath": "C:\\Users\\Máté\\source\\repos\\AgeOfEmpires\\AgeOfEmpires.csproj",
+      "packagesPath": "C:\\Users\\Máté\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Máté\\source\\repos\\AgeOfEmpires\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\matte\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Máté\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -616,27 +528,11 @@
             "target": "Package",
             "version": "[3.8.0.1641, )"
           },
-          "MonoGame.Extended": {
-            "target": "Package",
-            "version": "[3.8.0, )"
-          },
-          "MonoGame.Extended.Animations": {
-            "target": "Package",
-            "version": "[3.7.0, )"
-          },
           "MonoGame.Extended.Content.Pipeline": {
             "target": "Package",
             "version": "[3.8.0, )"
           },
           "MonoGame.Extended.Entities": {
-            "target": "Package",
-            "version": "[3.8.0, )"
-          },
-          "MonoGame.Extended.Graphics": {
-            "target": "Package",
-            "version": "[3.8.0, )"
-          },
-          "MonoGame.Extended.Tiled": {
             "target": "Package",
             "version": "[3.8.0, )"
           },
@@ -655,12 +551,18 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.24, 3.1.24]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
