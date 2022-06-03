@@ -29,13 +29,17 @@ namespace AgeOfEmpires.States
         private Texture2D button;
         private SpriteFont font2;
         private Texture2D font;
+
         
+
 
         public MainMenu(Game1 game) : base(game) 
         {
             _components = new List<Component>();
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             fontCoord = new Vector2(0, 0);
+
+            
         }
 
         public override void LoadContent()
@@ -68,5 +72,7 @@ namespace AgeOfEmpires.States
 
 
         }
+
+       
     }
 }

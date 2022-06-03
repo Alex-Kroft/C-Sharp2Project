@@ -20,8 +20,6 @@ namespace AgeOfEmpires
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        private TiledMap _tiledMap;
-        private TiledMapRenderer _tiledMapRenderer;
         private OrthographicCamera _camera;
         private Vector2 _cameraPosition;
 
@@ -55,20 +53,23 @@ namespace AgeOfEmpires
 
         protected override void LoadContent()
         {
-            _tiledMap = Content.Load<TiledMap>("editedTilesSet");
-            _tiledMapRenderer = new TiledMapRenderer(GraphicsDevice, _tiledMap);
-
+     
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
         }
 
         protected override void Update(GameTime gameTime)
         {
-            _tiledMapRenderer.Update(gameTime);
+           
             
            MoveCamera(gameTime);
             _camera.LookAt(_cameraPosition);
 
+            KeyboardState keyboard = Keyboard.GetState();
+            if (keyboard.IsKeyDown(Keys.Escape))
+            {
+                LoadGamePlay();
+            }
             
 
             base.Update(gameTime);
@@ -142,6 +143,11 @@ namespace AgeOfEmpires
             _screenManager.LoadScreen(new MainMenu(this));
         }
 
-       
+        private void LoadGamePlay()
+        {
+            _screenManager.LoadScreen(new GamePlay(this));
+        }
+
+
     }
 }
