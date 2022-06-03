@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/editedTilesSet.tmx</SourceFile>
+  <SourceTime>2022-05-31T09:21:35+02:00</SourceTime>
+  <DestFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/editedTilesSet.xnb</DestFile>
+  <DestTime>2022-06-03T14:02:26.6432925+02:00</DestTime>
+  <Importer>TiledMapImporter</Importer>
+  <ImporterTime>2020-08-29T19:17:30+02:00</ImporterTime>
+  <Processor>TiledMapProcessor</Processor>
+  <ProcessorTime>2020-08-29T19:17:30+02:00</ProcessorTime>
+  <Dependencies />
+  <BuildAsset>
+    <string>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Standard Green Raw Tiles_0.xnb</string>
+  </BuildAsset>
+  <BuildOutput />
+</PipelineBuildEvent>

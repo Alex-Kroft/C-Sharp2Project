@@ -1,0 +1,160 @@
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.exe
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.deps.json
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.runtimeconfig.json
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.runtimeconfig.dev.json
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.dll
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.pdb
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.dll
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Entities.dll
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Graphics.dll
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Tiled.dll
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSDL2-2.0.0.dylib
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\osx\native\libopenal.1.dylib
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SDL2.dll
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
+C:\Users\Máté\source\repos\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.AssemblyReference.cache
+C:\Users\Máté\source\repos\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Máté\source\repos\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.AssemblyInfoInputs.cache
+C:\Users\Máté\source\repos\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.AssemblyInfo.cs
+C:\Users\Máté\source\repos\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.CoreCompileInputs.cache
+C:\Users\Máté\source\repos\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.CopyComplete
+C:\Users\Máté\source\repos\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.dll
+C:\Users\Máté\source\repos\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.pdb
+C:\Users\Máté\source\repos\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.genruntimeconfig.cache
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\editedTilesSet.xnb
+C:\Users\Máté\source\repos\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Standard Green Raw Tiles_0.xnb
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\editedTilesSet (1).tmx
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\editedTilesSet.tmx
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\LightBandit.sf
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\LightBandit.xnb
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\MicrosoftTeams-image.xnb
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\editedTilesSet.xnb
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Standard Green Raw Tiles_0.xnb
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.exe
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.deps.json
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.runtimeconfig.json
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.runtimeconfig.dev.json
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.dll
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.pdb
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.dll
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Entities.dll
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Graphics.dll
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Tiled.dll
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSDL2-2.0.0.dylib
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\osx\native\libopenal.1.dylib
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SDL2.dll
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.AssemblyReference.cache
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.AssemblyInfoInputs.cache
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.AssemblyInfo.cs
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.CoreCompileInputs.cache
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.CopyComplete
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.dll
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.pdb
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.genruntimeconfig.cache
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Controls\Poles_Icon.xnb
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Controls\Button.xnb
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Fonts\Font.xnb
+C:\Users\Alex Kroft\Desktop\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Fonts\Font2.xnb
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Controls\Poles_Icon.xnb
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\editedTilesSet (1).tmx
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\editedTilesSet.tmx
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\LightBandit.sf
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\LightBandit.xnb
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\MicrosoftTeams-image.xnb
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Controls\Button.xnb
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\editedTilesSet.xnb
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Fonts\Font.xnb
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Fonts\Font2.xnb
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Standard Green Raw Tiles_0.xnb
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.exe
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.deps.json
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.runtimeconfig.json
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.runtimeconfig.dev.json
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.dll
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.pdb
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.dll
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Entities.dll
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Graphics.dll
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Tiled.dll
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSDL2-2.0.0.dylib
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\osx\native\libopenal.1.dylib
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SDL2.dll
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.AssemblyReference.cache
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.AssemblyInfoInputs.cache
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.AssemblyInfo.cs
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.CoreCompileInputs.cache
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.CopyComplete
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.dll
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.pdb
+C:\Users\matte\Downloads\C-Sharp2Project-AgeOfEmpires\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.genruntimeconfig.cache
+E:\Github\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.AssemblyReference.cache
+E:\Github\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.GeneratedMSBuildEditorConfig.editorconfig
+E:\Github\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.AssemblyInfoInputs.cache
+E:\Github\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.AssemblyInfo.cs
+E:\Github\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.CoreCompileInputs.cache
+E:\Github\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.pdb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Controls\Poles_Icon.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\editedTilesSet (1).tmx
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\editedTilesSet.tmx
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\editedTilesSet.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\LightBandit.sf
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\LightBandit.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\MicrosoftTeams-image.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Standard Green Raw Tiles_0.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.exe
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.deps.json
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.runtimeconfig.json
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.runtimeconfig.dev.json
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.pdb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Animations.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Collisions.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Entities.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Graphics.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Gui.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Input.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.NuclexGui.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Particles.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.SceneGraphs.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Tiled.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Tweening.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSDL2-2.0.0.dylib
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\osx\native\libopenal.1.dylib
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SDL2.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.CopyComplete
+E:\Github\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.genruntimeconfig.cache
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Standard Green Raw Tiles.xnb
