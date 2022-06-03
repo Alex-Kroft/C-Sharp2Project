@@ -7,6 +7,8 @@ using MonoGame.Extended.Entities;
 using MonoGame.Extended.Tiled;
 using MonoGame.Extended.Tiled.Renderers;
 using MonoGame.Extended.ViewportAdapters;
+using MonoGame.Extended.Screens;
+using MonoGame.Extended.Screens.Transitions;
 using System;
 using System.Diagnostics;
 using AgeOfEmpires.States;
@@ -15,29 +17,30 @@ namespace AgeOfEmpires
 {
     public class Game1 : Game
     {
-
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-
-        private State _currentState;
-
-        private State _nextState;
 
         private TiledMap _tiledMap;
         private TiledMapRenderer _tiledMapRenderer;
         private OrthographicCamera _camera;
         private Vector2 _cameraPosition;
 
-        public void ChangeState(State state)
-        {
-            _nextState = state;
-        }
+        private readonly ScreenManager _screenManager;
+
 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+
+            if (GraphicsDevice == null) { _graphics.ApplyChanges(); }
+            _graphics.PreferredBackBufferWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
+            _graphics.PreferredBackBufferHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
+            _graphics.ApplyChanges();
+
+            _screenManager = new ScreenManager();
+            Components.Add(_screenManager);
         }
 
         protected override void Initialize()
@@ -45,7 +48,9 @@ namespace AgeOfEmpires
             var viewportadapter = new BoxingViewportAdapter(Window, GraphicsDevice, 800, 600);
             _camera = new OrthographicCamera(viewportadapter);
             _cameraPosition = new Vector2(_graphics.PreferredBackBufferWidth/2, _graphics.PreferredBackBufferHeight/2+100);
+
             base.Initialize();
+            LoadMainMenu();
         }
 
         protected override void LoadContent()
@@ -55,7 +60,6 @@ namespace AgeOfEmpires
 
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            _currentState = new MenuState(this, _graphics.GraphicsDevice, Content);
         }
 
         protected override void Update(GameTime gameTime)
@@ -63,19 +67,9 @@ namespace AgeOfEmpires
             _tiledMapRenderer.Update(gameTime);
             
            MoveCamera(gameTime);
-           _camera.LookAt(_cameraPosition);
-            base.Update(gameTime);
+            _camera.LookAt(_cameraPosition);
 
-            if (_nextState != null)
-            {
-                _currentState = _nextState;
-
-                _nextState = null;
-            }
-
-            _currentState.Update(gameTime);
-
-            _currentState.PostUpdate(gameTime);
+            
 
             base.Update(gameTime);
         }
@@ -83,8 +77,6 @@ namespace AgeOfEmpires
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            _currentState.Draw(gameTime, _spriteBatch);
 
             base.Draw(gameTime);
         }
@@ -144,5 +136,12 @@ namespace AgeOfEmpires
             _cameraPosition += speed * movementDirection * seconds;
             Debug.WriteLine(movementDirection);
         }
+
+        private void LoadMainMenu()
+        {
+            _screenManager.LoadScreen(new MainMenu(this));
+        }
+
+       
     }
 }
