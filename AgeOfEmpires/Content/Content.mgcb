@@ -27,9 +27,7 @@
 /build:Controls/Button.png
 
 #begin editedTilesSet.tmx
-/importer:TiledMapImporter
-/processor:TiledMapProcessor
-/build:editedTilesSet.tmx
+/copy:editedTilesSet.tmx
 
 #begin Fonts/Font.png
 /importer:TextureImporter
