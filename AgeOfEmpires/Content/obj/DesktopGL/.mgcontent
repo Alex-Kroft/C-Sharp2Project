@@ -7,9 +7,11 @@
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/editedTilesSet.tmx</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.sf</File>
+    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mainmenu_bg.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

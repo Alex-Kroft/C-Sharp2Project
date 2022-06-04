@@ -1,5 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/editedTilesSet.tmx","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/editedTilesSet.xnb","TiledMapProcessor","TiledMapContentItem",25006,77099,0.2025896
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/LightBandit.xnb","TextureProcessor","Texture2DContent",7837,368725,0.0105371
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.sf","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/LightBandit.xnb","SpriteFactoryContentProcessor","JsonContentProcessorResult",610,744,0.0032496
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Standard Green Raw Tiles.xnb","TextureProcessor","Texture2DContent",84068,1048661,0.0225584
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/editedTilesSet.tmx","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/editedTilesSet.xnb","TiledMapProcessor","TiledMapContentItem",25006,77099,0.2379785
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/LightBandit.xnb","TextureProcessor","Texture2DContent",7837,368725,0.1465375
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.sf","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/LightBandit.xnb","SpriteFactoryContentProcessor","JsonContentProcessorResult",610,744,0.0035793
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mainmenu_bg.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/mainmenu_bg.xnb","TextureProcessor","Texture2DContent",21227506,44236885,1.5044883
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Standard Green Raw Tiles.xnb","TextureProcessor","Texture2DContent",84068,1048661,0.0969428

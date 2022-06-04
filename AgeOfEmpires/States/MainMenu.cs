@@ -47,7 +47,7 @@ namespace AgeOfEmpires.States
             
             button = Content.Load<Texture2D>("Controls/Button");
             font2 = Content.Load<SpriteFont>("Fonts/Font2");
-            font = Content.Load<Texture2D>("Fonts/Font");
+            font = Content.Load<Texture2D>("mainmenu_bg");
             
             base.LoadContent();
         }
@@ -62,7 +62,7 @@ namespace AgeOfEmpires.States
         {
             
             _spriteBatch.Begin();
-            _spriteBatch.Draw(font, fontCoord, Color.White);
+            _spriteBatch.Draw(font, new Rectangle((int)fontCoord.X,(int)fontCoord.Y, GraphicsDevice.Adapter.CurrentDisplayMode.Width, GraphicsDevice.Adapter.CurrentDisplayMode.Height), Color.White);
             foreach (var component in _components)
             {
                 component.Draw(gameTime, _spriteBatch);
