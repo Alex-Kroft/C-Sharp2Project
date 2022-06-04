@@ -4,13 +4,11 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/editedTilesSet.tmx</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mainmenu_bg.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles.png</File>
+    <File>C:/Users/Alex Kroft/Source/Repos/Beaneaters/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.png</File>
+    <File>C:/Users/Alex Kroft/Source/Repos/Beaneaters/C-Sharp2Project/AgeOfEmpires/Content/mainmenu_bg.png</File>
+    <File>C:/Users/Alex Kroft/Source/Repos/Beaneaters/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

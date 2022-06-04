@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.png</SourceFile>
-  <SourceTime>2022-05-31T09:21:35+02:00</SourceTime>
-  <DestFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/LightBandit.xnb</DestFile>
-  <DestTime>2022-06-04T17:53:50.7093325+02:00</DestTime>
+  <SourceFile>C:/Users/Alex Kroft/Source/Repos/Beaneaters/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.png</SourceFile>
+  <SourceTime>2022-06-04T22:36:13.5407734+02:00</SourceTime>
+  <DestFile>C:/Users/Alex Kroft/Source/Repos/Beaneaters/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/LightBandit.xnb</DestFile>
+  <DestTime>2022-06-04T22:40:49.7364035+02:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
+  <ImporterTime>2020-08-10T16:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2020-08-10T18:17:54+02:00</ProcessorTime>
+  <ProcessorTime>2020-08-10T16:17:54+02:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

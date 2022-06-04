@@ -159,3 +159,32 @@ E:\Github\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.cspr
 E:\Github\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.genruntimeconfig.cache
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Standard Green Raw Tiles.xnb
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\mainmenu_bg.xnb
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.exe
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.deps.json
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.runtimeconfig.json
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.runtimeconfig.dev.json
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.dll
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.pdb
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.dll
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Entities.dll
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Graphics.dll
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Tiled.dll
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSDL2-2.0.0.dylib
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\osx\native\libopenal.1.dylib
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SDL2.dll
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.AssemblyReference.cache
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.AssemblyInfoInputs.cache
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.AssemblyInfo.cs
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.CoreCompileInputs.cache
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.CopyComplete
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.dll
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.pdb
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.genruntimeconfig.cache

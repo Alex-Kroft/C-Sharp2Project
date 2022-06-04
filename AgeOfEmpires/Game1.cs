@@ -87,7 +87,7 @@ namespace AgeOfEmpires
             _screenManager.LoadScreen(new MainMenu(this));
         }
 
-        private void LoadGamePlay()
+        public void LoadGamePlay()
         {
             _screenManager.LoadScreen(new GamePlay(this));
         }

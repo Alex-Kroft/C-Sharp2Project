@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\AgeOfEmpires",
+    "\\AgeOfEmpires\\.config",
+    "\\AgeOfEmpires\\bin",
+    "\\AgeOfEmpires\\Characters",
+    "\\AgeOfEmpires\\Components",
+    "\\AgeOfEmpires\\Content",
+    "\\AgeOfEmpires\\States"
+  ],
+  "SelectedNode": "\\AgeOfEmpires\\States\\GamePlay.cs",
+  "PreviewInSolutionExplorer": false
+}

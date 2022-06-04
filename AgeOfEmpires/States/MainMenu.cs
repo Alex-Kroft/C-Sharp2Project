@@ -14,6 +14,7 @@ using System.Diagnostics;
 using AgeOfEmpires.States;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework.Content;
+using AgeOfEmpires.Controls;
 
 namespace AgeOfEmpires.States
 {
@@ -48,7 +49,22 @@ namespace AgeOfEmpires.States
             button = Content.Load<Texture2D>("Controls/Button");
             font2 = Content.Load<SpriteFont>("Fonts/Font2");
             Background = Content.Load<Texture2D>("mainmenu_bg");
-            
+
+
+            var newGameButton = new Button(button, font2)
+            {
+                Position = new Vector2(GraphicsDevice.Adapter.CurrentDisplayMode.Width / 3, GraphicsDevice.Adapter.CurrentDisplayMode.Height / 3),
+            };
+
+            newGameButton.Click += NewGameButton_Click;
+
+
+
+            _components = new List<Component>()
+      {
+        newGameButton
+      };
+
             base.LoadContent();
         }
 
@@ -73,6 +89,11 @@ namespace AgeOfEmpires.States
 
         }
 
-       
+        private void NewGameButton_Click(object sender, EventArgs e)
+        {
+            Game.LoadGamePlay();
+        }
+
+
     }
 }
