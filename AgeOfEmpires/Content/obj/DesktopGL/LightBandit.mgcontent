@@ -1,16 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.sf</SourceFile>
+  <SourceFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/LightBandit.png</SourceFile>
   <SourceTime>2022-05-31T09:21:35+02:00</SourceTime>
   <DestFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/LightBandit.xnb</DestFile>
-  <DestTime>2022-06-04T13:34:12.8336663+02:00</DestTime>
-  <Importer>SpriteFactoryContentImporter</Importer>
-  <ImporterTime>2020-08-29T19:17:30+02:00</ImporterTime>
-  <Processor>SpriteFactoryContentProcessor</Processor>
-  <ProcessorTime>2020-08-29T19:17:30+02:00</ProcessorTime>
+  <DestTime>2022-06-04T17:53:49.6444783+02:00</DestTime>
+  <Importer>TextureImporter</Importer>
+  <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
+  <Processor>TextureProcessor</Processor>
+  <ProcessorTime>2020-08-10T18:17:54+02:00</ProcessorTime>
   <Parameters>
-    <Key>ContentType</Key>
-    <Value>MonoGame.Extended MonoGame.Extended.Animations.SpriteFactory.SpriteFactoryFileReader, MonoGame.Extended.Animations</Value>
+    <Key>ColorKeyColor</Key>
+    <Value>255,0,255,255</Value>
+  </Parameters>
+  <Parameters>
+    <Key>ColorKeyEnabled</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>GenerateMipmaps</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>ResizeToPowerOfTwo</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Parameters>
+    <Key>MakeSquare</Key>
+    <Value>False</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Color</Value>
   </Parameters>
   <Dependencies />
   <BuildAsset />
