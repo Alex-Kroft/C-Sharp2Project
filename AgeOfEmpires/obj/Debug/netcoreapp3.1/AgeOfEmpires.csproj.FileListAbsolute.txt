@@ -179,7 +179,6 @@ C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Deb
 C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
 C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
 C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
-C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.csproj.AssemblyReference.cache
 C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.AssemblyInfoInputs.cache
 C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.AssemblyInfo.cs
@@ -188,3 +187,15 @@ C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Deb
 C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.dll
 C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.pdb
 C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\obj\Debug\netcoreapp3.1\AgeOfEmpires.genruntimeconfig.cache
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Controls\Poles_Icon.xnb
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\editedTilesSet (1).tmx
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\editedTilesSet.tmx
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\LightBandit.sf
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\MicrosoftTeams-image.xnb
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\editedTilesSet.xnb
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\LightBandit.xnb
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\mainmenu_bg.xnb
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Square.png
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Standard Green Raw Tiles.xnb
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Standard Green Raw Tiles_0.xnb
+C:\Users\Alex Kroft\Source\Repos\Beaneaters\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Autofac.dll

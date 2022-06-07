@@ -72,14 +72,17 @@ namespace AgeOfEmpires.States
             
             var sprite = new AnimatedSprite(spriteSheet);
 
+
             sprite.Play("idle");
             villager = sprite;
 
             base.LoadContent();
         }
+
         public override void Draw(GameTime gameTime)
         {
             _tiledMapRenderer.Draw();
+            var position1 = new Vector2(0, 0);
             var transformMatrix = _camera.GetViewMatrix();
             _spriteBatch.Begin(transformMatrix: transformMatrix);
             _spriteBatch.DrawRectangle(new RectangleF(250, 250, 50, 50), Color.Black, 1f);

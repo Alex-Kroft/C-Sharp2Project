@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "UTsvVGimv01nkOTV+7b8nLR4Oyb2L7awpHDbLEpwR4l8yeWIzgrex2M2wzi7pPheQEspIys5daqXLdvhmSBE5A==",
+  "dgSpecHash": "XBlTeuaX/R/IzAZur7FS2BXel+2WXL4fmjJPBrybUTPeOUvUli4ZRCYkRUxCZeiKYuQvBJaP3o8UGxHFbmXQAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alex Kroft\\Source\\Repos\\Beaneaters\\C-Sharp2Project\\AgeOfEmpires\\AgeOfEmpires.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Alex Kroft\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
+    "C:\\Users\\Alex Kroft\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
     "C:\\Users\\Alex Kroft\\.nuget\\packages\\monogame.extended\\3.8.0\\monogame.extended.3.8.0.nupkg.sha512",
+    "C:\\Users\\Alex Kroft\\.nuget\\packages\\monogame.extended.content.pipeline\\3.8.0\\monogame.extended.content.pipeline.3.8.0.nupkg.sha512",
     "C:\\Users\\Alex Kroft\\.nuget\\packages\\monogame.extended.entities\\3.8.0\\monogame.extended.entities.3.8.0.nupkg.sha512",
     "C:\\Users\\Alex Kroft\\.nuget\\packages\\monogame.extended.graphics\\3.8.0\\monogame.extended.graphics.3.8.0.nupkg.sha512",
     "C:\\Users\\Alex Kroft\\.nuget\\packages\\monogame.extended.tiled\\3.8.0\\monogame.extended.tiled.3.8.0.nupkg.sha512",
