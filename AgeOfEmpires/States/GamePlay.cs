@@ -32,8 +32,11 @@ namespace AgeOfEmpires.States
 
         private AnimatedSprite villager;
         private Vector2 spritePosition;
-        
-        
+
+
+        private Vector2 _cameraPosition;
+
+
 
 
         private new Game1 Game => (Game1)base.Game;
@@ -42,8 +45,12 @@ namespace AgeOfEmpires.States
 
         public GamePlay(Game1 game) : base(game)
         {
-            
+            _graphics = game._graphics;
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+            if (GraphicsDevice == null) { _graphics.ApplyChanges(); }
+            _graphics.PreferredBackBufferWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
+            _graphics.PreferredBackBufferHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
+            _graphics.ApplyChanges();
         }
 
         public override void Initialize()
@@ -53,6 +60,7 @@ namespace AgeOfEmpires.States
             var viewportAdapter = new BoxingViewportAdapter(Game.Window, GraphicsDevice, 800, 480);
             _camera = new OrthographicCamera(viewportAdapter);
             spritePosition = new Vector2(0, 0);
+            _cameraPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2 + 100);
         }
 
         public override void LoadContent()
@@ -83,7 +91,6 @@ namespace AgeOfEmpires.States
 
         public override void Update(GameTime gameTime)
         {
-            
             _tiledMapRenderer.Update(gameTime);
             const float movementSpeed = 200;
             _camera.Move(GetMovementDirection() * movementSpeed * gameTime.GetElapsedSeconds());
@@ -95,45 +102,36 @@ namespace AgeOfEmpires.States
 
         }
 
+        private void MoveCamera(GameTime gameTime)
+        {
+            var speed = 400;
+            var seconds = gameTime.GetElapsedSeconds();
+            var movementDirection = GetMovementDirection();
+            
+            _cameraPosition += speed * movementDirection * seconds;
+            Debug.WriteLine(movementDirection);
+        }
+
         private Vector2 GetMovementDirection()
         {
             var movementDirection = Vector2.Zero;
-            /*var state = Keyboard.GetState();
-            
-            if (state.IsKeyDown(Keys.Down))
-            {
-                movementDirection += Vector2.UnitY;
-            }
-            if (state.IsKeyDown(Keys.Up))
-            {
-                movementDirection -= Vector2.UnitY;
-            }
-            if (state.IsKeyDown(Keys.Left))
-            {
-                movementDirection -= Vector2.UnitX;
-            }
-            if (state.IsKeyDown(Keys.Right))
-            {
-                movementDirection += Vector2.UnitX;
-            }*/
 
             var state = Mouse.GetState();
-            Debug.WriteLine("Mouse: " + state.X);
             if (state.X < 50)
             {
-                movementDirection -= Vector2.UnitX;
-            }
-            if (state.X > GraphicsDevice.Adapter.CurrentDisplayMode.Width + 50)
-            {
                 movementDirection += Vector2.UnitX;
+            }
+            if (state.X > GraphicsDevice.Adapter.CurrentDisplayMode.Width - 50)
+            {
+                movementDirection -= Vector2.UnitX;
             }
             if (state.Y < 50)
             {
-                movementDirection -= Vector2.UnitY;
+                movementDirection += Vector2.UnitY;
             }
             if (state.Y > GraphicsDevice.Adapter.CurrentDisplayMode.Height - 50)
             {
-                movementDirection += Vector2.UnitY;
+                movementDirection -= Vector2.UnitY;
             }
 
             //Can't normalize the zero vector so test for it before normalizing

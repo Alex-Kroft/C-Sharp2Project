@@ -9,6 +9,6 @@
     "\\AgeOfEmpires\\Content",
     "\\AgeOfEmpires\\States"
   ],
-  "SelectedNode": "\\AgeOfEmpires\\States\\GamePlay.cs",
+  "SelectedNode": "\\AgeOfEmpires\\Components\\Level.cs",
   "PreviewInSolutionExplorer": false
 }

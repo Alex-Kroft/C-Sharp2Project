@@ -17,7 +17,7 @@ namespace AgeOfEmpires
 {
     public class Game1 : Game
     {
-        private GraphicsDeviceManager _graphics;
+        public GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
         private OrthographicCamera _camera;

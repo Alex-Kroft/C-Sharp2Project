@@ -53,7 +53,7 @@ namespace AgeOfEmpires.States
 
             var newGameButton = new Button(button, font2)
             {
-                Position = new Vector2(GraphicsDevice.Adapter.CurrentDisplayMode.Width / 3, GraphicsDevice.Adapter.CurrentDisplayMode.Height / 3),
+                Position = new Vector2(0, 0),
             };
 
             newGameButton.Click += NewGameButton_Click;
