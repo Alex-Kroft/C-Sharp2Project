@@ -12,24 +12,20 @@ using MonoGame.Extended.Screens.Transitions;
 using System;
 using System.Diagnostics;
 using AgeOfEmpires.States;
+using MonoGame.Extended.Input.InputListeners;
 
 namespace AgeOfEmpires
 {
     public class Game1 : Game
     {
         public GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
-
-        private OrthographicCamera _camera;
-        private Vector2 _cameraPosition;
-
-
         private readonly ScreenManager _screenManager;
-
+        private readonly MouseListener _mouseListener;
 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
+            _mouseListener = new MouseListener();
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
 
@@ -40,117 +36,49 @@ namespace AgeOfEmpires
 
             _screenManager = new ScreenManager();
             Components.Add(_screenManager);
+            Components.Add(new InputListenerComponent(this, _mouseListener));
         }
 
-       
+        public MouseListener mouseListener{ get { return _mouseListener; } }
+
+
         protected override void Initialize()
         {
-
-            var viewportadapter = new BoxingViewportAdapter(Window, GraphicsDevice, 800, 600);
-            _camera = new OrthographicCamera(viewportadapter);
-            _cameraPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2 + 100);
-            base.Initialize();
+            //on default load the menu
             LoadMainMenu();
+            base.Initialize();
         }
 
         protected override void LoadContent()
         {
-     
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
-
         }
 
         protected override void Update(GameTime gameTime)
         {
-            _camera.LookAt(_cameraPosition);
-            MoveCamera(gameTime);
-
+            //On key pressed load the game
             KeyboardState keyboard = Keyboard.GetState();
             if (keyboard.IsKeyDown(Keys.Escape))
             {
                 LoadGamePlay();
             }
-            
-
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
             base.Draw(gameTime);
         }
-
+        //load menu function
         private void LoadMainMenu()
         {
             _screenManager.LoadScreen(new MainMenu(this));
         }
-
+        //load gameplay function
         public void LoadGamePlay()
         {
             _screenManager.LoadScreen(new GamePlay(this));
         }
-
-        private void MoveCamera(GameTime gameTime)
-        {
-            var speed = 400;
-            var seconds = gameTime.GetElapsedSeconds();
-            var movementDirection = GetMovementDirection();
-            _cameraPosition += speed * movementDirection * seconds;
-            Debug.WriteLine(movementDirection);
-        }
-
-        private Vector2 GetMovementDirection()
-        {
-            var movementDirection = Vector2.Zero;
-            /*var state = Keyboard.GetState();
-            
-            if (state.IsKeyDown(Keys.Down))
-            {
-                movementDirection += Vector2.UnitY;
-            }
-            if (state.IsKeyDown(Keys.Up))
-            {
-                movementDirection -= Vector2.UnitY;
-            }
-            if (state.IsKeyDown(Keys.Left))
-            {
-                movementDirection -= Vector2.UnitX;
-            }
-            if (state.IsKeyDown(Keys.Right))
-            {
-                movementDirection += Vector2.UnitX;
-            }*/
-
-            var state = Mouse.GetState();
-            Debug.WriteLine("Mouse: " + state.X);
-            if (state.X < 50)
-            {
-                movementDirection -= Vector2.UnitX;
-            }
-            if (state.X > _graphics.PreferredBackBufferWidth - 50)
-            {
-                movementDirection += Vector2.UnitX;
-            }
-            if (state.Y < 50)
-            {
-                movementDirection -= Vector2.UnitY;
-            }
-            if (state.Y > _graphics.PreferredBackBufferHeight - 50)
-            {
-                movementDirection += Vector2.UnitY;
-            }
-
-            //Can't normalize the zero vector so test for it before normalizing
-            if (movementDirection != Vector2.Zero)
-            {
-                movementDirection.Normalize();
-            }
-
-            return movementDirection;
-        }
-
 
     }
 }

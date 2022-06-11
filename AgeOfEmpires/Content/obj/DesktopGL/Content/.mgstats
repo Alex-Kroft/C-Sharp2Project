@@ -1,3 +1,1 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/Alex Kroft/Source/Repos/Beaneaters/C-Sharp2Project/AgeOfEmpires/Content/editedTilesSet.tmx","C:/Users/Alex Kroft/Source/Repos/Beaneaters/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/editedTilesSet.xnb","TiledMapProcessor","TiledMapContentItem",25101,77099,0.3554537
-"C:/Users/Alex Kroft/Source/Repos/Beaneaters/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles.png","C:/Users/Alex Kroft/Source/Repos/Beaneaters/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/Standard Green Raw Tiles_0.xnb","TextureProcessor","Texture2DContent",84068,1048661,0.2357294

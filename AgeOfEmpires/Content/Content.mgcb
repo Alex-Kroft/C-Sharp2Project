@@ -10,15 +10,12 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:..\..\..\..\..\..\..\matte\.nuget\packages\monogame.extended.content.pipeline\3.8.0\tools\MonoGame.Extended.Content.Pipeline.dll
 /reference:..\..\..\..\..\..\.nuget\packages\monogame.extended.content.pipeline\3.8.0\tools\MonoGame.Extended.Content.Pipeline.dll
 
 #---------------------------------- Content ---------------------------------#
 
 #begin editedTilesSet.tmx
-/importer:TiledMapImporter
-/processor:TiledMapProcessor
-/build:editedTilesSet.tmx
+/copy:editedTilesSet.tmx
 
 #begin LightBandit.png
 /importer:TextureImporter

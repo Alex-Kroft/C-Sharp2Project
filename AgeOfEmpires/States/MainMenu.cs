@@ -31,9 +31,6 @@ namespace AgeOfEmpires.States
         private SpriteFont font2;
         private Texture2D Background;
 
-        
-
-
         public MainMenu(Game1 game) : base(game) 
         {
             _components = new List<Component>();
@@ -45,26 +42,17 @@ namespace AgeOfEmpires.States
 
         public override void LoadContent()
         {
-            
             button = Content.Load<Texture2D>("Controls/Button");
             font2 = Content.Load<SpriteFont>("Fonts/Font2");
             Background = Content.Load<Texture2D>("mainmenu_bg");
-
 
             var newGameButton = new Button(button, font2)
             {
                 Position = new Vector2(0, 0),
             };
-
             newGameButton.Click += NewGameButton_Click;
 
-
-
-            _components = new List<Component>()
-      {
-        newGameButton
-      };
-
+            _components = new List<Component>(){newGameButton};
             base.LoadContent();
         }
 
@@ -76,17 +64,14 @@ namespace AgeOfEmpires.States
 
         public override void Draw(GameTime gameTime)
         {
-            
             _spriteBatch.Begin();
             _spriteBatch.Draw(Background, new Rectangle((int)fontCoord.X,(int)fontCoord.Y, GraphicsDevice.Adapter.CurrentDisplayMode.Width, GraphicsDevice.Adapter.CurrentDisplayMode.Height), Color.White);
+            
             foreach (var component in _components)
             {
                 component.Draw(gameTime, _spriteBatch);
             }
             _spriteBatch.End();
-           
-
-
         }
 
         private void NewGameButton_Click(object sender, EventArgs e)

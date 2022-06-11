@@ -6,7 +6,7 @@ namespace AgeOfEmpires.Components
 {
     class Size
     {
-        int EntityRadius;
+        public int EntityRadius;
 
         public Size(int entityRadius) {
             EntityRadius = entityRadius;

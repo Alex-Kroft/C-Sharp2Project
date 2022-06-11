@@ -7,7 +7,7 @@ namespace AgeOfEmpires.Components
 {
     class Position
     {
-        Vector2 VectorPosition;
+        public Vector2 VectorPosition;
 
         public Position(Vector2 vectorPosition) {
             VectorPosition = vectorPosition;

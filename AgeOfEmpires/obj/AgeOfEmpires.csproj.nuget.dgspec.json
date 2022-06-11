@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alex Kroft\\Source\\Repos\\Beaneaters\\C-Sharp2Project\\AgeOfEmpires\\AgeOfEmpires.csproj": {}
+    "C:\\Users\\Máté\\Documents\\GitHub\\C-Sharp2Project\\AgeOfEmpires\\AgeOfEmpires.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alex Kroft\\Source\\Repos\\Beaneaters\\C-Sharp2Project\\AgeOfEmpires\\AgeOfEmpires.csproj": {
+    "C:\\Users\\Máté\\Documents\\GitHub\\C-Sharp2Project\\AgeOfEmpires\\AgeOfEmpires.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alex Kroft\\Source\\Repos\\Beaneaters\\C-Sharp2Project\\AgeOfEmpires\\AgeOfEmpires.csproj",
+        "projectUniqueName": "C:\\Users\\Máté\\Documents\\GitHub\\C-Sharp2Project\\AgeOfEmpires\\AgeOfEmpires.csproj",
         "projectName": "AgeOfEmpires",
-        "projectPath": "C:\\Users\\Alex Kroft\\Source\\Repos\\Beaneaters\\C-Sharp2Project\\AgeOfEmpires\\AgeOfEmpires.csproj",
-        "packagesPath": "C:\\Users\\Alex Kroft\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alex Kroft\\Source\\Repos\\Beaneaters\\C-Sharp2Project\\AgeOfEmpires\\obj\\",
+        "projectPath": "C:\\Users\\Máté\\Documents\\GitHub\\C-Sharp2Project\\AgeOfEmpires\\AgeOfEmpires.csproj",
+        "packagesPath": "C:\\Users\\Máté\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Máté\\Documents\\GitHub\\C-Sharp2Project\\AgeOfEmpires\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alex Kroft\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Máté\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,10 +40,6 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "MonoGame.Content.Builder.Task": {
-              "target": "Package",
-              "version": "[3.8.0.1641, )"
-            },
             "MonoGame.Extended": {
               "target": "Package",
               "version": "[3.8.0, )"
@@ -57,6 +53,10 @@
               "version": "[3.8.0, )"
             },
             "MonoGame.Extended.Graphics": {
+              "target": "Package",
+              "version": "[3.8.0, )"
+            },
+            "MonoGame.Extended.Input": {
               "target": "Package",
               "version": "[3.8.0, )"
             },
@@ -79,12 +79,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.24, 3.1.24]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
