@@ -70,18 +70,8 @@ namespace AgeOfEmpires.Systems
                     Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
 
                     var position = _positionMapper.Get(selectedEntity);
-                    //position.VectorPosition = clickWorldPos;
-                    
-                        Vector2 dir = clickWorldPos - position.VectorPosition;
-                    //Debug.WriteLine(clickWorldPos);
-                        dir.Normalize();
-                        Debug.WriteLine(dir);
-                        do{
-                        position.VectorPosition += dir * 10;
-                        
-                            } while(clickWorldPos.X-position.VectorPosition.X >0.5f && clickWorldPos.Y - position.VectorPosition.Y > 0.5f);
-                    //Debug.WriteLine(position.VectorPosition);
-
+                    var movement = _movementMapper.Get(selectedEntity);
+                    movement.GoSomeWhere(clickWorldPos, position);
                 }
             };
         }

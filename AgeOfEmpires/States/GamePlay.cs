@@ -30,10 +30,10 @@ namespace AgeOfEmpires.States
         private TiledMap _tiledMap;
         private TiledMapRenderer _tiledMapRenderer;
         public  static OrthographicCamera _camera;
-        private World _world;
+        public static World _world;
         private Vector2 _cameraPosition;
 
-        private Game1 baseGame;
+        public static Game1 baseGame;
 
         public GamePlay(Game1 game) : base(game)
         {
@@ -68,6 +68,7 @@ namespace AgeOfEmpires.States
             entity.Attach(new MeleeAttack(5, 1.1F));
             entity.Attach(new Position(new Vector2(0, 0)));
             entity.Attach(new UnitDistance(10, 5));
+            entity.Attach(new Movement(50));
             entity.Attach(new Components.Size(64));
             baseGame.Components.Add(_world);
             base.Initialize();
