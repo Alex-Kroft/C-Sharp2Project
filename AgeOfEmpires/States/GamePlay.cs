@@ -121,12 +121,33 @@ namespace AgeOfEmpires.States
 
         public override void Update(GameTime gameTime)
         {
+            var state = Mouse.GetState();
+            var position = _camera.ScreenToWorld(new Vector2(state.X, state.Y));
             _tiledMapRenderer.Update(gameTime);
             const float movementSpeed = 800;
-            _camera.Move(GetMovementDirection() * movementSpeed * gameTime.GetElapsedSeconds());
+            if (position.X > 50)
+            {
+                if(position.X < 3800)
+                {
+                    if (position.Y > 50)
+                    {
+                        if(position.Y < 2500)
+                        {
+                            _camera.Move(GetMovementDirection() * movementSpeed * gameTime.GetElapsedSeconds());
+                            _miniMapCamPos.X = _miniMapCamPos.X + ((GetMovementDirection().X * movementSpeed * gameTime.GetElapsedSeconds()) / 9);
+                            _miniMapCamPos.Y = _miniMapCamPos.Y + ((GetMovementDirection().Y * movementSpeed * gameTime.GetElapsedSeconds()) / 9);
+                        }
+                        
+                    }
+                }
+                
+                
+            }
+            
 
-            _miniMapCamPos.X = _miniMapCamPos.X + ((GetMovementDirection().X * movementSpeed * gameTime.GetElapsedSeconds()) / 9);
-            _miniMapCamPos.Y = _miniMapCamPos.Y + ((GetMovementDirection().Y * movementSpeed * gameTime.GetElapsedSeconds()) / 9);
+            
+
+           
         }
 
         private void MoveCamera(GameTime gameTime)
@@ -141,25 +162,32 @@ namespace AgeOfEmpires.States
 
         private Vector2 GetMovementDirection()
         {
+            
             var movementDirection = Vector2.Zero;
-
             var state = Mouse.GetState();
-            if (state.X < 50)
-            {
-                movementDirection -= Vector2.UnitX;
-            }
-            if (state.X > GraphicsDevice.Adapter.CurrentDisplayMode.Width - 50)
-            {
-                movementDirection += Vector2.UnitX;
-            }
-            if (state.Y < 50)
-            {
-                movementDirection -= Vector2.UnitY;
-            }
-            if (state.Y > GraphicsDevice.Adapter.CurrentDisplayMode.Height - 50)
-            {
-                movementDirection += Vector2.UnitY;
-            }
+
+                    if (state.X < 50)
+                    {
+                        movementDirection -= Vector2.UnitX;
+                    }
+                    if (state.X > GraphicsDevice.Adapter.CurrentDisplayMode.Width - 50)
+                    {
+                        movementDirection += Vector2.UnitX;
+                    }
+                    if (state.Y < 50)
+                    {
+                        movementDirection -= Vector2.UnitY;
+                    }
+                    if (state.Y > GraphicsDevice.Adapter.CurrentDisplayMode.Height - 50)
+                    {
+                        movementDirection += Vector2.UnitY;
+                    }
+                
+            
+            
+               
+            
+           
 
             //Can't normalize the zero vector so test for it before normalizing
             if (movementDirection != Vector2.Zero)
