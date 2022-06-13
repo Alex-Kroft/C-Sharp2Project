@@ -37,27 +37,7 @@ namespace AgeOfEmpires.Systems
         {
             Game.mouseListener.MouseClicked += (sender, args) => {
                 if (args.Button == MonoGame.Extended.Input.MouseButton.Left)
-                {
-                    Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
-                    foreach (var entity in ActiveEntities)
-                    {
-                        var position = _positionMapper.Get(entity);
-                        var size = _sizeMapper.Get(entity);
-
-                        if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= size.EntityRadius)
-                        {
-                            selectedBuilding = entity;
-                        }
-                    }
-                }
-                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedEntity != -1)
-                {
-                    Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
-
-                    var position = _positionMapper.Get(selectedEntity);
-                    var movement = _movementMapper.Get(selectedEntity);
-                    movement.GoSomeWhere(clickWorldPos, position);
-                }
+                { }
             };
         }
     }

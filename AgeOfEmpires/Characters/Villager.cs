@@ -11,11 +11,9 @@ namespace AgeOfEmpires.Characters
     {
         private Texture2D _texture;
         public Vector2 Position;
-        private Units units;
         private HealthPoints HealthPoints;
         private String _playerColour;
 
-        public Units propUnits { get; set; }
         public HealthPoints propHealthPoints { get; set; }
         public String propPlayerColour { get; set; }
 
