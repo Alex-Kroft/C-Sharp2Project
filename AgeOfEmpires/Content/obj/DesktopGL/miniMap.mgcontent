@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/miniMap.png</SourceFile>
-  <SourceTime>2022-06-13T00:19:32.2193198+02:00</SourceTime>
+  <SourceTime>2022-06-13T14:09:00.9636946+02:00</SourceTime>
   <DestFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/miniMap.xnb</DestFile>
-  <DestTime>2022-06-13T00:20:02.9826004+02:00</DestTime>
+  <DestTime>2022-06-14T01:45:47.1122306+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

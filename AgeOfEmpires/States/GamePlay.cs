@@ -36,12 +36,17 @@ namespace AgeOfEmpires.States
 
         public static Game1 baseGame;
 
+        
+
         private Texture2D _resourcesCover;
         private Texture2D _buttonContainer;
         private Texture2D _bottomBar;
         private Texture2D _miniMap;
         private Texture2D _miniMapCam;
         private Vector2 _miniMapCamPos;
+        private Texture2D _age;
+        private SpriteFont _fontResources;
+        private Resource Resource;
 
         public GamePlay(Game1 game) : base(game)
         {
@@ -63,6 +68,8 @@ namespace AgeOfEmpires.States
             _camera = new OrthographicCamera(viewportAdapter);
             _cameraPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2 + 100);
 
+            Mouse.SetCursor(MouseCursor.FromTexture2D(Content.Load<Texture2D>("Cursor"), 0,0));
+            
 
             //creating world
             _world = new WorldBuilder()
@@ -79,8 +86,15 @@ namespace AgeOfEmpires.States
             entity.Attach(new UnitDistance(10, 5));
             entity.Attach(new Movement(50));
             entity.Attach(new Components.Size(64));
+            
             baseGame.Components.Add(_world);
+
+            Resource = new Resource();
+
             base.Initialize();
+
+            
+            
         }
 
         public override void LoadContent()
@@ -96,6 +110,8 @@ namespace AgeOfEmpires.States
             _miniMap = Content.Load<Texture2D>("miniMap");
             _miniMapCam = Content.Load<Texture2D>("miniMapRect");
             _miniMapCamPos = new Vector2(GraphicsDevice.Adapter.CurrentDisplayMode.Width - _miniMap.Width + 40, GraphicsDevice.Adapter.CurrentDisplayMode.Height - _miniMap.Height + 60);
+            _fontResources = Content.Load<SpriteFont>("Gold");
+            _age = Content.Load<Texture2D>("shield_dark_age_slav_normal");
 
 
 
@@ -115,6 +131,11 @@ namespace AgeOfEmpires.States
             _spriteBatch.Draw(_resourcesCover, new Rectangle(0, 0, _resourcesCover.Width, _resourcesCover.Height), Color.White);
             _spriteBatch.Draw(_buttonContainer, new Rectangle(0, GraphicsDevice.Adapter.CurrentDisplayMode.Height - _buttonContainer.Height, _buttonContainer.Width, _buttonContainer.Height), Color.White);
             _spriteBatch.Draw(_miniMapCam, new Rectangle((int)_miniMapCamPos.X, (int) _miniMapCamPos.Y, (GraphicsDevice.Adapter.CurrentDisplayMode.Width) / 12, (GraphicsDevice.Adapter.CurrentDisplayMode.Height) / 12), Color.White);
+            _spriteBatch.DrawString(_fontResources, Resource.getFood().ToString(), new Vector2((_resourcesCover.Width)/14, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0,0),2.0f,SpriteEffects.None, 0.1f);
+            _spriteBatch.DrawString(_fontResources, Resource.getWood().ToString(), new Vector2((_resourcesCover.Width) / 6, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
+            _spriteBatch.DrawString(_fontResources, Resource.getGold().ToString(), new Vector2(((_resourcesCover.Width) / 4) + 50, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
+            _spriteBatch.DrawString(_fontResources, Resource.getStone().ToString(), new Vector2(((_resourcesCover.Width) / 3) + 80, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
+            _spriteBatch.Draw(_age, new Rectangle(_resourcesCover.Width / 2, 0, _age.Width, _age.Height), Color.White);
             _spriteBatch.End();
 
             
@@ -122,6 +143,8 @@ namespace AgeOfEmpires.States
 
         public override void Update(GameTime gameTime)
         {
+           
+            
             var state = Mouse.GetState();
             var position = _camera.ScreenToWorld(new Vector2(state.X, state.Y));
             _tiledMapRenderer.Update(gameTime);

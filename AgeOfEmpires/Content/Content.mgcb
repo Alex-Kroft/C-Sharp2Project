@@ -38,8 +38,27 @@
 /processorParam:TextureFormat=Color
 /build:command-panel_collapsed.png
 
+#begin Cursor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Cursor.png
+
 #begin editedTilesSet.tmx
 /copy:editedTilesSet.tmx
+
+#begin Gold.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Gold.spritefont
 
 #begin LightBandit.png
 /importer:TextureImporter
@@ -115,6 +134,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:resource-panel_full.png
+
+#begin shield_dark_age_slav_normal.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:shield_dark_age_slav_normal.png
 
 #begin Standard Green Raw Tiles.png
 /importer:TextureImporter

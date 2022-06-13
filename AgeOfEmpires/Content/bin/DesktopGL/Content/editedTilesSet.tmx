@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.8" tiledversion="1.8.5" orientation="orthogonal" renderorder="right-down" width="120" height="80" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="1">
  <tileset firstgid="1" name="Standard Green Raw Tiles" tilewidth="32" tileheight="32" tilecount="256" columns="16">
-  <image source="Standard Green Raw Tiles_0.png" width="512" height="512"/>
+  <image source="Standard Green Raw Tiles.png" width="512" height="512"/>
   <tile id="144" probability="0.001"/>
   <tile id="148" probability="0.001"/>
   <tile id="190" probability="0.1"/>
