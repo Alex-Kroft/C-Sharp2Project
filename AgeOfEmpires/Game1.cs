@@ -28,11 +28,15 @@ namespace AgeOfEmpires
             _mouseListener = new MouseListener();
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            
 
             if (GraphicsDevice == null) { _graphics.ApplyChanges(); }
             _graphics.PreferredBackBufferWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
             _graphics.PreferredBackBufferHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
+            _graphics.IsFullScreen = false;
+           
             _graphics.ApplyChanges();
+
 
             _screenManager = new ScreenManager();
             Components.Add(_screenManager);
