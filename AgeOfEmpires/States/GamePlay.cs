@@ -45,6 +45,7 @@ namespace AgeOfEmpires.States
         private Texture2D _miniMapCam;
         private Vector2 _miniMapCamPos;
         private Texture2D _age;
+        private Texture2D _villagersCount;
         private SpriteFont _fontResources;
         private Resource Resource;
 
@@ -112,6 +113,7 @@ namespace AgeOfEmpires.States
             _miniMapCamPos = new Vector2(GraphicsDevice.Adapter.CurrentDisplayMode.Width - _miniMap.Width + 40, GraphicsDevice.Adapter.CurrentDisplayMode.Height - _miniMap.Height + 60);
             _fontResources = Content.Load<SpriteFont>("Gold");
             _age = Content.Load<Texture2D>("shield_dark_age_slav_normal");
+            _villagersCount = Content.Load<Texture2D>("villagers");
 
 
 
@@ -136,6 +138,8 @@ namespace AgeOfEmpires.States
             _spriteBatch.DrawString(_fontResources, Resource.getGold().ToString(), new Vector2(((_resourcesCover.Width) / 4) + 50, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
             _spriteBatch.DrawString(_fontResources, Resource.getStone().ToString(), new Vector2(((_resourcesCover.Width) / 3) + 80, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
             _spriteBatch.Draw(_age, new Rectangle(_resourcesCover.Width / 2, 0, _age.Width, _age.Height), Color.White);
+            _spriteBatch.Draw(_villagersCount, new Rectangle((_resourcesCover.Width / 2) - 160, _resourcesCover.Height / 7, _villagersCount.Width + 35, _villagersCount.Height + 20), Color.White);
+            _spriteBatch.DrawString(_fontResources, "0/200", new Vector2((_resourcesCover.Width / 2) - 70, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 1.5f, SpriteEffects.None, 0.1f);
             _spriteBatch.End();
 
             

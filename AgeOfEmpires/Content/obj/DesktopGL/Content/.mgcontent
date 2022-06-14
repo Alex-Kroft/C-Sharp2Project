@@ -16,8 +16,10 @@
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/resource-panel_full.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/shield_dark_age_slav_normal.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles.png</File>
+    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/villagers.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
