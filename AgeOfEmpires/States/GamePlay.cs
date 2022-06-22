@@ -139,7 +139,7 @@ namespace AgeOfEmpires.States
 
             _buildBuilding = Content.Load<Texture2D>("031_");
             
-            _uiComponents.Add(new NoClickState(GraphicsDevice,_buttonContainer,_buildBuilding));
+            _uiComponents.Add(new NoClickState(GraphicsDevice,_buttonContainer));
           
 
 
