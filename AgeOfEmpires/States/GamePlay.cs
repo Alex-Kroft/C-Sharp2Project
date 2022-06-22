@@ -20,6 +20,8 @@ using MonoGame.Extended.Serialization;
 using AgeOfEmpires.Systems;
 using MonoGame.Extended.Entities.Systems;
 using AgeOfEmpires.Components;
+using System.Collections.Generic;
+using AgeOfEmpires.IngameUI_s;
 
 namespace AgeOfEmpires.States
 {
@@ -49,6 +51,16 @@ namespace AgeOfEmpires.States
         private SpriteFont _fontResources;
         private Resource Resource;
 
+        private List<Component> _uiComponents;
+
+        private bool _currentEntityPressed;
+        private Texture2D _buildBuilding;
+
+        public Vector2 getMiniMapPos()
+        {
+            return this._miniMapCamPos;
+        }
+
         public GamePlay(Game1 game) : base(game)
         {
             baseGame = game;
@@ -70,7 +82,8 @@ namespace AgeOfEmpires.States
             _cameraPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2 + 100);
 
             Mouse.SetCursor(MouseCursor.FromTexture2D(Content.Load<Texture2D>("Cursor"), 0,0));
-            
+
+            _uiComponents = new List<Component>();
 
             //creating world
             _world = new WorldBuilder()
@@ -112,7 +125,10 @@ namespace AgeOfEmpires.States
             _age = Content.Load<Texture2D>("shield_dark_age_slav_normal");
             _villagersCount = Content.Load<Texture2D>("villagers");
 
-
+            _buildBuilding = Content.Load<Texture2D>("031_");
+            
+            _uiComponents.Add(new NoClickState(GraphicsDevice,_buttonContainer,_buildBuilding));
+          
 
 
             base.LoadContent();
@@ -128,7 +144,6 @@ namespace AgeOfEmpires.States
             _spriteBatch.Draw(_bottomBar, new Rectangle(_buttonContainer.Width -100, GraphicsDevice.Adapter.CurrentDisplayMode.Height - _bottomBar.Height, _bottomBar.Width, _bottomBar.Height), Color.White);
             _spriteBatch.Draw(_miniMap, new Rectangle((GraphicsDevice.Adapter.CurrentDisplayMode.Width - _miniMap.Width), (GraphicsDevice.Adapter.CurrentDisplayMode.Height - _miniMap.Height), _miniMap.Width, _miniMap.Height), Color.White);
             _spriteBatch.Draw(_resourcesCover, new Rectangle(0, 0, _resourcesCover.Width, _resourcesCover.Height), Color.White);
-            _spriteBatch.Draw(_buttonContainer, new Rectangle(0, GraphicsDevice.Adapter.CurrentDisplayMode.Height - _buttonContainer.Height, _buttonContainer.Width, _buttonContainer.Height), Color.White);
             _spriteBatch.Draw(_miniMapCam, new Rectangle((int)_miniMapCamPos.X, (int) _miniMapCamPos.Y, (GraphicsDevice.Adapter.CurrentDisplayMode.Width) / 12, (GraphicsDevice.Adapter.CurrentDisplayMode.Height) / 12), Color.White);
             _spriteBatch.DrawString(_fontResources, Resource.getFood().ToString(), new Vector2((_resourcesCover.Width)/14, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0,0),2.0f,SpriteEffects.None, 0.1f);
             _spriteBatch.DrawString(_fontResources, Resource.getWood().ToString(), new Vector2((_resourcesCover.Width) / 6, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
@@ -137,6 +152,12 @@ namespace AgeOfEmpires.States
             _spriteBatch.Draw(_age, new Rectangle(_resourcesCover.Width / 2, 0, _age.Width, _age.Height), Color.White);
             _spriteBatch.Draw(_villagersCount, new Rectangle((_resourcesCover.Width / 2) - 160, _resourcesCover.Height / 7, _villagersCount.Width + 35, _villagersCount.Height + 20), Color.White);
             _spriteBatch.DrawString(_fontResources, "0/200", new Vector2((_resourcesCover.Width / 2) - 70, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 1.5f, SpriteEffects.None, 0.1f);
+            
+            foreach (var component in _uiComponents)
+            {
+                component.Draw(gameTime, _spriteBatch);
+            }
+
             _spriteBatch.End();
 
             
@@ -165,14 +186,15 @@ namespace AgeOfEmpires.States
                         
                     }
                 }
-                
-                
             }
-            
 
-            
+            foreach (var component in _uiComponents)
+            {
+                component.Update(gameTime);
+            }
 
-           
+
+
         }
 
         private void MoveCamera(GameTime gameTime)
