@@ -96,10 +96,10 @@ namespace AgeOfEmpires.States
             entity.Attach(new Skin(baseGame.Content, "idle"));
             entity.Attach(new HealthPoints(100));
             entity.Attach(new Level());
-            entity.Attach(new MeleeAttack(5, 1.1F));
+            entity.Attach(new MeleeAttack(20, 1100));
             entity.Attach(new Position(new Vector2(200, 200)));
             entity.Attach(new UnitDistance(10, 50));
-            entity.Attach(new Movement(50));
+            entity.Attach(new Movement(80));
             entity.Attach(new Components.Size(64));
 
             //test enemy
@@ -107,9 +107,9 @@ namespace AgeOfEmpires.States
             enemy.Attach(new Skin(baseGame.Content, "idle"));
             enemy.Attach(new HealthPoints(100));
             enemy.Attach(new Level());
-            enemy.Attach(new MeleeAttack(5, 1.1F));
+            enemy.Attach(new MeleeAttack(5, 1100));
             enemy.Attach(new Position(new Vector2(280, 280)));
-            enemy.Attach(new UnitDistance(10, 5));
+            enemy.Attach(new UnitDistance(10, 50));
             enemy.Attach(new Movement(50));
             enemy.Attach(new Components.Size(64));
 

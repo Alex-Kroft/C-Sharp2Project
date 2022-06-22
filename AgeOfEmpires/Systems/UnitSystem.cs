@@ -55,6 +55,7 @@ namespace AgeOfEmpires.Systems
             _skinMapper = mapperService.GetMapper<Skin>();
             _unitDistance = mapperService.GetMapper<UnitDistance>();
 
+
             Game.mouseListener.MouseClicked += (sender, args) => {
                 //select unit
                 if (args.Button == MonoGame.Extended.Input.MouseButton.Left)
@@ -83,9 +84,12 @@ namespace AgeOfEmpires.Systems
                     var selectedUnitDistance = _unitDistance.Get(selectedEntity);
                     var melleeAttack = _meleeAttackMapper.Get(selectedEntity);
 
+                    //if moving while combat current attack stops
+                    melleeAttack.InCombat = false;
+
                     foreach (var entity in ActiveEntities)
                     {
-                        if (entity != selectedEntity) {
+                        //if (entity != selectedEntity) {
                             var position = _positionMapper.Get(entity);
                             var size = _sizeMapper.Get(entity);
 
@@ -93,12 +97,12 @@ namespace AgeOfEmpires.Systems
                             {
                                 focusEntity = entity;
                                 var focusSkin = _skinMapper.Get(focusEntity);
-
+                                var focusHealthPoints = _healthPointsMapper.Get(focusEntity);
                                 //Vector2 calculatedFocusPosition = new Vector2(focusPosition.VectorPosition.X - selectedUnitDistance.AttackDistance, focusPosition.VectorPosition.Y - selectedUnitDistance.AttackDistance);
-                                selectedMovement.GoSomeWhereAttack(clickWorldPos, selectedPosition, selectedSkin, selectedUnitDistance, melleeAttack, focusEntity, focusSkin);
+                                selectedMovement.GoSomeWhereAttack(clickWorldPos, selectedPosition, selectedSkin, selectedUnitDistance, melleeAttack, focusEntity, focusSkin, focusHealthPoints);
                                 return;
                             }
-                        }
+                        //}
                         
                     }
 
