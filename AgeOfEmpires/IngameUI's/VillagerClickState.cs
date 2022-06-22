@@ -28,43 +28,77 @@ namespace AgeOfEmpires.IngameUI_s
     {
         private GraphicsDevice graphicsDevice;
         private Texture2D _buttonContainer;
-        private Texture2D _buildBuilding;
+        
+        private Texture2D _buildHouse;
+        private Texture2D _buildBarracks;
+        private Texture2D _buildFarm;
 
         private MouseState _previousMouse;
 
         private MouseState _currentMouse;
 
-        private bool _isHovering;
+        private bool isHoveringHouse;
+        private bool isHoveringBarracks;
+        private bool isHoveringFarm;
 
         public event EventHandler Click;
 
         public bool Clicked { get; private set; }
 
-        public Rectangle Rectangle
+       
+        public Rectangle RectangleBuildHouse
         {
             get
             {
-                return new Rectangle(_buttonContainer.Width / 6, _buttonContainer.Height + 380, _buildBuilding.Width - 20, _buildBuilding.Height - 20);
+                return new Rectangle(_buttonContainer.Width / 6, _buttonContainer.Height + 450, 70, 70);
+            }
+        }
+        public Rectangle RectangleBuildbarracks
+        {
+            get
+            {
+                return new Rectangle(_buttonContainer.Width / 2, _buttonContainer.Height + 450, 70, 70);
+            }
+        }
+        public Rectangle RectangleBuildFarm
+        {
+            get
+            {
+                return new Rectangle(_buttonContainer.Width / 3, _buttonContainer.Height + 450, 70, 70);
             }
         }
 
-        public VillagerClickState(GraphicsDevice graphicsDevice, Texture2D buttonConatiner, Texture2D buildBuilding)
+        public VillagerClickState(GraphicsDevice graphicsDevice, Texture2D buttonConatiner, Texture2D buildHouse, Texture2D buildBarracks, Texture2D buildFarm)
         {
             this._buttonContainer = buttonConatiner;
-            this._buildBuilding = buildBuilding;
             this.graphicsDevice = graphicsDevice;
+            this._buildHouse = buildHouse;
+            this._buildBarracks = buildBarracks;
+            this._buildFarm = buildFarm;
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            var buttonColour = Color.White;
-            if (_isHovering)
+            var buttonColourHouse = Color.White;
+            var buttonColourFarm = Color.White;
+            var buttonColourBarracks = Color.White;
+            if (isHoveringHouse)
             {
-                buttonColour = Color.Gray;
+                buttonColourHouse = Color.Gray;
+            }
+            if (isHoveringFarm)
+            {
+                buttonColourFarm = Color.Gray;
+            }
+            if (isHoveringBarracks)
+            {
+                buttonColourBarracks = Color.Gray;
             }
 
-            spriteBatch.Draw(_buttonContainer, new Rectangle(0, graphicsDevice.Adapter.CurrentDisplayMode.Height - _buttonContainer.Height, _buttonContainer.Width, _buttonContainer.Height), Color.White);
-            spriteBatch.Draw(_buildBuilding, Rectangle, buttonColour);
+            spriteBatch.Draw(_buttonContainer, new Rectangle(0, graphicsDevice.Adapter.CurrentDisplayMode.Height - _buttonContainer.Height + 60, _buttonContainer.Width - 50, _buttonContainer.Height - 80) , Color.White);
+            spriteBatch.Draw(_buildHouse, RectangleBuildHouse, buttonColourHouse);
+            spriteBatch.Draw(_buildFarm, RectangleBuildFarm, buttonColourFarm);
+            spriteBatch.Draw(_buildBarracks, RectangleBuildbarracks, buttonColourBarracks);
 
         }
 
@@ -74,11 +108,32 @@ namespace AgeOfEmpires.IngameUI_s
             _currentMouse = Mouse.GetState();
 
             var mouseRectangle = new Rectangle(_currentMouse.X, _currentMouse.Y, 1, 1);
-            _isHovering = false;
+            isHoveringHouse = false;
+            isHoveringFarm = false;
+            isHoveringBarracks = false;
 
-            if (mouseRectangle.Intersects(Rectangle))
+           
+            if (mouseRectangle.Intersects(RectangleBuildHouse))
             {
-                _isHovering = true;
+                isHoveringHouse = true;
+                // If a click is needed for an update here
+                if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
+                {
+                    Click?.Invoke(this, new EventArgs());
+                }
+            }
+            if (mouseRectangle.Intersects(RectangleBuildFarm))
+            {
+                isHoveringFarm = true;
+                // If a click is needed for an update here
+                if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
+                {
+                    Click?.Invoke(this, new EventArgs());
+                }
+            }
+            if (mouseRectangle.Intersects(RectangleBuildbarracks))
+            {
+                isHoveringBarracks = true;
                 // If a click is needed for an update here
                 if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
                 {

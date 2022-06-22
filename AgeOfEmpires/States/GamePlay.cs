@@ -51,10 +51,18 @@ namespace AgeOfEmpires.States
         private SpriteFont _fontResources;
         private Resource Resource;
 
+        // 1 = none, 2 = villager, 3 = army
+        private int _itemSelected;
         private List<Component> _uiComponents;
+        private NoClickState noClickState;
+        private VillagerClickState VillagerClickState;
+        
 
-        private bool _currentEntityPressed;
-        private Texture2D _buildBuilding;
+        
+        private Texture2D _buildFarm;
+        private Texture2D _buildHouse;
+        private Texture2D _buildBarracks;
+       
 
         public Vector2 getMiniMapPos()
         {
@@ -70,6 +78,17 @@ namespace AgeOfEmpires.States
             _graphics.PreferredBackBufferWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
             _graphics.PreferredBackBufferHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
             _graphics.ApplyChanges();
+            _itemSelected = 2;
+        }
+
+        public int getItemSelected()
+        {
+            return this._itemSelected;
+        }
+
+        public void setItemSelected(int itemSelected)
+        {
+            this._itemSelected = itemSelected;
         }
 
         public override void Initialize()
@@ -137,9 +156,14 @@ namespace AgeOfEmpires.States
             _age = Content.Load<Texture2D>("shield_dark_age_slav_normal");
             _villagersCount = Content.Load<Texture2D>("villagers");
 
-            _buildBuilding = Content.Load<Texture2D>("031_");
-            
-            _uiComponents.Add(new NoClickState(GraphicsDevice,_buttonContainer));
+            _buildHouse = Content.Load<Texture2D>("CR-004");
+            _buildFarm = Content.Load<Texture2D>("CR-005");
+            _buildBarracks = Content.Load<Texture2D>("CR-010");
+
+            noClickState = new NoClickState(GraphicsDevice, _buttonContainer);
+            VillagerClickState = new VillagerClickState(GraphicsDevice,_buttonContainer,_buildHouse,_buildBarracks,_buildFarm);
+            _uiComponents.Add(noClickState);
+            _uiComponents.Add(VillagerClickState);
           
 
 
@@ -167,9 +191,25 @@ namespace AgeOfEmpires.States
             
             foreach (var component in _uiComponents)
             {
-                component.Draw(gameTime, _spriteBatch);
-            }
+               switch(_itemSelected)
+                {
+                    case 1:
+                        if (component.Equals(noClickState))
+                        {
+                            component.Draw(gameTime, _spriteBatch);
+                        }
+                        break;
+                    case 2:
+                        if (component.Equals(VillagerClickState))
+                        {
+                            component.Draw(gameTime, _spriteBatch);
+                        }
+                        break;
 
+                }
+               
+            }
+            
             _spriteBatch.End();
 
             
