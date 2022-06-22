@@ -91,6 +91,7 @@ namespace AgeOfEmpires.States
                 .AddSystem(new UnitSystem(baseGame))
                  .Build();
 
+            //test entity
             var entity = _world.CreateEntity();
             entity.Attach(new Skin(baseGame.Content, "idle"));
             entity.Attach(new HealthPoints(100));
@@ -101,12 +102,13 @@ namespace AgeOfEmpires.States
             entity.Attach(new Movement(50));
             entity.Attach(new Components.Size(64));
 
+            //test enemy
             var enemy = _world.CreateEntity();
             enemy.Attach(new Skin(baseGame.Content, "idle"));
             enemy.Attach(new HealthPoints(100));
             enemy.Attach(new Level());
             enemy.Attach(new MeleeAttack(5, 1.1F));
-            enemy.Attach(new Position(new Vector2(400, 400)));
+            enemy.Attach(new Position(new Vector2(280, 280)));
             enemy.Attach(new UnitDistance(10, 5));
             enemy.Attach(new Movement(50));
             enemy.Attach(new Components.Size(64));
@@ -137,7 +139,7 @@ namespace AgeOfEmpires.States
 
             _buildBuilding = Content.Load<Texture2D>("031_");
             
-            _uiComponents.Add(new NoClickState(GraphicsDevice,_buttonContainer,_buildBuilding));
+            _uiComponents.Add(new NoClickState(GraphicsDevice,_buttonContainer));
           
 
 
@@ -175,7 +177,6 @@ namespace AgeOfEmpires.States
 
         public override void Update(GameTime gameTime)
         {
-           
             
             var state = Mouse.GetState();
             var position = _camera.ScreenToWorld(new Vector2(state.X, state.Y));
@@ -239,12 +240,6 @@ namespace AgeOfEmpires.States
                     {
                         movementDirection += Vector2.UnitY;
                     }
-                
-            
-            
-               
-            
-           
 
             //Can't normalize the zero vector so test for it before normalizing
             if (movementDirection != Vector2.Zero)

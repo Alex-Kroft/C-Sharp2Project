@@ -35,7 +35,7 @@ namespace AgeOfEmpires.Components
                         Thread.Sleep(Time);
 
                     } while (entityPosition.VectorPosition.X - destination.X > 0.5f && entityPosition.VectorPosition.Y - destination.Y > 0.5f);
-                    skin.animationName = "attack";
+                    skin.animationName = "idle";
                 }));
                 newThread.Start();
             }
@@ -55,7 +55,7 @@ namespace AgeOfEmpires.Components
                         Thread.Sleep(Time);
 
                     } while (destination.X - entityPosition.VectorPosition.X > 0.5f && destination.Y - entityPosition.VectorPosition.Y > 0.5f);
-                    skin.animationName = "attack";
+                    skin.animationName = "idle";
                 }));
                 newThread.Start();
             } else if (dir.X > 0 && dir.Y < 0) {
@@ -73,7 +73,7 @@ namespace AgeOfEmpires.Components
                         Thread.Sleep(Time);
 
                     } while (destination.X - entityPosition.VectorPosition.X > 0.5f &&  entityPosition.VectorPosition.Y -destination.Y> 0.5f);
-                    skin.animationName = "attack";
+                    skin.animationName = "idle";
                 }));
                 newThread.Start();
             }
@@ -93,7 +93,7 @@ namespace AgeOfEmpires.Components
                         Thread.Sleep(Time);
 
                     } while (entityPosition.VectorPosition.X - destination.X > 0.5f && destination.Y - entityPosition.VectorPosition.Y > 0.5f);
-                    skin.animationName = "attack";
+                    skin.animationName = "idle";
                 }));
                 newThread.Start();
             }else if (dir.X == 0 && dir.Y < 0)
@@ -112,7 +112,7 @@ namespace AgeOfEmpires.Components
                         Thread.Sleep(Time);
 
                     } while (entityPosition.VectorPosition.Y - destination.Y > 0.5f);
-                    skin.animationName = "attack";
+                    skin.animationName = "idle";
                 }));
                 newThread.Start();
             }else if (dir.X < 0 && dir.Y == 0)
@@ -131,7 +131,7 @@ namespace AgeOfEmpires.Components
                         Thread.Sleep(Time);
 
                     } while (entityPosition.VectorPosition.X - destination.X > 0.5f);
-                    skin.animationName = "attack";
+                    skin.animationName = "idle";
                 }));
                 newThread.Start();
             }
@@ -139,7 +139,7 @@ namespace AgeOfEmpires.Components
 
         }
         //Go somewhere and attack
-        public void GoSomeWhere(Vector2 destination, Components.Position entityPosition, Skin skin, UnitDistance unitDistance)
+        public void GoSomeWhereAttack(Vector2 destination, Components.Position entityPosition, Skin skin, UnitDistance unitDistance, MeleeAttack meleeAttack, int focusEntity, Skin focusSkin)
         {
             Vector2 dir = destination - entityPosition.VectorPosition;
             Debug.WriteLine(dir);
@@ -160,7 +160,10 @@ namespace AgeOfEmpires.Components
                         Thread.Sleep(Time);
 
                     } while (entityPosition.VectorPosition.X - (destination.X+unitDistance.AttackDistance) > 0.5f && entityPosition.VectorPosition.Y - (destination.Y+unitDistance.AttackDistance) > 0.5f);
-                    skin.animationName = "attack";
+                    
+                    //Attack enemy
+                    meleeAttack.attack(skin, focusEntity, focusSkin);
+                    
                 }));
                 newThread.Start();
             }
@@ -180,7 +183,9 @@ namespace AgeOfEmpires.Components
                         Thread.Sleep(Time);
 
                     } while ((destination.X-unitDistance.AttackDistance) - entityPosition.VectorPosition.X > 0.5f && (destination.Y-unitDistance.AttackDistance) - entityPosition.VectorPosition.Y > 0.5f);
-                    skin.animationName = "attack";
+                    
+                    //Attack enemy
+                    meleeAttack.attack(skin, focusEntity, focusSkin);
                 }));
                 newThread.Start();
             }
@@ -200,7 +205,9 @@ namespace AgeOfEmpires.Components
                         Thread.Sleep(Time);
 
                     } while ((destination.X - unitDistance.AttackDistance) - entityPosition.VectorPosition.X > 0.5f && entityPosition.VectorPosition.Y - (destination.Y + unitDistance.AttackDistance) > 0.5f);
-                    skin.animationName = "attack";
+
+                    //Attack enemy
+                    meleeAttack.attack(skin, focusEntity, focusSkin);
                 }));
                 newThread.Start();
             }
@@ -220,7 +227,9 @@ namespace AgeOfEmpires.Components
                         Thread.Sleep(Time);
 
                     } while (entityPosition.VectorPosition.X - (destination.X + unitDistance.AttackDistance) > 0.5f && (destination.Y - unitDistance.AttackDistance) - entityPosition.VectorPosition.Y > 0.5f);
-                    skin.animationName = "attack";
+
+                    //Attack enemy
+                    meleeAttack.attack(skin, focusEntity, focusSkin);
                 }));
                 newThread.Start();
             }
@@ -240,7 +249,9 @@ namespace AgeOfEmpires.Components
                         Thread.Sleep(Time);
 
                     } while (entityPosition.VectorPosition.Y - (destination.Y + unitDistance.AttackDistance) > 0.5f);
-                    skin.animationName = "attack";
+
+                    //Attack enemy
+                    meleeAttack.attack(skin, focusEntity, focusSkin);
                 }));
                 newThread.Start();
             }
@@ -260,7 +271,9 @@ namespace AgeOfEmpires.Components
                         Thread.Sleep(Time);
 
                     } while (entityPosition.VectorPosition.X - (destination.X + unitDistance.AttackDistance) > 0.5f);
-                    skin.animationName = "attack";
+
+                    //Attack enemy
+                    meleeAttack.attack(skin, focusEntity, focusSkin);
                 }));
                 newThread.Start();
             }
