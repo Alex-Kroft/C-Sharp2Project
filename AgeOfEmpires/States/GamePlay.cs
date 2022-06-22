@@ -12,7 +12,7 @@ using MonoGame.Extended.Screens.Transitions;
 using System;
 using System.Diagnostics;
 using AgeOfEmpires.States;
-using AgeOfEmpires.Characters;
+
 
 using MonoGame.Extended.Content;
 using MonoGame.Extended.Sprites;
@@ -79,11 +79,11 @@ namespace AgeOfEmpires.States
                  .Build();
 
             var entity = _world.CreateEntity();
-            entity.Attach(new Skin(baseGame.Content));
+            entity.Attach(new Skin(baseGame.Content, "idle"));
             entity.Attach(new HealthPoints(100));
             entity.Attach(new Level());
             entity.Attach(new MeleeAttack(5, 1.1F));
-            entity.Attach(new Position(new Vector2(0, 0)));
+            entity.Attach(new Position(new Vector2(200, 200)));
             entity.Attach(new UnitDistance(10, 5));
             entity.Attach(new Movement(50));
             entity.Attach(new Components.Size(64));
@@ -93,9 +93,6 @@ namespace AgeOfEmpires.States
             Resource = new Resource();
 
             base.Initialize();
-
-            
-            
         }
 
         public override void LoadContent()

@@ -15,7 +15,7 @@ namespace AgeOfEmpires.Components
         public void CreateUnit(String type) {
             if (type.Equals("normal")) {
                 var entity = GamePlay._world.CreateEntity();
-                entity.Attach(new Skin(GamePlay.baseGame.Content));
+                entity.Attach(new Skin(GamePlay.baseGame.Content, "idle"));
                 entity.Attach(new HealthPoints(100));
                 entity.Attach(new Level());
                 entity.Attach(new MeleeAttack(5, 1.1F));

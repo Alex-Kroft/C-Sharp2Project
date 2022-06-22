@@ -26,6 +26,7 @@
     <TrimmerRootAssembly Include="Microsoft.Xna.Framework.Content.ContentTypeReader" Visible="false" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Characters\" />
     <Folder Include="maps\" />
   </ItemGroup>
   <ItemGroup>

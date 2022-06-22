@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/villagers.png</SourceFile>
-  <SourceTime>2022-06-14T01:55:53.350907+02:00</SourceTime>
-  <DestFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/villagers.xnb</DestFile>
-  <DestTime>2022-06-14T02:01:23.0000964+02:00</DestTime>
+  <SourceFile>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/villagers.png</SourceFile>
+  <SourceTime>2022-06-20T11:23:54.9837862+02:00</SourceTime>
+  <DestFile>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/villagers.xnb</DestFile>
+  <DestTime>2022-06-22T10:40:48.2276635+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -8,19 +8,21 @@ using System.Text;
 using MonoGame.Extended.Content;
 using Microsoft.Xna.Framework.Content;
 using MonoGame.Extended;
+using AgeOfEmpires.Systems;
 
 namespace AgeOfEmpires.Components
 {
     class Skin
     {
         public AnimatedSprite villager;
-        //OrthographicCamera _camera;
+        public String animationName;
 
-        public Skin(ContentManager content) {
-            //_camera = camera;
-            var spriteSheet = content.Load<SpriteSheet>("LightBandit.sf", new JsonContentLoader());
+        public AnimatedSprite Villager { get; set; }
+
+        public Skin(ContentManager content, String animation) {
+            var spriteSheet = content.Load<SpriteSheet>("Bandit.sf", new JsonContentLoader());
             var sprite = new AnimatedSprite(spriteSheet);
-            sprite.Play("idle");
+            animationName = animation;
             villager = sprite;
         }
     }

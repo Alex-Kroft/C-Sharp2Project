@@ -31,6 +31,7 @@ namespace AgeOfEmpires.Systems
         private ComponentMapper<Resource> _resourceMapper;
         private ComponentMapper<Skin> _skinMapper;
         private int selectedEntity = -1;
+        private int focusEntity = -1;
 
         public UnitSystem(Game1 game)
             : base(Aspect.All(typeof(UnitDistance)))
@@ -51,7 +52,8 @@ namespace AgeOfEmpires.Systems
             _resourceMapper = mapperService.GetMapper<Resource>();
             _skinMapper = mapperService.GetMapper<Skin>();
 
-            Game.mouseListener.MouseClicked += (sender, args) => { 
+            Game.mouseListener.MouseClicked += (sender, args) => {
+                //select unit
                 if (args.Button == MonoGame.Extended.Input.MouseButton.Left)
                 {
                     Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
@@ -65,13 +67,31 @@ namespace AgeOfEmpires.Systems
                         }
                     } 
                 }
-                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedEntity != -1)
+                //move selected unit
+                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedEntity != -1 && focusEntity ==-1)
                 {
                     Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
 
                     var position = _positionMapper.Get(selectedEntity);
                     var movement = _movementMapper.Get(selectedEntity);
-                    movement.GoSomeWhere(clickWorldPos, position);
+                    var skin = _skinMapper.Get(selectedEntity);
+                    
+                    movement.GoSomeWhere(clickWorldPos, position, skin);
+                }
+                //attack unit
+                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedEntity != -1 && focusEntity != -1)
+                {
+                    Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
+
+                    //selected entity
+                    var selectedPosition = _positionMapper.Get(selectedEntity);
+                    var selectedMovement = _movementMapper.Get(selectedEntity);
+                    var selectedSkin = _skinMapper.Get(selectedEntity);
+
+                    //focus entity
+                    var focusPosition
+
+                    selectedMovement.GoSomeWhere(clickWorldPos, selectedPosition, selectedSkin);
                 }
             };
         }
@@ -81,11 +101,9 @@ namespace AgeOfEmpires.Systems
 
             foreach (var entity in ActiveEntities)
             {
-                
-                
                 var skin = _skinMapper.Get(entity);
                 skin.villager.Update(deltaSeconds);
-                skin.villager.Play("idle");
+                skin.villager.Play(skin.animationName);
             }
         }
 
