@@ -10,20 +10,28 @@ namespace AgeOfEmpires.Components
     class MeleeAttack
     {
         public int Damage { get; set; }
-        public float Time { get; set; }
-
-        public MeleeAttack(int damage, float time) {
+        public int Time { get; set; }
+        public bool InCombat = false; 
+        public MeleeAttack(int damage, int time) {
             Damage = damage;
             Time = time;
         }
 
-        public void attack(Skin selectedSkin, int entityID, Skin focusEntity) {
-            selectedSkin.animationName = "attack";
-            focusEntity.animationName = "dead";
-            Thread.Sleep(700); //To play the animation
-
-            GamePlay._world.DestroyEntity(entityID);
+        public void attack(Skin selectedSkin, int entityID, Skin focusEntity, HealthPoints focusHealthPoints) {
+            InCombat = true;
+            do
+            {
+                selectedSkin.animationName = "attack";
+                focusHealthPoints.Hp -= Damage;
+                Thread.Sleep(Time);
+            } while (focusHealthPoints.Hp > 0 && InCombat );
             selectedSkin.animationName = "idle";
+            if (focusHealthPoints.Hp <= 0) {
+                focusEntity.animationName = "dead";
+                Thread.Sleep(700); //To play the animation
+                GamePlay._world.DestroyEntity(entityID);
+            }
+            
         }
     }
 }

@@ -18,7 +18,7 @@ namespace AgeOfEmpires.Components
                 entity.Attach(new Skin(GamePlay.baseGame.Content, "idle"));
                 entity.Attach(new HealthPoints(100));
                 entity.Attach(new Level());
-                entity.Attach(new MeleeAttack(5, 1.1F));
+                entity.Attach(new MeleeAttack(5, 1100));
                 entity.Attach(new Position(new Vector2(0, 0)));
                 entity.Attach(new UnitDistance(10, 5));
                 entity.Attach(new Movement(50));
