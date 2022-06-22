@@ -4,6 +4,7 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/031_.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bottombar.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/command-panel_collapsed.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Cursor.png</File>
@@ -19,6 +20,7 @@
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/villagers.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

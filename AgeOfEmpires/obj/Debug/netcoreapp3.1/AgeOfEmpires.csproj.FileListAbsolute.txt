@@ -235,3 +235,4 @@ E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Gold.xnb
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\shield_dark_age_slav_normal.xnb
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Cursor.xnb
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\villagers.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\031_.xnb
