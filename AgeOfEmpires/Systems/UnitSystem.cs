@@ -33,6 +33,7 @@ namespace AgeOfEmpires.Systems
         private ComponentMapper<UnitDistance> _unitDistance;
         private int selectedEntity = -1;
         private int focusEntity = -1;
+        public static float deltaSeconds;
 
         public UnitSystem(Game1 game)
             : base(Aspect.All(typeof(UnitDistance)))
@@ -80,6 +81,7 @@ namespace AgeOfEmpires.Systems
                     var selectedMovement = _movementMapper.Get(selectedEntity);
                     var selectedSkin = _skinMapper.Get(selectedEntity);
                     var selectedUnitDistance = _unitDistance.Get(selectedEntity);
+                    var melleeAttack = _meleeAttackMapper.Get(selectedEntity);
 
                     foreach (var entity in ActiveEntities)
                     {
@@ -90,10 +92,10 @@ namespace AgeOfEmpires.Systems
                             if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= size.EntityRadius)
                             {
                                 focusEntity = entity;
-
+                                var focusSkin = _skinMapper.Get(focusEntity);
 
                                 //Vector2 calculatedFocusPosition = new Vector2(focusPosition.VectorPosition.X - selectedUnitDistance.AttackDistance, focusPosition.VectorPosition.Y - selectedUnitDistance.AttackDistance);
-                                selectedMovement.GoSomeWhere(clickWorldPos, selectedPosition, selectedSkin, selectedUnitDistance);
+                                selectedMovement.GoSomeWhereAttack(clickWorldPos, selectedPosition, selectedSkin, selectedUnitDistance, melleeAttack, focusEntity, focusSkin);
                                 return;
                             }
                         }
@@ -106,7 +108,7 @@ namespace AgeOfEmpires.Systems
         }
         public override void Update(GameTime gameTime)
         {
-            var deltaSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            deltaSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             foreach (var entity in ActiveEntities)
             {
