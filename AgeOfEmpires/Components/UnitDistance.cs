@@ -6,8 +6,10 @@ namespace AgeOfEmpires.Components
 {
     class UnitDistance
     {
-        float LineOfSight;
-        float AttackDistance;
+        public float LineOfSight { get; set; }
+        public float AttackDistance { get; set; }
+
+        
         public UnitDistance(float lineOfSight, float attackDistance) {
             LineOfSight = lineOfSight;
             AttackDistance = attackDistance;

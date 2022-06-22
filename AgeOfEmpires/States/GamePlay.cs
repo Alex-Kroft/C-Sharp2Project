@@ -97,10 +97,20 @@ namespace AgeOfEmpires.States
             entity.Attach(new Level());
             entity.Attach(new MeleeAttack(5, 1.1F));
             entity.Attach(new Position(new Vector2(200, 200)));
-            entity.Attach(new UnitDistance(10, 5));
+            entity.Attach(new UnitDistance(10, 50));
             entity.Attach(new Movement(50));
             entity.Attach(new Components.Size(64));
-            
+
+            var enemy = _world.CreateEntity();
+            enemy.Attach(new Skin(baseGame.Content, "idle"));
+            enemy.Attach(new HealthPoints(100));
+            enemy.Attach(new Level());
+            enemy.Attach(new MeleeAttack(5, 1.1F));
+            enemy.Attach(new Position(new Vector2(400, 400)));
+            enemy.Attach(new UnitDistance(10, 5));
+            enemy.Attach(new Movement(50));
+            enemy.Attach(new Components.Size(64));
+
             baseGame.Components.Add(_world);
 
             Resource = new Resource();

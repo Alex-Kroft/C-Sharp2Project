@@ -30,6 +30,7 @@ namespace AgeOfEmpires.Systems
         private ComponentMapper<Movement> _movementMapper;
         private ComponentMapper<Resource> _resourceMapper;
         private ComponentMapper<Skin> _skinMapper;
+        private ComponentMapper<UnitDistance> _unitDistance;
         private int selectedEntity = -1;
         private int focusEntity = -1;
 
@@ -51,6 +52,7 @@ namespace AgeOfEmpires.Systems
             _movementMapper = mapperService.GetMapper<Movement>();
             _resourceMapper = mapperService.GetMapper<Resource>();
             _skinMapper = mapperService.GetMapper<Skin>();
+            _unitDistance = mapperService.GetMapper<UnitDistance>();
 
             Game.mouseListener.MouseClicked += (sender, args) => {
                 //select unit
@@ -68,18 +70,8 @@ namespace AgeOfEmpires.Systems
                     } 
                 }
                 //move selected unit
-                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedEntity != -1 && focusEntity ==-1)
-                {
-                    Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
-
-                    var position = _positionMapper.Get(selectedEntity);
-                    var movement = _movementMapper.Get(selectedEntity);
-                    var skin = _skinMapper.Get(selectedEntity);
-                    
-                    movement.GoSomeWhere(clickWorldPos, position, skin);
-                }
                 //attack unit
-                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedEntity != -1 && focusEntity != -1)
+                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedEntity != -1)
                 {
                     Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
 
@@ -87,9 +79,26 @@ namespace AgeOfEmpires.Systems
                     var selectedPosition = _positionMapper.Get(selectedEntity);
                     var selectedMovement = _movementMapper.Get(selectedEntity);
                     var selectedSkin = _skinMapper.Get(selectedEntity);
+                    var selectedUnitDistance = _unitDistance.Get(selectedEntity);
 
-                    //focus entity
-                    var focusPosition
+                    foreach (var entity in ActiveEntities)
+                    {
+                        if (entity != selectedEntity) {
+                            var position = _positionMapper.Get(entity);
+                            var size = _sizeMapper.Get(entity);
+
+                            if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= size.EntityRadius)
+                            {
+                                focusEntity = entity;
+
+
+                                //Vector2 calculatedFocusPosition = new Vector2(focusPosition.VectorPosition.X - selectedUnitDistance.AttackDistance, focusPosition.VectorPosition.Y - selectedUnitDistance.AttackDistance);
+                                selectedMovement.GoSomeWhere(clickWorldPos, selectedPosition, selectedSkin, selectedUnitDistance);
+                                return;
+                            }
+                        }
+                        
+                    }
 
                     selectedMovement.GoSomeWhere(clickWorldPos, selectedPosition, selectedSkin);
                 }
