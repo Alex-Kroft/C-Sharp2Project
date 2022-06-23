@@ -27,19 +27,6 @@ namespace AgeOfEmpires.IngameUI_s
     {
         private GraphicsDevice graphicsDevice;
         private Texture2D _buttonContainer;
-       
-
-        private MouseState _previousMouse;
-
-        private MouseState _currentMouse;
-
-        private bool _isHovering;
-
-        public event EventHandler Click;
-
-        
-
-        
 
         public NoClickState(GraphicsDevice graphicsDevice, Texture2D buttonConatiner)
         {
@@ -50,15 +37,7 @@ namespace AgeOfEmpires.IngameUI_s
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            var buttonColour = Color.White;
-            if (_isHovering)
-            {
-                buttonColour = Color.Gray;
-            }
-           
-            spriteBatch.Draw(_buttonContainer, new Rectangle(0, graphicsDevice.Adapter.CurrentDisplayMode.Height - _buttonContainer.Height, _buttonContainer.Width, _buttonContainer.Height), Color.White);
-           
-            
+            spriteBatch.Draw(_buttonContainer, new Rectangle(0, graphicsDevice.Adapter.CurrentDisplayMode.Height - _buttonContainer.Height + 60, _buttonContainer.Width - 50, _buttonContainer.Height - 80), Color.White);
         }
 
         public override void Update(GameTime gameTime)
