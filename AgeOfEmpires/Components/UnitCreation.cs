@@ -15,7 +15,7 @@ namespace AgeOfEmpires.Components
         public void CreateUnit(String type) {
             if (type.Equals("swordsman")) {
                 var entity = GamePlay._world.CreateEntity();
-                entity.Attach(new Skin(GamePlay.baseGame.Content, "idle", "Bandit.sf"));
+                entity.Attach(new Skin(GamePlay.baseGame.Content, "idle", "BlueSwordsman.sf"));
                 entity.Attach(new HealthPoints(150));
                 entity.Attach(new Level());
                 entity.Attach(new Combat(25, 1100));
@@ -27,7 +27,7 @@ namespace AgeOfEmpires.Components
             if (type.Equals("archer"))
             {
                 var entity = GamePlay._world.CreateEntity();
-                entity.Attach(new Skin(GamePlay.baseGame.Content, "idle", "Bandit.sf"));
+                entity.Attach(new Skin(GamePlay.baseGame.Content, "idle", "BlueArcher.sf"));
                 entity.Attach(new HealthPoints(90));
                 entity.Attach(new Level());
                 entity.Attach(new Combat(15, 800));
@@ -39,7 +39,7 @@ namespace AgeOfEmpires.Components
             if (type.Equals("barbarian"))
             {
                 var entity = GamePlay._world.CreateEntity();
-                entity.Attach(new Skin(GamePlay.baseGame.Content, "idle", "Bandit.sf"));
+                entity.Attach(new Skin(GamePlay.baseGame.Content, "idle", "BLueBarbarian.sf"));
                 entity.Attach(new HealthPoints(120));
                 entity.Attach(new Level());
                 entity.Attach(new Combat(25, 800));
@@ -51,7 +51,7 @@ namespace AgeOfEmpires.Components
             if (type.Equals("peasant"))
             {
                 var entity = GamePlay._world.CreateEntity();
-                entity.Attach(new Skin(GamePlay.baseGame.Content, "idle", "Bandit.sf"));
+                entity.Attach(new Skin(GamePlay.baseGame.Content, "idle", "BluePeasant.sf"));
                 entity.Attach(new HealthPoints(70));
                 entity.Attach(new Level());
                 entity.Attach(new Position(new Vector2(0, 0)));
@@ -60,8 +60,10 @@ namespace AgeOfEmpires.Components
                 entity.Attach(new Grinding());
                 entity.Attach(new Components.Size(64));
             }
-            
-            
+
+
+
+
         }
     }
 }

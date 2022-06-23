@@ -25,7 +25,7 @@ namespace AgeOfEmpires.Components
 
                 Thread newThread = new Thread(new ThreadStart(() =>
                 {
-                    skin.animationName = "run";
+                    skin.animationName = "move";
                     do
                     {
                         entityPosition.VectorPosition += dir * 1f;
@@ -45,7 +45,7 @@ namespace AgeOfEmpires.Components
 
                 Thread newThread = new Thread(new ThreadStart(() =>
                 {
-                    skin.animationName = "run";
+                    skin.animationName = "move";
                     do
                     {
                         entityPosition.VectorPosition += dir * 1f;
@@ -63,7 +63,7 @@ namespace AgeOfEmpires.Components
 
                 Thread newThread = new Thread(new ThreadStart(() =>
                 {
-                    skin.animationName = "run";
+                    skin.animationName = "move";
                     do
                     {
                         entityPosition.VectorPosition += dir * 1f;
@@ -83,7 +83,7 @@ namespace AgeOfEmpires.Components
 
                 Thread newThread = new Thread(new ThreadStart(() =>
                 {
-                    skin.animationName = "run";
+                    skin.animationName = "move";
                     do
                     {
                         entityPosition.VectorPosition += dir * 1f;
@@ -102,7 +102,7 @@ namespace AgeOfEmpires.Components
 
                 Thread newThread = new Thread(new ThreadStart(() =>
                 {
-                    skin.animationName = "run";
+                    skin.animationName = "move";
                     do
                     {
                         entityPosition.VectorPosition.Y += dir.Y * 1f;
@@ -121,7 +121,7 @@ namespace AgeOfEmpires.Components
 
                 Thread newThread = new Thread(new ThreadStart(() =>
                 {
-                    skin.animationName = "run";
+                    skin.animationName = "move";
                     do
                     {
                         entityPosition.VectorPosition.X += dir.X * 1f;
@@ -150,7 +150,7 @@ namespace AgeOfEmpires.Components
 
                 Thread newThread = new Thread(new ThreadStart(() =>
                 {
-                    skin.animationName = "run";
+                    skin.animationName = "move";
                     do
                     {
                         entityPosition.VectorPosition += dir * 1f;
@@ -173,7 +173,7 @@ namespace AgeOfEmpires.Components
 
                 Thread newThread = new Thread(new ThreadStart(() =>
                 {
-                    skin.animationName = "run";
+                    skin.animationName = "move";
                     do
                     {
                         entityPosition.VectorPosition += dir * 1f;
@@ -195,7 +195,7 @@ namespace AgeOfEmpires.Components
 
                 Thread newThread = new Thread(new ThreadStart(() =>
                 {
-                    skin.animationName = "run";
+                    skin.animationName = "move";
                     do
                     {
                         entityPosition.VectorPosition += dir * 1f;
@@ -217,7 +217,7 @@ namespace AgeOfEmpires.Components
 
                 Thread newThread = new Thread(new ThreadStart(() =>
                 {
-                    skin.animationName = "run";
+                    skin.animationName = "move";
                     do
                     {
                         entityPosition.VectorPosition += dir * 1f;
@@ -239,7 +239,7 @@ namespace AgeOfEmpires.Components
 
                 Thread newThread = new Thread(new ThreadStart(() =>
                 {
-                    skin.animationName = "run";
+                    skin.animationName = "move";
                     do
                     {
                         entityPosition.VectorPosition.Y += dir.Y * 1f;
@@ -261,7 +261,7 @@ namespace AgeOfEmpires.Components
 
                 Thread newThread = new Thread(new ThreadStart(() =>
                 {
-                    skin.animationName = "run";
+                    skin.animationName = "move";
                     do
                     {
                         entityPosition.VectorPosition.X += dir.X * 1f;

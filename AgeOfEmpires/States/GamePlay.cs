@@ -106,7 +106,7 @@ namespace AgeOfEmpires.States
 
             //test entity
             var entity = _world.CreateEntity();
-            entity.Attach(new Skin(baseGame.Content, "idle", "Bandit.sf"));
+            entity.Attach(new Skin(baseGame.Content, "idle", "BlueBarbarian.sf"));
             entity.Attach(new HealthPoints(100));
             entity.Attach(new Level());
             entity.Attach(new Combat(20, 1100));
@@ -117,7 +117,7 @@ namespace AgeOfEmpires.States
 
             //test enemy
             var enemy = _world.CreateEntity();
-            enemy.Attach(new Skin(baseGame.Content, "idle", "Bandit.sf"));
+            enemy.Attach(new Skin(baseGame.Content, "idle", "BlueArcher.sf"));
             enemy.Attach(new HealthPoints(100));
             enemy.Attach(new Level());
             enemy.Attach(new Combat(5, 1100));
@@ -136,7 +136,7 @@ namespace AgeOfEmpires.States
         public override void LoadContent()
         {
             //tiledmap
-            _tiledMap = Content.Load<TiledMap>("editedTilesSet");
+            _tiledMap = Content.Load<TiledMap>("map");
             _tiledMapRenderer = new TiledMapRenderer(GraphicsDevice, _tiledMap);
 
            

@@ -38,6 +38,78 @@
 /processorParam:TextureFormat=Color
 /build:031_.png
 
+#begin berrybush (1).png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:berrybush (1).png
+
+#begin BlueArcher.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:BlueArcher.png
+
+#begin BlueArcher.sf
+/copy:BlueArcher.sf
+
+#begin BlueBarbarian.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:BlueBarbarian.png
+
+#begin BlueBarbarian.sf
+/copy:BlueBarbarian.sf
+
+#begin BluePeasant.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:BluePeasant.png
+
+#begin BluePeasant.sf
+/copy:BluePeasant.sf
+
+#begin BlueSwordsman.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:BlueSwordsman.png
+
+#begin BlueSwordsman.sf
+/copy:BlueSwordsman.sf
+
 #begin bottombar.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -49,6 +121,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:bottombar.png
+
+#begin bush (1).png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:bush (1).png
 
 #begin command-panel_collapsed.png
 /importer:TextureImporter
@@ -120,6 +204,18 @@
 /processorParam:TextureFormat=Compressed
 /build:Gold.spritefont
 
+#begin grass_tileset_16x16.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:grass_tileset_16x16.png
+
 #begin mainmenu_bg.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -132,6 +228,9 @@
 /processorParam:TextureFormat=Color
 /build:mainmenu_bg.png
 
+#begin map.tmx
+/copy:map.tmx
+
 #begin map-panel_full.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -143,6 +242,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:map-panel_full.png
+
+#begin mine.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:mine.png
 
 #begin miniMap.png
 /importer:TextureImporter
@@ -203,6 +314,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Standard Green Raw Tiles.png
+
+#begin tree (1) (1).png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:tree (1) (1).png
 
 #begin villagers.png
 /importer:TextureImporter

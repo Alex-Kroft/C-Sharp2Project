@@ -268,3 +268,17 @@ C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcorea
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\CR-004.xnb
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\CR-005.xnb
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\CR-010.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BlueArcher.sf
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BlueBarbarian.sf
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BluePeasant.sf
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BlueSwordsman.sf
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BlueArcher.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BlueBarbarian.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BluePeasant.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BlueSwordsman.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\berrybush (1).xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\bush (1).xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\grass_tileset_16x16.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\map.tmx
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\mine.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\tree (1) (1).xnb

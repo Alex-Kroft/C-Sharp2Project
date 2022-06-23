@@ -67,8 +67,10 @@ namespace AgeOfEmpires.Systems
                         if (Vector2.Distance(position.VectorPosition, clickWorldPos)<= size.EntityRadius) {
                             selectedEntity = entity;
                             GamePlay._itemSelected = 2;
-                        } 
-                    } 
+                            return;
+                        }
+                    }
+                    GamePlay._itemSelected = 1;
                 }
 
                 
@@ -90,7 +92,6 @@ namespace AgeOfEmpires.Systems
 
                     foreach (var entity in ActiveEntities)
                     {
-                        //if (entity != selectedEntity) {
                             var position = _positionMapper.Get(entity);
                             var size = _sizeMapper.Get(entity);
 
@@ -103,8 +104,6 @@ namespace AgeOfEmpires.Systems
                                 selectedMovement.GoSomeWhereAttack(clickWorldPos, selectedPosition, selectedSkin, selectedUnitDistance, melleeAttack, focusEntity, focusSkin, focusHealthPoints, position);
                                 return;
                             }
-                        //}
-                        
                     }
 
                     selectedMovement.GoSomeWhere(clickWorldPos, selectedPosition, selectedSkin);
