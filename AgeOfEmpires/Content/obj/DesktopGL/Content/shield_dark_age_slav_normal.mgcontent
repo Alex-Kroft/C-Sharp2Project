@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/shield_dark_age_slav_normal.png</SourceFile>
-  <SourceTime>2022-06-20T11:23:54.9827212+02:00</SourceTime>
-  <DestFile>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/shield_dark_age_slav_normal.xnb</DestFile>
-  <DestTime>2022-06-23T11:21:54.6341897+02:00</DestTime>
+  <SourceFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/shield_dark_age_slav_normal.png</SourceFile>
+  <SourceTime>2022-05-14T12:53:48.5499237+02:00</SourceTime>
+  <DestFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/shield_dark_age_slav_normal.xnb</DestFile>
+  <DestTime>2022-06-23T21:12:07.0885928+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -282,3 +282,23 @@ C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcorea
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\map.tmx
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\mine.xnb
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\tree (1) (1).xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BlueArcher.sf
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BlueBarbarian.sf
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BluePeasant.sf
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BlueSwordsman.sf
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\map.tmx
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\berrybush (1).xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\berrybush (1)_0.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BlueArcher.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BlueBarbarian.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BluePeasant.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\BlueSwordsman.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\bush (1).xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\bush (1)_0.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\grass_tileset_16x16.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\grass_tileset_16x16_0.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\map.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\mine.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\mine_0.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\tree (1) (1).xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\tree (1) (1)_0.xnb
