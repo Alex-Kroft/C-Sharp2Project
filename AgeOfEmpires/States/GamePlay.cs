@@ -52,7 +52,7 @@ namespace AgeOfEmpires.States
         private Resource Resource;
 
         // 1 = none, 2 = villager, 3 = army
-        private int _itemSelected;
+        public static int _itemSelected;
         private List<Component> _uiComponents;
         private NoClickState noClickState;
         private VillagerClickState VillagerClickState;
@@ -78,18 +78,12 @@ namespace AgeOfEmpires.States
             _graphics.PreferredBackBufferWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
             _graphics.PreferredBackBufferHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
             _graphics.ApplyChanges();
-            _itemSelected = 2;
+            _itemSelected = 1;
         }
 
-        public int getItemSelected()
-        {
-            return this._itemSelected;
-        }
+        
 
-        public void setItemSelected(int itemSelected)
-        {
-            this._itemSelected = itemSelected;
-        }
+       
 
         public override void Initialize()
         {

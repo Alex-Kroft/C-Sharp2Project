@@ -19,7 +19,7 @@ namespace AgeOfEmpires.Systems
     {
 
         private Game1 Game;
-
+        
         private ComponentMapper<HealthPoints> _healthPointsMapper;
         private ComponentMapper<Position> _positionMapper;
         private ComponentMapper<Components.Size> _sizeMapper;
@@ -53,7 +53,7 @@ namespace AgeOfEmpires.Systems
             _skinMapper = mapperService.GetMapper<Skin>();
             _unitDistance = mapperService.GetMapper<UnitDistance>();
 
-
+            
             Game.mouseListener.MouseClicked += (sender, args) => {
                 //select unit
                 if (args.Button == MonoGame.Extended.Input.MouseButton.Left)
@@ -66,9 +66,12 @@ namespace AgeOfEmpires.Systems
                        
                         if (Vector2.Distance(position.VectorPosition, clickWorldPos)<= size.EntityRadius) {
                             selectedEntity = entity;
-                        }
+                            GamePlay._itemSelected = 2;
+                        } 
                     } 
                 }
+
+                
                 //move selected unit
                 //attack unit
                 if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedEntity != -1)
