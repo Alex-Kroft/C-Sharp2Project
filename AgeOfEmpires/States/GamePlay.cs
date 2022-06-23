@@ -90,7 +90,7 @@ namespace AgeOfEmpires.States
 
 
             //camera
-            var viewportAdapter = new BoxingViewportAdapter(Game.Window, GraphicsDevice, 1920, 1280);
+            var viewportAdapter = new BoxingViewportAdapter(Game.Window, GraphicsDevice, 4096, 2160);
             _camera = new OrthographicCamera(viewportAdapter);
             _cameraPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2 + 100);
 
@@ -174,7 +174,7 @@ namespace AgeOfEmpires.States
             _spriteBatch.Draw(_bottomBar, new Rectangle(_buttonContainer.Width -100, GraphicsDevice.Adapter.CurrentDisplayMode.Height - _bottomBar.Height, _bottomBar.Width, _bottomBar.Height), Color.White);
             _spriteBatch.Draw(_miniMap, new Rectangle((GraphicsDevice.Adapter.CurrentDisplayMode.Width - _miniMap.Width), (GraphicsDevice.Adapter.CurrentDisplayMode.Height - _miniMap.Height), _miniMap.Width, _miniMap.Height), Color.White);
             _spriteBatch.Draw(_resourcesCover, new Rectangle(0, 0, _resourcesCover.Width, _resourcesCover.Height), Color.White);
-            _spriteBatch.Draw(_miniMapCam, new Rectangle((int)_miniMapCamPos.X, (int) _miniMapCamPos.Y, (GraphicsDevice.Adapter.CurrentDisplayMode.Width) / 12, (GraphicsDevice.Adapter.CurrentDisplayMode.Height) / 12), Color.White);
+            _spriteBatch.Draw(_miniMapCam, new Rectangle((int)_miniMapCamPos.X, (int)_miniMapCamPos.Y, (GraphicsDevice.Adapter.CurrentDisplayMode.Width) / 12, (GraphicsDevice.Adapter.CurrentDisplayMode.Height) / 12), Color.White);
             _spriteBatch.DrawString(_fontResources, Resource.getFood().ToString(), new Vector2((_resourcesCover.Width)/14, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0,0),2.0f,SpriteEffects.None, 0.1f);
             _spriteBatch.DrawString(_fontResources, Resource.getWood().ToString(), new Vector2((_resourcesCover.Width) / 6, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
             _spriteBatch.DrawString(_fontResources, Resource.getGold().ToString(), new Vector2(((_resourcesCover.Width) / 4) + 50, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
@@ -215,14 +215,14 @@ namespace AgeOfEmpires.States
             var state = Mouse.GetState();
             var position = _camera.ScreenToWorld(new Vector2(state.X, state.Y));
             _tiledMapRenderer.Update(gameTime);
-            const float movementSpeed = 800;
+            const float movementSpeed = 1600;
             if (position.X > 50)
             {
-                if(position.X < 3800)
+                if(position.X < 20000)
                 {
                     if (position.Y > 50)
                     {
-                        if(position.Y < 2500)
+                        if(position.Y < 20000)
                         {
                             _camera.Move(GetMovementDirection() * movementSpeed * gameTime.GetElapsedSeconds());
                             _miniMapCamPos.X = _miniMapCamPos.X + ((GetMovementDirection().X * movementSpeed * gameTime.GetElapsedSeconds()) / 9);
@@ -242,15 +242,7 @@ namespace AgeOfEmpires.States
 
         }
 
-        private void MoveCamera(GameTime gameTime)
-        {
-            var speed = 800;
-            var seconds = gameTime.GetElapsedSeconds();
-            var movementDirection = GetMovementDirection();
-
-            _cameraPosition += speed * movementDirection * seconds;
-            Debug.WriteLine(movementDirection);
-        }
+        
 
         private Vector2 GetMovementDirection()
         {
