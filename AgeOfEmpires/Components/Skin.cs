@@ -19,8 +19,8 @@ namespace AgeOfEmpires.Components
 
         public AnimatedSprite Villager { get; set; }
 
-        public Skin(ContentManager content, String animation) {
-            var spriteSheet = content.Load<SpriteSheet>("Bandit.sf", new JsonContentLoader());
+        public Skin(ContentManager content, String animation, String character) {
+            var spriteSheet = content.Load<SpriteSheet>(character, new JsonContentLoader());
             var sprite = new AnimatedSprite(spriteSheet);
             animationName = animation;
             villager = sprite;

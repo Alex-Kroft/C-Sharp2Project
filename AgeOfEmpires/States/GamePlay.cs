@@ -112,10 +112,10 @@ namespace AgeOfEmpires.States
 
             //test entity
             var entity = _world.CreateEntity();
-            entity.Attach(new Skin(baseGame.Content, "idle"));
+            entity.Attach(new Skin(baseGame.Content, "idle", "Bandit.sf"));
             entity.Attach(new HealthPoints(100));
             entity.Attach(new Level());
-            entity.Attach(new MeleeAttack(20, 1100));
+            entity.Attach(new Combat(20, 1100));
             entity.Attach(new Position(new Vector2(200, 200)));
             entity.Attach(new UnitDistance(10, 50));
             entity.Attach(new Movement(80));
@@ -123,10 +123,10 @@ namespace AgeOfEmpires.States
 
             //test enemy
             var enemy = _world.CreateEntity();
-            enemy.Attach(new Skin(baseGame.Content, "idle"));
+            enemy.Attach(new Skin(baseGame.Content, "idle", "Bandit.sf"));
             enemy.Attach(new HealthPoints(100));
             enemy.Attach(new Level());
-            enemy.Attach(new MeleeAttack(5, 1100));
+            enemy.Attach(new Combat(5, 1100));
             enemy.Attach(new Position(new Vector2(280, 280)));
             enemy.Attach(new UnitDistance(10, 50));
             enemy.Attach(new Movement(50));

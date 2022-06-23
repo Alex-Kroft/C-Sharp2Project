@@ -1,19 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "6I7VLKyh4XewzR+PSevRU6h9x0FsFyKgT/f64xvNopjABsp2YF/28vSESz/9ujoBBsGmWqTIdOuovPOLoWYHfA==",
+  "dgSpecHash": "C7rbJegDZ44aHZVsiS2g1f3IId5W89rQKFZOo7oOihgajARdrC8A9z2mXNpk4z389YvBWGqBZdugXBEGFN0BGQ==",
   "success": true,
-  "projectFilePath": "E:\\Github\\C-Sharp2Project\\AgeOfEmpires\\AgeOfEmpires.csproj",
+  "projectFilePath": "C:\\Users\\Máté\\Documents\\GitHub\\C-Sharp2Project\\AgeOfEmpires\\AgeOfEmpires.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\matte\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
-    "C:\\Users\\matte\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
-    "C:\\Users\\matte\\.nuget\\packages\\monogame.extended\\3.8.0\\monogame.extended.3.8.0.nupkg.sha512",
-    "C:\\Users\\matte\\.nuget\\packages\\monogame.extended.content.pipeline\\3.8.0\\monogame.extended.content.pipeline.3.8.0.nupkg.sha512",
-    "C:\\Users\\matte\\.nuget\\packages\\monogame.extended.entities\\3.8.0\\monogame.extended.entities.3.8.0.nupkg.sha512",
-    "C:\\Users\\matte\\.nuget\\packages\\monogame.extended.graphics\\3.8.0\\monogame.extended.graphics.3.8.0.nupkg.sha512",
-    "C:\\Users\\matte\\.nuget\\packages\\monogame.extended.input\\3.8.0\\monogame.extended.input.3.8.0.nupkg.sha512",
-    "C:\\Users\\matte\\.nuget\\packages\\monogame.extended.tiled\\3.8.0\\monogame.extended.tiled.3.8.0.nupkg.sha512",
-    "C:\\Users\\matte\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512",
-    "C:\\Users\\matte\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\Máté\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
+    "C:\\Users\\Máté\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\Máté\\.nuget\\packages\\monogame.extended\\3.8.0\\monogame.extended.3.8.0.nupkg.sha512",
+    "C:\\Users\\Máté\\.nuget\\packages\\monogame.extended.content.pipeline\\3.8.0\\monogame.extended.content.pipeline.3.8.0.nupkg.sha512",
+    "C:\\Users\\Máté\\.nuget\\packages\\monogame.extended.entities\\3.8.0\\monogame.extended.entities.3.8.0.nupkg.sha512",
+    "C:\\Users\\Máté\\.nuget\\packages\\monogame.extended.graphics\\3.8.0\\monogame.extended.graphics.3.8.0.nupkg.sha512",
+    "C:\\Users\\Máté\\.nuget\\packages\\monogame.extended.input\\3.8.0\\monogame.extended.input.3.8.0.nupkg.sha512",
+    "C:\\Users\\Máté\\.nuget\\packages\\monogame.extended.tiled\\3.8.0\\monogame.extended.tiled.3.8.0.nupkg.sha512",
+    "C:\\Users\\Máté\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\Máté\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Máté\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.24\\microsoft.netcore.app.host.win-x64.3.1.24.nupkg.sha512"
   ],
   "logs": []
 }

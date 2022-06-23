@@ -24,8 +24,7 @@ namespace AgeOfEmpires.Systems
         private ComponentMapper<Position> _positionMapper;
         private ComponentMapper<Components.Size> _sizeMapper;
         private ComponentMapper<Level> _levelMapper;
-        private ComponentMapper<LongeRangeAttack> _longRangeAttackMapper;
-        private ComponentMapper<MeleeAttack> _meleeAttackMapper;
+        private ComponentMapper<Combat> _meleeAttackMapper;
         private ComponentMapper<Grinding> _grindingMapper;
         private ComponentMapper<Movement> _movementMapper;
         private ComponentMapper<Resource> _resourceMapper;
@@ -47,8 +46,7 @@ namespace AgeOfEmpires.Systems
             _positionMapper = mapperService.GetMapper<Position>();
             _sizeMapper = mapperService.GetMapper<Components.Size>();
             _levelMapper = mapperService.GetMapper<Level>();
-            _longRangeAttackMapper = mapperService.GetMapper<LongeRangeAttack>();
-            _meleeAttackMapper = mapperService.GetMapper<MeleeAttack>();
+            _meleeAttackMapper = mapperService.GetMapper<Combat>();
             _grindingMapper = mapperService.GetMapper<Grinding>();
             _movementMapper = mapperService.GetMapper<Movement>();
             _resourceMapper = mapperService.GetMapper<Resource>();
@@ -93,13 +91,13 @@ namespace AgeOfEmpires.Systems
                             var position = _positionMapper.Get(entity);
                             var size = _sizeMapper.Get(entity);
 
-                            if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= size.EntityRadius)
+                            if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= size.EntityRadius && entity != selectedEntity)
                             {
                                 focusEntity = entity;
                                 var focusSkin = _skinMapper.Get(focusEntity);
                                 var focusHealthPoints = _healthPointsMapper.Get(focusEntity);
                                 //Vector2 calculatedFocusPosition = new Vector2(focusPosition.VectorPosition.X - selectedUnitDistance.AttackDistance, focusPosition.VectorPosition.Y - selectedUnitDistance.AttackDistance);
-                                selectedMovement.GoSomeWhereAttack(clickWorldPos, selectedPosition, selectedSkin, selectedUnitDistance, melleeAttack, focusEntity, focusSkin, focusHealthPoints);
+                                selectedMovement.GoSomeWhereAttack(clickWorldPos, selectedPosition, selectedSkin, selectedUnitDistance, melleeAttack, focusEntity, focusSkin, focusHealthPoints, position);
                                 return;
                             }
                         //}

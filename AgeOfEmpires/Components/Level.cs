@@ -6,12 +6,14 @@ namespace AgeOfEmpires.Components
 {
     class Level
     {
-        int level =0;
+        int level =1;
 
         public Level() { }
 
-        public void upgrade() {
+        public void upgrade(HealthPoints hp, Combat combat) {
             level++;
+            hp.Hp += 25;
+            combat.Damage += 5;
         }
     }
 }
