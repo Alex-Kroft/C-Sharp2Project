@@ -55,18 +55,13 @@ namespace AgeOfEmpires.States
         public static int _itemSelected;
         private List<Component> _uiComponents;
         private NoClickState noClickState;
-        private VillagerClickState villagerClickState;
-        private BarracksClickState barracksClickState;
+        private VillagerClickState VillagerClickState;
         
 
         
         private Texture2D _buildFarm;
         private Texture2D _buildHouse;
         private Texture2D _buildBarracks;
-
-        private Texture2D _archer;
-        private Texture2D _barbarian;
-        private Texture2D _swordMan;
        
 
         public Vector2 getMiniMapPos()
@@ -160,16 +155,10 @@ namespace AgeOfEmpires.States
             _buildFarm = Content.Load<Texture2D>("CR-005");
             _buildBarracks = Content.Load<Texture2D>("CR-010");
 
-            _barbarian = Content.Load<Texture2D>("008_50730");
-            _archer = Content.Load<Texture2D>("018_50730");
-            _swordMan = Content.Load<Texture2D>("012_50730");
-
             noClickState = new NoClickState(GraphicsDevice, _buttonContainer);
-            villagerClickState = new VillagerClickState(GraphicsDevice,_buttonContainer,_buildHouse,_buildBarracks,_buildFarm);
-            barracksClickState = new BarracksClickState(GraphicsDevice, _buttonContainer, _barbarian, _archer, _swordMan);
+            VillagerClickState = new VillagerClickState(GraphicsDevice,_buttonContainer,_buildHouse,_buildBarracks,_buildFarm);
             _uiComponents.Add(noClickState);
-            _uiComponents.Add(villagerClickState);
-            _uiComponents.Add(barracksClickState);
+            _uiComponents.Add(VillagerClickState);
           
 
 
@@ -186,7 +175,7 @@ namespace AgeOfEmpires.States
             _spriteBatch.Draw(_bottomBar, new Rectangle(_buttonContainer.Width -100, GraphicsDevice.Adapter.CurrentDisplayMode.Height - _bottomBar.Height, _bottomBar.Width, _bottomBar.Height), Color.White);
             _spriteBatch.Draw(_miniMap, new Rectangle((GraphicsDevice.Adapter.CurrentDisplayMode.Width - _miniMap.Width), (GraphicsDevice.Adapter.CurrentDisplayMode.Height - _miniMap.Height), _miniMap.Width, _miniMap.Height), Color.White);
             _spriteBatch.Draw(_resourcesCover, new Rectangle(0, 0, _resourcesCover.Width, _resourcesCover.Height), Color.White);
-            _spriteBatch.Draw(_miniMapCam, new Rectangle((int)_miniMapCamPos.X, (int)_miniMapCamPos.Y, (GraphicsDevice.Adapter.CurrentDisplayMode.Width) / 30, (GraphicsDevice.Adapter.CurrentDisplayMode.Height) / 30), Color.White);
+            _spriteBatch.Draw(_miniMapCam, new Rectangle((int)_miniMapCamPos.X, (int)_miniMapCamPos.Y, (GraphicsDevice.Adapter.CurrentDisplayMode.Width) / 12, (GraphicsDevice.Adapter.CurrentDisplayMode.Height) / 12), Color.White);
             _spriteBatch.DrawString(_fontResources, Resource.getFood().ToString(), new Vector2((_resourcesCover.Width)/14, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0,0),2.0f,SpriteEffects.None, 0.1f);
             _spriteBatch.DrawString(_fontResources, Resource.getWood().ToString(), new Vector2((_resourcesCover.Width) / 6, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
             _spriteBatch.DrawString(_fontResources, Resource.getGold().ToString(), new Vector2(((_resourcesCover.Width) / 4) + 50, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
@@ -206,13 +195,7 @@ namespace AgeOfEmpires.States
                         }
                         break;
                     case 2:
-                        if (component.Equals(villagerClickState))
-                        {
-                            component.Draw(gameTime, _spriteBatch);
-                        }
-                        break;
-                    case 3:
-                        if (component.Equals(barracksClickState))
+                        if (component.Equals(VillagerClickState))
                         {
                             component.Draw(gameTime, _spriteBatch);
                         }
@@ -243,8 +226,8 @@ namespace AgeOfEmpires.States
                         if(position.Y < 20000)
                         {
                             _camera.Move(GetMovementDirection() * movementSpeed * gameTime.GetElapsedSeconds());
-                            _miniMapCamPos.X = _miniMapCamPos.X + ((GetMovementDirection().X * movementSpeed * gameTime.GetElapsedSeconds()) / 53);
-                            _miniMapCamPos.Y = _miniMapCamPos.Y + ((GetMovementDirection().Y * movementSpeed * gameTime.GetElapsedSeconds()) / 95);
+                            _miniMapCamPos.X = _miniMapCamPos.X + ((GetMovementDirection().X * movementSpeed * gameTime.GetElapsedSeconds()) / 9);
+                            _miniMapCamPos.Y = _miniMapCamPos.Y + ((GetMovementDirection().Y * movementSpeed * gameTime.GetElapsedSeconds()) / 9);
                         }
                         
                     }
