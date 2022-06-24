@@ -4,33 +4,33 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/019_.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/031_.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/berrybush (1).png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueArcher.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueBarbarian.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BluePeasant.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueSwordsman.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bottombar.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bush (1).png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/command-panel_collapsed.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/CR-004.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/CR-005.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/CR-010.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Cursor.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Gold.spritefont</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/grass_tileset_16x16.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mainmenu_bg.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/map.tmx</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/map-panel_full.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mine.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/miniMap.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/miniMapRect.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/resource-panel_full.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/shield_dark_age_slav_normal.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/tree (1) (1).png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/villagers.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/019_.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/031_.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/berrybush (1).png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/BlueArcher.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/BlueBarbarian.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/BluePeasant.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/BlueSwordsman.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/bottombar.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/bush (1).png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/command-panel_collapsed.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/CR-004.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/CR-005.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/CR-010.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/Cursor.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/Gold.spritefont</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/grass_tileset_16x16.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/mainmenu_bg.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/map.tmx</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/map-panel_full.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/mine.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/miniMap.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/miniMapRect.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/resource-panel_full.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/shield_dark_age_slav_normal.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/tree (1) (1).png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/villagers.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

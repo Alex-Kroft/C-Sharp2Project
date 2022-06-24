@@ -12,15 +12,19 @@ namespace AgeOfEmpires.Components
     class Combat
     {
         public int Damage { get; set; }
-        public int Time { get; set; }
-        public bool InCombat = false; 
+        private int Time { get; set; }
+        private bool InCombat = false; 
         public Combat(int damage, int time) {
             Damage = damage;
             Time = time;
         }
 
+        public void setInCombat() {
+            this.InCombat = true;
+        }
+
         public void Attack(Skin selectedSkin, int entityID, Skin focusEntity, HealthPoints focusHealthPoints, UnitDistance selectedUnitDistance,Position selectedPosition, Position focusPosition) {
-            InCombat = true;
+            this.InCombat = true;
             do
             {
                     selectedSkin.animationName = "attack";

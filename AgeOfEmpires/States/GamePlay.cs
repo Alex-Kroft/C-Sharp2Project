@@ -29,7 +29,7 @@ namespace AgeOfEmpires.States
     {
         private GraphicsDeviceManager _graphics;
         public SpriteBatch _spriteBatch;
-        private TiledMap _tiledMap;
+        public static TiledMap _tiledMap;
         private TiledMapRenderer _tiledMapRenderer;
 
         public  static OrthographicCamera _camera;
@@ -49,7 +49,7 @@ namespace AgeOfEmpires.States
         private Texture2D _age;
         private Texture2D _villagersCount;
         private SpriteFont _fontResources;
-        private Resource Resource;
+        public static Resource Resource;
 
         // 1 = none, 2 = villager, 3 = army
         public static int _itemSelected;
@@ -106,13 +106,14 @@ namespace AgeOfEmpires.States
 
             //test entity
             var entity = _world.CreateEntity();
-            entity.Attach(new Skin(baseGame.Content, "idle", "BlueBarbarian.sf"));
+            entity.Attach(new Skin(baseGame.Content, "idle", "BluePeasant.sf"));
             entity.Attach(new HealthPoints(100));
             entity.Attach(new Level());
             entity.Attach(new Combat(20, 1100));
-            entity.Attach(new Position(new Vector2(200, 200)));
+            entity.Attach(new Position(new Vector2(2300, 1400)));
             entity.Attach(new UnitDistance(10, 50));
-            entity.Attach(new Movement(80));
+            entity.Attach(new Movement(1));
+            entity.Attach(new Grinding());
             entity.Attach(new Components.Size(64));
 
             //test enemy
@@ -121,9 +122,9 @@ namespace AgeOfEmpires.States
             enemy.Attach(new HealthPoints(100));
             enemy.Attach(new Level());
             enemy.Attach(new Combat(5, 1100));
-            enemy.Attach(new Position(new Vector2(280, 280)));
+            enemy.Attach(new Position(new Vector2(2400, 1500)));
             enemy.Attach(new UnitDistance(10, 50));
-            enemy.Attach(new Movement(50));
+            enemy.Attach(new Movement(10));
             enemy.Attach(new Components.Size(64));
 
             baseGame.Components.Add(_world);

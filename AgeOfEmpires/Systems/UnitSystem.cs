@@ -6,6 +6,7 @@ using MonoGame.Extended;
 using MonoGame.Extended.Entities;
 using MonoGame.Extended.Entities.Systems;
 using MonoGame.Extended.Input.InputListeners;
+using MonoGame.Extended.Tiled;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -55,7 +56,7 @@ namespace AgeOfEmpires.Systems
 
             
             Game.mouseListener.MouseClicked += (sender, args) => {
-                //select unit
+                //select unit -- left click
                 if (args.Button == MonoGame.Extended.Input.MouseButton.Left)
                 {
                     Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
@@ -74,8 +75,8 @@ namespace AgeOfEmpires.Systems
                 }
 
                 
-                //move selected unit
-                //attack unit
+                //move selected unit -- right click
+                //attack unit -- if right click is on a player attack
                 if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedEntity != -1)
                 {
                     Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
@@ -87,8 +88,14 @@ namespace AgeOfEmpires.Systems
                     var selectedUnitDistance = _unitDistance.Get(selectedEntity);
                     var melleeAttack = _meleeAttackMapper.Get(selectedEntity);
 
-                    //if moving while combat current attack stops
-                    melleeAttack.InCombat = false;
+                    var peasantGrinding = _grindingMapper.Get(selectedEntity);
+
+                    //if moving while combat current attack stops/current grinding
+                    melleeAttack.setInCombat();
+                    if (peasantGrinding != null) {
+                        peasantGrinding.setInGrinding(selectedSkin);
+                    }
+                    
 
                     foreach (var entity in ActiveEntities)
                     {
@@ -100,13 +107,13 @@ namespace AgeOfEmpires.Systems
                                 focusEntity = entity;
                                 var focusSkin = _skinMapper.Get(focusEntity);
                                 var focusHealthPoints = _healthPointsMapper.Get(focusEntity);
-                                //Vector2 calculatedFocusPosition = new Vector2(focusPosition.VectorPosition.X - selectedUnitDistance.AttackDistance, focusPosition.VectorPosition.Y - selectedUnitDistance.AttackDistance);
+                                
                                 selectedMovement.GoSomeWhereAttack(clickWorldPos, selectedPosition, selectedSkin, selectedUnitDistance, melleeAttack, focusEntity, focusSkin, focusHealthPoints, position);
                                 return;
                             }
                     }
-
-                    selectedMovement.GoSomeWhere(clickWorldPos, selectedPosition, selectedSkin);
+                    //No attack then just move to location
+                    selectedMovement.GoSomeWhere(clickWorldPos, selectedPosition, selectedSkin, peasantGrinding);
                 }
             };
         }

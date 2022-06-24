@@ -6,23 +6,21 @@ namespace AgeOfEmpires.Components
 {
     class Resource
     {
-        int wood = 0;
-        int stone = 0;
-        int gold = 0;
-        int food = 0;
+        private int wood = 0;
+        private int stone = 0;
+        private int gold = 0;
+        private int food = 0;
 
-        public Resource() { 
-
-        }
+        public Resource() { }
 
         public int getWood()
         {
             return this.wood;
         }
 
-        public void setWood(int wood)
+        public void addWood(int wood)
         {
-            this.wood = wood;
+            this.wood += wood;
         }
 
         public int getStone()
@@ -30,9 +28,9 @@ namespace AgeOfEmpires.Components
             return this.stone;
         }
 
-        public void setStone(int stone)
+        public void addStone(int stone)
         {
-            this.stone = stone;
+            this.stone += stone;
         }
 
         public int getGold()
@@ -40,9 +38,9 @@ namespace AgeOfEmpires.Components
             return this.gold;
         }
 
-        public void setGold(int gold)
+        public void addGold(int gold)
         {
-            this.gold = gold;
+            this.gold += gold;
         }
 
         public int getFood()
@@ -50,9 +48,9 @@ namespace AgeOfEmpires.Components
             return this.food;
         }
 
-        public void setFood(int food)
+        public void addFood(int food)
         {
-            this.food = food;
+            this.food += food;
         }
 
     }
