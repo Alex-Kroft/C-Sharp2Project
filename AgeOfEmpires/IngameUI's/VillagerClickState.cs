@@ -20,7 +20,7 @@ using MonoGame.Extended.Serialization;
 using AgeOfEmpires.Systems;
 using MonoGame.Extended.Entities.Systems;
 using AgeOfEmpires.Components;
-
+using System.Threading;
 
 namespace AgeOfEmpires.IngameUI_s
 {
@@ -28,7 +28,7 @@ namespace AgeOfEmpires.IngameUI_s
     {
         private GraphicsDevice graphicsDevice;
         private Texture2D _buttonContainer;
-        
+
         private Texture2D _buildHouse;
         private Texture2D _buildBarracks;
         private Texture2D _buildFarm;
@@ -42,10 +42,10 @@ namespace AgeOfEmpires.IngameUI_s
         private bool isHoveringFarm;
 
         public event EventHandler Click;
+        
 
-        public bool Clicked { get; private set; }
 
-       
+
         public Rectangle RectangleBuildHouse
         {
             get
@@ -95,7 +95,7 @@ namespace AgeOfEmpires.IngameUI_s
                 buttonColourBarracks = Color.Gray;
             }
 
-            spriteBatch.Draw(_buttonContainer, new Rectangle(0, graphicsDevice.Adapter.CurrentDisplayMode.Height - _buttonContainer.Height + 60, _buttonContainer.Width - 50, _buttonContainer.Height - 80) , Color.White);
+            spriteBatch.Draw(_buttonContainer, new Rectangle(0, graphicsDevice.Adapter.CurrentDisplayMode.Height - _buttonContainer.Height + 60, _buttonContainer.Width - 50, _buttonContainer.Height - 80), Color.White);
             spriteBatch.Draw(_buildHouse, RectangleBuildHouse, buttonColourHouse);
             spriteBatch.Draw(_buildFarm, RectangleBuildFarm, buttonColourFarm);
             spriteBatch.Draw(_buildBarracks, RectangleBuildbarracks, buttonColourBarracks);
@@ -112,34 +112,81 @@ namespace AgeOfEmpires.IngameUI_s
             isHoveringFarm = false;
             isHoveringBarracks = false;
 
-           
+
             if (mouseRectangle.Intersects(RectangleBuildHouse))
             {
                 isHoveringHouse = true;
                 // If a click is needed for an update here
                 if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
                 {
-                    Click?.Invoke(this, new EventArgs());
+                    GamePlay.mouseTaken = "Building";
+
+                    Thread newThread = new Thread(new ThreadStart(() =>
+                    {
+                        while (GamePlay.mouseTaken != null)
+                        {
+                            
+                            Debug.WriteLine(GamePlay.mouseTaken + "");
+                            Thread.Sleep(1000);
+                        }
+
+                    }));
+                    newThread.Start();
                 }
             }
             if (mouseRectangle.Intersects(RectangleBuildFarm))
             {
                 isHoveringFarm = true;
+                
                 // If a click is needed for an update here
                 if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
                 {
-                    Click?.Invoke(this, new EventArgs());
+                    GamePlay.mouseTaken = "Farm";
+
+                    Thread newThread = new Thread(new ThreadStart(() =>
+                    {
+                        while (GamePlay.mouseTaken !=null)
+                        {
+
+                            Debug.WriteLine(GamePlay.mouseTaken + "");
+                            Thread.Sleep(1000);
+                        }
+
+                    }));
+                    newThread.Start();
                 }
             }
             if (mouseRectangle.Intersects(RectangleBuildbarracks))
             {
                 isHoveringBarracks = true;
+                
                 // If a click is needed for an update here
                 if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
                 {
-                    Click?.Invoke(this, new EventArgs());
+                    GamePlay.mouseTaken = "Barrack";
+
+                    Thread newThread = new Thread(new ThreadStart(() =>
+                    {
+                        while (GamePlay.mouseTaken != null)
+                        {
+
+                            Debug.WriteLine(GamePlay.mouseTaken + "");
+                            Thread.Sleep(1000);
+                        }
+
+                    }));
+                    newThread.Start();
                 }
             }
+
+            //if backspace then drop action
+            if (Keyboard.GetState().IsKeyDown(Keys.Back) && GamePlay.mouseTaken != null)
+            {
+                GamePlay.mouseTaken = null;
+            }
+
+            
+
         }
-}
+    }
 }

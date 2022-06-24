@@ -51,6 +51,8 @@ namespace AgeOfEmpires.States
         private SpriteFont _fontResources;
         public static Resource Resource;
 
+        public static String mouseTaken = null;
+
         // 1 = none, 2 = villager, 3 = army
         public static int _itemSelected;
         private List<Component> _uiComponents;
@@ -112,7 +114,7 @@ namespace AgeOfEmpires.States
             entity.Attach(new Combat(20, 1100));
             entity.Attach(new Position(new Vector2(2300, 1400)));
             entity.Attach(new UnitDistance(10, 50));
-            entity.Attach(new Movement(1));
+            entity.Attach(new Movement(100));
             entity.Attach(new Grinding());
             entity.Attach(new Components.Size(64));
 

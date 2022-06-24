@@ -57,27 +57,43 @@ namespace AgeOfEmpires.Systems
             
             Game.mouseListener.MouseClicked += (sender, args) => {
                 //select unit -- left click
-                if (args.Button == MonoGame.Extended.Input.MouseButton.Left)
+                if (args.Button == MonoGame.Extended.Input.MouseButton.Left && GamePlay.mouseTaken == null)
                 {
                     Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
                     foreach (var entity in ActiveEntities)
                     {
                         var position = _positionMapper.Get(entity);
                         var size = _sizeMapper.Get(entity);
+                        var grinding = _grindingMapper.Get(entity);
                        
                         if (Vector2.Distance(position.VectorPosition, clickWorldPos)<= size.EntityRadius) {
                             selectedEntity = entity;
-                            GamePlay._itemSelected = 2;
+                            if (grinding != null) {
+                                GamePlay._itemSelected = 2;
+                                return;
+                            }
+                            GamePlay._itemSelected = 3;
                             return;
                         }
                     }
-                    GamePlay._itemSelected = 1;
+                    
+                    
                 }
 
-                
+                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedEntity != -1 && GamePlay.mouseTaken != null)
+                {
+                    Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
+
+                    //Create building entity here
+                    //check building type with mouseTaken variable
+                    GamePlay.mouseTaken = null;
+
+                }
+
+
                 //move selected unit -- right click
                 //attack unit -- if right click is on a player attack
-                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedEntity != -1)
+                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedEntity != -1 && GamePlay.mouseTaken == null)
                 {
                     Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
 
@@ -127,6 +143,61 @@ namespace AgeOfEmpires.Systems
                 skin.villager.Update(deltaSeconds);
                 skin.villager.Play(skin.animationName);
             }
+        }
+
+        public bool block(Vector2 characterPos)
+        {
+            var mines = GamePlay._tiledMap.GetLayer<TiledMapTileLayer>("mines");
+            var grass = GamePlay._tiledMap.GetLayer<TiledMapTileLayer>("base");
+            var trees = GamePlay._tiledMap.GetLayer<TiledMapTileLayer>("trees");
+            var bushes = GamePlay._tiledMap.GetLayer<TiledMapTileLayer>("bushes");
+            var berryBushes = GamePlay._tiledMap.GetLayer<TiledMapTileLayer>("berryBushes");
+            TiledMapTile? tile;
+            int tx = (int)(characterPos.X / GamePlay._tiledMap.TileWidth);
+            int ty = (int)(characterPos.Y / GamePlay._tiledMap.TileHeight);
+
+            if (grass.TryGetTile((ushort)tx, (ushort)ty, out tile))
+            {
+                if (tile.Value.GlobalIdentifier == 1)
+                {
+                    var id = tile.Value.GlobalIdentifier;
+                    return true;
+                }
+            }
+            if (mines.TryGetTile((ushort)tx, (ushort)ty, out tile))
+            {
+                if (tile.Value.GlobalIdentifier == 3)
+                {
+                    var id = tile.Value.GlobalIdentifier;
+                    return true;
+                }
+            }
+            if (trees.TryGetTile((ushort)tx, (ushort)ty, out tile))
+            {
+                if (tile.Value.GlobalIdentifier == 2)
+                {
+                    var id = tile.Value.GlobalIdentifier;
+                    return true;
+                }
+            }
+            if (bushes.TryGetTile((ushort)tx, (ushort)ty, out tile))
+            {
+                if (tile.Value.GlobalIdentifier == 4)
+                {
+                    var id = tile.Value.GlobalIdentifier;
+                    return true;
+                }
+            }
+            if (berryBushes.TryGetTile((ushort)tx, (ushort)ty, out tile))
+            {
+                if (tile.Value.GlobalIdentifier == 5)
+                {
+                    var id = tile.Value.GlobalIdentifier;
+                    return true;
+                }
+            }
+
+            return false;
         }
 
     }
