@@ -4,6 +4,9 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/008_50730.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/012_50730.png</File>
+    <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/018_50730.png</File>
     <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/019_.png</File>
     <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/031_.png</File>
     <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/berrybush (1).png</File>
@@ -33,6 +36,9 @@
     <File>C:/Users/Máté/Documents/GitHub/C-Sharp2Project/AgeOfEmpires/Content/villagers.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

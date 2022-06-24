@@ -67,7 +67,7 @@ namespace AgeOfEmpires.Systems
                        
                         if (Vector2.Distance(position.VectorPosition, clickWorldPos)<= size.EntityRadius) {
                             selectedEntity = entity;
-                            GamePlay._itemSelected = 2;
+                            GamePlay._itemSelected = 3;
                             return;
                         }
                     }
