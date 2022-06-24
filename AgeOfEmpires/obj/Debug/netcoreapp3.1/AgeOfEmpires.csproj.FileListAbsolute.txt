@@ -302,3 +302,8 @@ E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\mine.xnb
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\mine_0.xnb
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\tree (1) (1).xnb
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\tree (1) (1)_0.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\008_50730.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\012_50730.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\018_50730.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\041_.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Background1.xnb

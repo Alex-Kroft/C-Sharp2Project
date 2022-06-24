@@ -1,4 +1,7 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/008_50730.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/008_50730.xnb","TextureProcessor","Texture2DContent",85623,262229,0.134456
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/012_50730.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/012_50730.xnb","TextureProcessor","Texture2DContent",74874,262229,0.0099757
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/018_50730.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/018_50730.xnb","TextureProcessor","Texture2DContent",82338,262229,0.0096068
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/019_.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/019_.xnb","TextureProcessor","Texture2DContent",20911,25685,0.1522622
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/031_.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/031_.xnb","TextureProcessor","Texture2DContent",22069,25685,0.0052126
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/berrybush (1).png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/berrybush (1)_0.xnb","TextureProcessor","Texture2DContent",10316,160085,0.0057894
@@ -19,7 +22,7 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/map.tmx","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/map.xnb","TiledMapProcessor","TiledMapContentItem",102607,123573,0.2222269
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/map-panel_full.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/map-panel_full.xnb","TextureProcessor","Texture2DContent",265628,835589,0.0898724
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mine.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/mine_0.xnb","TextureProcessor","Texture2DContent",33994,160085,0.0059518
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/miniMap.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/miniMap.xnb","TextureProcessor","Texture2DContent",230889,551189,0.0181829
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/miniMap.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/miniMap.xnb","TextureProcessor","Texture2DContent",207137,544869,0.1437025
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/miniMapRect.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/miniMapRect.xnb","TextureProcessor","Texture2DContent",2963,7104973,0.1915323
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/resource-panel_full.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/resource-panel_full.xnb","TextureProcessor","Texture2DContent",212777,1764805,0.0539799
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/shield_dark_age_slav_normal.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/shield_dark_age_slav_normal.xnb","TextureProcessor","Texture2DContent",34528,78085,0.0061515
