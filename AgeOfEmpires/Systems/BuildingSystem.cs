@@ -13,11 +13,11 @@ namespace AgeOfEmpires.Systems
     class BuildingSystem : EntityUpdateSystem
     {
         private Game1 Game;
-        private int selectedBuilding = -1;
+        public static int selectedBuilding = -1;
 
         private ComponentMapper<HealthPoints> _healthPointsMapper;
         private ComponentMapper<Position> _positionMapper;
-        private ComponentMapper<Size> _sizeMapper;
+        private ComponentMapper<BuildingArea> _buildingAreaMapper;
         private ComponentMapper<Level> _levelMapper;
 
         public BuildingSystem(Game1 game)
@@ -29,7 +29,7 @@ namespace AgeOfEmpires.Systems
         {
             _healthPointsMapper = mapperService.GetMapper<HealthPoints>();
             _positionMapper = mapperService.GetMapper<Position>();
-            _sizeMapper = mapperService.GetMapper<Size>();
+            _buildingAreaMapper = mapperService.GetMapper<BuildingArea>();
             _levelMapper = mapperService.GetMapper<Level>();
         }
 
@@ -37,7 +37,11 @@ namespace AgeOfEmpires.Systems
         {
             Game.mouseListener.MouseClicked += (sender, args) => {
                 if (args.Button == MonoGame.Extended.Input.MouseButton.Left)
-                { }
+                {
+                    foreach (var entity in ActiveEntities) { 
+                        
+                    }
+                }
             };
         }
     }

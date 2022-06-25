@@ -45,6 +45,7 @@ namespace AgeOfEmpires.Components
                     {
                         skin.animationName = "idle";
                     }
+                    
                 }));
                 newThread.Start();
             }
@@ -460,8 +461,8 @@ namespace AgeOfEmpires.Components
                         var id = tile.Value.GlobalIdentifier;
                         //mine
                         skin.animationName = "mine";
-                        grinding.grindGold();
-                        grinding.grindStone();
+                        
+                        grinding.grindStoneGold();
                     }
                 }
                 if (trees.TryGetTile((ushort)tx, (ushort)ty, out tile))
@@ -523,8 +524,8 @@ namespace AgeOfEmpires.Components
                         var id = tile.Value.GlobalIdentifier;
                         //mine
                         skin.animationName = "mine";
-                        grinding.grindGold();
-                        grinding.grindStone();
+                        
+                        grinding.grindStoneGold();
                     }
                 }
                 if (trees.TryGetTile((ushort)tx, (ushort)ty, out tile))

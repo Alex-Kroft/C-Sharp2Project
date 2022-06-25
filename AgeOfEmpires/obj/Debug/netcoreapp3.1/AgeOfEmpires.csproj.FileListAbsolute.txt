@@ -197,7 +197,6 @@ C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcorea
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.runtimeconfig.dev.json
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.dll
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\AgeOfEmpires.pdb
-C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Autofac.dll
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.dll
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Entities.dll
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Graphics.dll
@@ -321,3 +320,15 @@ E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\035_farm.
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\farm.xnb
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\barracks.xnb
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\barrack.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\035_farm.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\barracks.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\008_50730.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\012_50730.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\017_50730.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\barrack.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\building.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\farm.xnb
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Animations.dll
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Gui.dll
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Particles.dll
+C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Tweening.dll

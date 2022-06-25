@@ -14,7 +14,7 @@ namespace AgeOfEmpires.Components
 {
     class Skin
     {
-        public AnimatedSprite villager;
+        public AnimatedSprite unit;
         public String animationName;
 
         public AnimatedSprite Villager { get; set; }
@@ -23,7 +23,7 @@ namespace AgeOfEmpires.Components
             var spriteSheet = content.Load<SpriteSheet>(character, new JsonContentLoader());
             var sprite = new AnimatedSprite(spriteSheet);
             animationName = animation;
-            villager = sprite;
+            unit = sprite;
         }
     }
 }

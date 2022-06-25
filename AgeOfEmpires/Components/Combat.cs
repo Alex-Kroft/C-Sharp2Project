@@ -20,7 +20,7 @@ namespace AgeOfEmpires.Components
         }
 
         public void setInCombat() {
-            this.InCombat = true;
+            this.InCombat = false;
         }
 
         public void Attack(Skin selectedSkin, int entityID, Skin focusEntity, HealthPoints focusHealthPoints, UnitDistance selectedUnitDistance,Position selectedPosition, Position focusPosition) {

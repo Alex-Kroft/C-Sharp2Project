@@ -32,8 +32,10 @@ namespace AgeOfEmpires.Systems
         private ComponentMapper<Resource> _resourceMapper;
         private ComponentMapper<Skin> _skinMapper;
         private ComponentMapper<UnitDistance> _unitDistance;
-        private int selectedEntity = -1;
-        private int focusEntity = -1;
+        //no unit selected at the moment
+        public static int selectedUnit = -1;
+        //no focus unit selected at
+        private int focusUnit = -1;
         public static float deltaSeconds;
 
         public UnitSystem(Game1 game)
@@ -58,7 +60,7 @@ namespace AgeOfEmpires.Systems
             
             Game.mouseListener.MouseClicked += (sender, args) => {
                 //select unit -- left click
-                if (args.Button == MonoGame.Extended.Input.MouseButton.Left && GamePlay.mouseTaken == null)
+                if (args.Button == MonoGame.Extended.Input.MouseButton.Left && GamePlay.buildingToBeConstructed == null)
                 {
                     Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
                     foreach (var entity in ActiveEntities)
@@ -68,7 +70,7 @@ namespace AgeOfEmpires.Systems
                         var grinding = _grindingMapper.Get(entity);
                        
                         if (Vector2.Distance(position.VectorPosition, clickWorldPos)<= size.EntityRadius) {
-                            selectedEntity = entity;
+                            selectedUnit = entity;
                             if (grinding != null) {
                                 GamePlay._itemSelected = 2;
                                 return;
@@ -77,17 +79,18 @@ namespace AgeOfEmpires.Systems
                             return;
                         }
                     }
-                    
-                    
                 }
 
-                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedEntity != -1 && GamePlay.mouseTaken != null)
+                //Build a building
+                //Only for peasant
+                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedUnit != -1 && GamePlay.buildingToBeConstructed != null)
                 {
+                    //Position of the click
                     Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
 
                     //Create building entity here
                     //check building type with mouseTaken variable
-                    if (GamePlay.mouseTaken == "building")
+                    if (GamePlay.buildingToBeConstructed == "building")
                     {
                         if (GamePlay.Resource.getWood() >=20)
                         {
@@ -96,82 +99,84 @@ namespace AgeOfEmpires.Systems
                             house.Attach(new Position(clickWorldPos));
                             house.Attach(new Components.Size(64));
                             house.Attach(new Level());
-                            house.Attach(new BuildingSkin(Game.Content.Load<Texture2D>(GamePlay.mouseTaken)));
+                            house.Attach(new BuildingSkin(Game.Content.Load<Texture2D>(GamePlay.buildingToBeConstructed)));
                             GamePlay.Resource.setWood(GamePlay.Resource.getWood() - 20);
                             GamePlay.noOfHouses = GamePlay.noOfHouses + 1;
                         }
                        
                     }
-                    if (GamePlay.mouseTaken == "farm")
+                    if (GamePlay.buildingToBeConstructed == "farm")
                     {
                         if(GamePlay.Resource.getWood() >= 30 && GamePlay.Resource.getGold() >= 10)
                         {
                             var farm = GamePlay._world.CreateEntity();
                             farm.Attach(new HealthPoints(50));
                             farm.Attach(new Position(clickWorldPos));
-                            farm.Attach(new Components.Size(64));
+                            farm.Attach(new BuildingArea(64));
                             farm.Attach(new Level());
-                            farm.Attach(new BuildingSkin(Game.Content.Load<Texture2D>(GamePlay.mouseTaken)));
+                            farm.Attach(new BuildingSkin(Game.Content.Load<Texture2D>(GamePlay.buildingToBeConstructed)));
+                            GamePlay.Resource.addFood(20);
                             GamePlay.Resource.setWood(GamePlay.Resource.getWood() - 30);
                             GamePlay.Resource.setGold(GamePlay.Resource.getGold() - 10);
                         }
                       
                     }
-                    if (GamePlay.mouseTaken == "barrack")
+                    if (GamePlay.buildingToBeConstructed == "barrack")
                     {
                         if (GamePlay.Resource.getStone() >= 20 && GamePlay.Resource.getGold() >= 10 && GamePlay.Resource.getFood() >= 50)
                         {
-                            var farm = GamePlay._world.CreateEntity();
-                            farm.Attach(new HealthPoints(300));
-                            farm.Attach(new Position(clickWorldPos));
-                            farm.Attach(new Components.Size(64));
-                            farm.Attach(new Level());
-                            farm.Attach(new BuildingSkin(Game.Content.Load<Texture2D>(GamePlay.mouseTaken)));
+                            var barack = GamePlay._world.CreateEntity();
+                            barack.Attach(new HealthPoints(300));
+                            barack.Attach(new Position(clickWorldPos));
+                            barack.Attach(new BuildingArea(64));
+                            barack.Attach(new Level());
+                            barack.Attach(new UnitCreation());
+                            barack.Attach(new BuildingSkin(Game.Content.Load<Texture2D>(GamePlay.buildingToBeConstructed)));
                             GamePlay.Resource.setStone(GamePlay.Resource.getStone() - 20);
                             GamePlay.Resource.setGold(GamePlay.Resource.getGold() - 10);
                             GamePlay.Resource.setFood(GamePlay.Resource.getFood() - 50);
                         }
                        
                     }
-                    GamePlay.mouseTaken = null;
-
+                    GamePlay.buildingToBeConstructed = null;
                 }
 
-
-                //move selected unit -- right click
-                //attack unit -- if right click is on a player attack
-                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedEntity != -1 && GamePlay.mouseTaken == null)
+                //Perform right click event related to one of the unit
+                //peasent = move/build/grind
+                //archer/barbarian/swordsman = move/attack
+                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && selectedUnit != -1 && GamePlay.buildingToBeConstructed == null)
                 {
                     Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
 
                     //selected entity
-                    var selectedPosition = _positionMapper.Get(selectedEntity);
-                    var selectedMovement = _movementMapper.Get(selectedEntity);
-                    var selectedSkin = _skinMapper.Get(selectedEntity);
-                    var selectedUnitDistance = _unitDistance.Get(selectedEntity);
-                    var melleeAttack = _meleeAttackMapper.Get(selectedEntity);
+                    var selectedPosition = _positionMapper.Get(selectedUnit);
+                    var selectedMovement = _movementMapper.Get(selectedUnit);
+                    var selectedSkin = _skinMapper.Get(selectedUnit);
+                    var selectedUnitDistance = _unitDistance.Get(selectedUnit);
+                    var melleeAttack = _meleeAttackMapper.Get(selectedUnit);
 
-                    var peasantGrinding = _grindingMapper.Get(selectedEntity);
+                    var peasantGrinding = _grindingMapper.Get(selectedUnit);
 
-                    //if moving while combat current attack stops/current grinding
+                    //if moving while combat current attack/current grinding stops
                     melleeAttack.setInCombat();
                     if (peasantGrinding != null) {
                         peasantGrinding.setInGrinding(selectedSkin);
                     }
-                    
 
+                    //Unit to be attacked
                     foreach (var entity in ActiveEntities)
                     {
                             var position = _positionMapper.Get(entity);
                             var size = _sizeMapper.Get(entity);
 
-                            if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= size.EntityRadius && entity != selectedEntity)
+                            if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= size.EntityRadius && entity != selectedUnit)
                             {
-                                focusEntity = entity;
-                                var focusSkin = _skinMapper.Get(focusEntity);
-                                var focusHealthPoints = _healthPointsMapper.Get(focusEntity);
+                                focusUnit = entity;
+                                var focusSkin = _skinMapper.Get(focusUnit);
+                                var focusHealthPoints = _healthPointsMapper.Get(focusUnit);
                                 
-                                selectedMovement.GoSomeWhereAttack(clickWorldPos, selectedPosition, selectedSkin, selectedUnitDistance, melleeAttack, focusEntity, focusSkin, focusHealthPoints, position);
+                                //Attack
+                                selectedMovement.GoSomeWhereAttack(clickWorldPos, selectedPosition, selectedSkin, selectedUnitDistance, melleeAttack, focusUnit, focusSkin, focusHealthPoints, position);
                                 return;
                             }
                     }
@@ -187,11 +192,12 @@ namespace AgeOfEmpires.Systems
             foreach (var entity in ActiveEntities)
             {
                 var skin = _skinMapper.Get(entity);
-                skin.villager.Update(deltaSeconds);
-                skin.villager.Play(skin.animationName);
+                skin.unit.Update(deltaSeconds);
+                skin.unit.Play(skin.animationName);
             }
         }
 
+        //this method checks if there is something on the tiledmap which blocks moving
         public bool block(Vector2 characterPos)
         {
             var mines = GamePlay._tiledMap.GetLayer<TiledMapTileLayer>("mines");
@@ -243,7 +249,6 @@ namespace AgeOfEmpires.Systems
                     return true;
                 }
             }
-
             return false;
         }
 

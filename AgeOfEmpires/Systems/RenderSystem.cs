@@ -14,21 +14,17 @@ namespace AgeOfEmpires.Systems
     //This system responsible for drawing the entities
     class RenderSystem : EntityDrawSystem
     {
+        private GamePlay _gamePlay;
         private GraphicsDevice _graphicsDevice;
         private SpriteBatch _spriteBatch;
+
         private ComponentMapper<HealthPoints> _healthPointsMapper;
         private ComponentMapper<Skin> _skinMapper;
         private ComponentMapper<Position> _positionMapper;
         private ComponentMapper<BuildingSkin> _buildingSkinMapper;
 
-        private GamePlay _gamePlay;
-        
-
-        //private AnimatedSprite villager;
-        //private Vector2 spritePosition;
-
-        public RenderSystem(GraphicsDevice graphicsDevice, GamePlay gamePlay) 
-            : base(Aspect.One(typeof(Skin),typeof(BuildingSkin))) 
+        public RenderSystem(GraphicsDevice graphicsDevice, GamePlay gamePlay)
+            : base(Aspect.One(typeof(Skin), typeof(BuildingSkin)))
         {
             _graphicsDevice = graphicsDevice;
             _gamePlay = gamePlay;
@@ -37,7 +33,6 @@ namespace AgeOfEmpires.Systems
 
         public override void Initialize(IComponentMapperService mapperService)
         {
-
             _healthPointsMapper = mapperService.GetMapper<HealthPoints>();
             _skinMapper = mapperService.GetMapper<Skin>();
             _positionMapper = mapperService.GetMapper<Position>();
@@ -58,22 +53,16 @@ namespace AgeOfEmpires.Systems
                 var buildingSkin = _buildingSkinMapper.Get(entity);
                 if (skin == null)
                 {
+                    //drawing building
                     _spriteBatch.Draw(buildingSkin.skin, position.VectorPosition, Color.White);
                 }
                 else
                 {
-                    _spriteBatch.Draw(skin.villager, position.VectorPosition);
+                    //drawing unit
+                    _spriteBatch.Draw(skin.unit, position.VectorPosition);
                 }
-                
-                
-
             }
-
             _spriteBatch.End();
-
-            
         }
-
-
     }
 }

@@ -119,14 +119,14 @@ namespace AgeOfEmpires.IngameUI_s
                 // If a click is needed for an update here
                 if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
                 {
-                    GamePlay.mouseTaken = "building";
+                    GamePlay.buildingToBeConstructed = "building";
 
                     Thread newThread = new Thread(new ThreadStart(() =>
                     {
-                        while (GamePlay.mouseTaken != null)
+                        while (GamePlay.buildingToBeConstructed != null)
                         {
                             
-                            Debug.WriteLine(GamePlay.mouseTaken + "");
+                            Debug.WriteLine(GamePlay.buildingToBeConstructed + "");
                             Thread.Sleep(1000);
                         }
 
@@ -141,14 +141,14 @@ namespace AgeOfEmpires.IngameUI_s
                 // If a click is needed for an update here
                 if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
                 {
-                    GamePlay.mouseTaken = "farm";
+                    GamePlay.buildingToBeConstructed = "farm";
 
                     Thread newThread = new Thread(new ThreadStart(() =>
                     {
-                        while (GamePlay.mouseTaken !=null)
+                        while (GamePlay.buildingToBeConstructed !=null)
                         {
 
-                            Debug.WriteLine(GamePlay.mouseTaken + "");
+                            Debug.WriteLine(GamePlay.buildingToBeConstructed + "");
                             Thread.Sleep(1000);
                         }
 
@@ -163,14 +163,14 @@ namespace AgeOfEmpires.IngameUI_s
                 // If a click is needed for an update here
                 if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
                 {
-                    GamePlay.mouseTaken = "barrack";
+                    GamePlay.buildingToBeConstructed = "barrack";
 
                     Thread newThread = new Thread(new ThreadStart(() =>
                     {
-                        while (GamePlay.mouseTaken != null)
+                        while (GamePlay.buildingToBeConstructed != null)
                         {
 
-                            Debug.WriteLine(GamePlay.mouseTaken + "");
+                            Debug.WriteLine(GamePlay.buildingToBeConstructed + "");
                             Thread.Sleep(1000);
                         }
 
@@ -180,9 +180,9 @@ namespace AgeOfEmpires.IngameUI_s
             }
 
             //if backspace then drop action
-            if (Keyboard.GetState().IsKeyDown(Keys.Back) && GamePlay.mouseTaken != null)
+            if (Keyboard.GetState().IsKeyDown(Keys.Back) && GamePlay.buildingToBeConstructed != null)
             {
-                GamePlay.mouseTaken = null;
+                GamePlay.buildingToBeConstructed = null;
             }
 
             

@@ -28,19 +28,28 @@ namespace AgeOfEmpires.States
 {
     class GamePlay : GameScreen
     {
+        public static Game1 baseGame;
+        public static TiledMap _tiledMap;
+        public static OrthographicCamera _camera;
+        public static World _world;
+
+        //wood,stone,gold,food
+        public static Resource Resource;
+        // 1 = none, 2 = villager, 3 = army
+        public static int _itemSelected;
+        //to calculate the max amount of population
+        public static int noOfHouses;
+        //building, farm, barack
+        public static String buildingToBeConstructed = null;
+
         private GraphicsDeviceManager _graphics;
         public SpriteBatch _spriteBatch;
-        public static TiledMap _tiledMap;
         private TiledMapRenderer _tiledMapRenderer;
-
-        public  static OrthographicCamera _camera;
-        public static World _world;
         private Vector2 _cameraPosition;
-
-        public static Game1 baseGame;
-
-        
-
+        private List<Component> _uiComponents;
+        private NoClickState noClickState;
+        private VillagerClickState VillagerClickState;
+        private BarracksClickState BarracksClickState;
         private Texture2D _resourcesCover;
         private Texture2D _buttonContainer;
         private Texture2D _bottomBar;
@@ -50,30 +59,12 @@ namespace AgeOfEmpires.States
         private Texture2D _age;
         private Texture2D _villagersCount;
         private SpriteFont _fontResources;
-
-        public static Resource Resource;
-
-        public static int noOfHouses;
-
-        public static String mouseTaken = null;
-
-        // 1 = none, 2 = villager, 3 = army
-        public static int _itemSelected;
-        private List<Component> _uiComponents;
-        private NoClickState noClickState;
-        private VillagerClickState VillagerClickState;
-        private BarracksClickState BarracksClickState;
-        
-
-        
         private Texture2D _buildFarm;
         private Texture2D _buildHouse;
         private Texture2D _buildBarracks;
-
         private Texture2D _barbarian;
         private Texture2D _archer;
         private Texture2D _swordMan;
-       
 
         public Vector2 getMiniMapPos()
         {
@@ -93,14 +84,8 @@ namespace AgeOfEmpires.States
             noOfHouses = 0;
         }
 
-        
-
-       
-
         public override void Initialize()
         {
-
-
             //camera
             var viewportAdapter = new BoxingViewportAdapter(Game.Window, GraphicsDevice, 4096, 2160);
             _camera = new OrthographicCamera(viewportAdapter);
@@ -117,29 +102,27 @@ namespace AgeOfEmpires.States
                  .Build();
 
             //test entity
-            var entity = _world.CreateEntity();
-            entity.Attach(new Skin(baseGame.Content, "idle", "BluePeasant.sf"));
-            entity.Attach(new HealthPoints(100));
-            entity.Attach(new Level());
-            entity.Attach(new Combat(20, 1100));
-            entity.Attach(new Position(new Vector2(2300, 1400)));
-            entity.Attach(new UnitDistance(10, 50));
-            entity.Attach(new Movement(100));
-            entity.Attach(new Grinding());
-            entity.Attach(new Components.Size(64));
+            var peasant = _world.CreateEntity();
+            peasant.Attach(new Skin(baseGame.Content, "idle", "BluePeasant.sf"));
+            peasant.Attach(new HealthPoints(100));
+            peasant.Attach(new Level());
+            peasant.Attach(new Combat(20, 1100));
+            peasant.Attach(new Position(new Vector2(2300, 1400)));
+            peasant.Attach(new UnitDistance(10, 50));
+            peasant.Attach(new Movement(10));
+            peasant.Attach(new Grinding());
+            peasant.Attach(new Components.Size(64));
 
             //test enemy
-            var enemy = _world.CreateEntity();
-            enemy.Attach(new Skin(baseGame.Content, "idle", "BlueArcher.sf"));
-            enemy.Attach(new HealthPoints(100));
-            enemy.Attach(new Level());
-            enemy.Attach(new Combat(5, 1100));
-            enemy.Attach(new Position(new Vector2(2400, 1500)));
-            enemy.Attach(new UnitDistance(10, 50));
-            enemy.Attach(new Movement(10));
-            enemy.Attach(new Components.Size(64));
-
-            
+            var archer = _world.CreateEntity();
+            archer.Attach(new Skin(baseGame.Content, "idle", "BlueArcher.sf"));
+            archer.Attach(new HealthPoints(100));
+            archer.Attach(new Level());
+            archer.Attach(new Combat(5, 1100));
+            archer.Attach(new Position(new Vector2(2400, 1500)));
+            archer.Attach(new UnitDistance(10, 50));
+            archer.Attach(new Movement(10));
+            archer.Attach(new Components.Size(64));
 
             baseGame.Components.Add(_world);
 
@@ -182,8 +165,6 @@ namespace AgeOfEmpires.States
             _uiComponents.Add(VillagerClickState);
             _uiComponents.Add(this.BarracksClickState);
           
-
-
             base.LoadContent();
         }
 
@@ -230,14 +211,8 @@ namespace AgeOfEmpires.States
                             }
                             break;
                     }
-
                 }
-           
-           
-            
             _spriteBatch.End();
-
-            
         }
 
         public override void Update(GameTime gameTime)
@@ -273,12 +248,7 @@ namespace AgeOfEmpires.States
             {
                 component.Update(gameTime);
             }
-
-
-
         }
-
-        
 
         private Vector2 GetMovementDirection()
         {
@@ -308,10 +278,7 @@ namespace AgeOfEmpires.States
             {
                 movementDirection.Normalize();
             }
-
             return movementDirection;
         }
-
-
     }
 }

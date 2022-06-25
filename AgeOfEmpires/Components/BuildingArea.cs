@@ -6,9 +6,9 @@ namespace AgeOfEmpires.Components
 {
     class BuildingArea
     {
-        float Radius;
+        private int Radius { get; set; }
 
-        public BuildingArea(float radius) {
+        public BuildingArea(int radius) {
             Radius = radius;
         }
     }

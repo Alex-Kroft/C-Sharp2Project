@@ -41,22 +41,16 @@ namespace AgeOfEmpires.Components
             Skin.animationName = "idle";
         }
 
-        public void grindStone() {
+        public void grindStoneGold() {
             inGrinding = true;
             while (inGrinding) {
                 GamePlay.Resource.addStone(10);
-                Thread.Sleep(speed);
-            }
-            Skin.animationName = "idle";
-        }
-        public void grindGold() {
-            inGrinding = true;
-            while(inGrinding) {
                 GamePlay.Resource.addGold(10);
                 Thread.Sleep(speed);
             }
             Skin.animationName = "idle";
         }
+        
         public void collectFood() {
             inGrinding = true;
             while (inGrinding) {
