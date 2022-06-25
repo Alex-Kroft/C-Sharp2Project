@@ -5,6 +5,7 @@ using MonoGame.Extended.Entities;
 using MonoGame.Extended.Entities.Systems;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace AgeOfEmpires.Systems
@@ -19,6 +20,7 @@ namespace AgeOfEmpires.Systems
         private ComponentMapper<Position> _positionMapper;
         private ComponentMapper<BuildingArea> _buildingAreaMapper;
         private ComponentMapper<Level> _levelMapper;
+        private ComponentMapper<UnitCreation> _unitCreationMapper;
 
         public BuildingSystem(Game1 game)
             : base(Aspect.All(typeof(BuildingArea)))
@@ -31,16 +33,41 @@ namespace AgeOfEmpires.Systems
             _positionMapper = mapperService.GetMapper<Position>();
             _buildingAreaMapper = mapperService.GetMapper<BuildingArea>();
             _levelMapper = mapperService.GetMapper<Level>();
+            _unitCreationMapper = mapperService.GetMapper<UnitCreation>();
         }
 
         public override void Update(GameTime gameTime)
         {
             Game.mouseListener.MouseClicked += (sender, args) => {
-                if (args.Button == MonoGame.Extended.Input.MouseButton.Left)
+                if (args.Button == MonoGame.Extended.Input.MouseButton.Left && GamePlay.characterTobeDeployed == null)
                 {
-                    foreach (var entity in ActiveEntities) { 
-                        
+                    //Position of the click
+                    Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
+
+                    foreach (var entity in ActiveEntities) {
+                        var unitCreation = _unitCreationMapper.Get(entity);
+                        var position = _positionMapper.Get(entity);
+                        var buildingArea = _buildingAreaMapper.Get(entity);
+                        if (unitCreation != null && buildingArea != null) {
+                            if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= buildingArea.Radius) {
+                                selectedBuilding = entity;
+                                UnitSystem.selectedUnit = -1;
+                                GamePlay._itemSelected = 3;
+                                return;
+                            }
+                            
+                        }
                     }
+                }
+
+                if (args.Button == MonoGame.Extended.Input.MouseButton.Right && GamePlay.characterTobeDeployed !=null) {
+                    Debug.WriteLine(GamePlay.characterTobeDeployed);
+                    //Position of the click
+                    Vector2 clickWorldPos = GamePlay._camera.ScreenToWorld(args.Position.ToVector2());
+
+                    var unitCreation = _unitCreationMapper.Get(selectedBuilding);
+
+                    unitCreation.CreateUnit(GamePlay.characterTobeDeployed, clickWorldPos);
                 }
             };
         }

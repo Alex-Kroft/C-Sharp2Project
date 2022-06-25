@@ -10,6 +10,11 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Characters\**" />
+    <EmbeddedResource Remove="Characters\**" />
+    <None Remove="Characters\**" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="Content\Content.mgcb" />
     <None Remove="Content\editedTilesSet.tmx" />
     <None Remove="Icon.ico" />
@@ -24,10 +29,6 @@
   </ItemGroup>
   <ItemGroup>
     <TrimmerRootAssembly Include="Microsoft.Xna.Framework.Content.ContentTypeReader" Visible="false" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Characters\" />
-    <Folder Include="maps\" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="Content\editedTilesSet.tmx" />

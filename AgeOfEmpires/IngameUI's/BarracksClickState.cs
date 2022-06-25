@@ -1,9 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+﻿using AgeOfEmpires.States;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
+using System.Threading;
 
 namespace AgeOfEmpires.IngameUI_s
 {
@@ -90,34 +93,77 @@ namespace AgeOfEmpires.IngameUI_s
             isHoveringArcher = false;
             isHoveringSwordMan = false;
 
+            if (GamePlay._itemSelected == 3) {
+                if (mouseRectangle.Intersects(RectangleBarbarian))
+                {
+                    isHoveringBarbarian = true;
+                    // If a click is needed for an update here
+                    if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
+                    {
+                        GamePlay.characterTobeDeployed = "barbarian";
 
-            if (mouseRectangle.Intersects(RectangleBarbarian))
-            {
-                isHoveringBarbarian = true;
-                // If a click is needed for an update here
-                if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
+                        Thread newThread = new Thread(new ThreadStart(() =>
+                        {
+                            while (GamePlay.buildingToBeConstructed != null)
+                            {
+
+                                Debug.WriteLine(GamePlay.characterTobeDeployed + "");
+                                Thread.Sleep(1000);
+                            }
+
+                        }));
+                        newThread.Start();
+                    }
+                }
+                if (mouseRectangle.Intersects(RectangleArcher))
                 {
-                    Click?.Invoke(this, new EventArgs());
+                    isHoveringArcher = true;
+                    // If a click is needed for an update here
+                    if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
+                    {
+                        GamePlay.characterTobeDeployed = "archer";
+
+                        Thread newThread = new Thread(new ThreadStart(() =>
+                        {
+                            while (GamePlay.buildingToBeConstructed != null)
+                            {
+
+                                Debug.WriteLine(GamePlay.characterTobeDeployed + "");
+                                Thread.Sleep(1000);
+                            }
+
+                        }));
+                        newThread.Start();
+                    }
+                }
+                if (mouseRectangle.Intersects(RectangleSwordMan))
+                {
+                    isHoveringSwordMan = true;
+                    // If a click is needed for an update here
+                    if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
+                    {
+                        GamePlay.characterTobeDeployed = "swordman";
+
+                        Thread newThread = new Thread(new ThreadStart(() =>
+                        {
+                            while (GamePlay.buildingToBeConstructed != null)
+                            {
+
+                                Debug.WriteLine(GamePlay.characterTobeDeployed + "");
+                                Thread.Sleep(1000);
+                            }
+
+                        }));
+                        newThread.Start();
+                    }
+                }
+                //if backspace then drop action
+                if (Keyboard.GetState().IsKeyDown(Keys.Back) && GamePlay.buildingToBeConstructed != null)
+                {
+                    GamePlay.characterTobeDeployed = null;
                 }
             }
-            if (mouseRectangle.Intersects(RectangleArcher))
-            {
-                isHoveringArcher = true;
-                // If a click is needed for an update here
-                if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
-                {
-                    Click?.Invoke(this, new EventArgs());
-                }
-            }
-            if (mouseRectangle.Intersects(RectangleSwordMan))
-            {
-                isHoveringSwordMan = true;
-                // If a click is needed for an update here
-                if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
-                {
-                    Click?.Invoke(this, new EventArgs());
-                }
-            }
+            
         }
     }
 }

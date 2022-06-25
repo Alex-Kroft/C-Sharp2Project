@@ -35,12 +35,14 @@ namespace AgeOfEmpires.States
 
         //wood,stone,gold,food
         public static Resource Resource;
-        // 1 = none, 2 = villager, 3 = army
+        // 1 = none, 2 = villager, 3 = barack
         public static int _itemSelected;
         //to calculate the max amount of population
         public static int noOfHouses;
         //building, farm, barack
         public static String buildingToBeConstructed = null;
+        //barbarian, archer, swordman
+        public static String characterTobeDeployed = null;
 
         private GraphicsDeviceManager _graphics;
         public SpriteBatch _spriteBatch;
@@ -99,6 +101,7 @@ namespace AgeOfEmpires.States
             _world = new WorldBuilder()
                 .AddSystem(new RenderSystem(GraphicsDevice, this))
                 .AddSystem(new UnitSystem(baseGame))
+                .AddSystem(new BuildingSystem(baseGame))
                  .Build();
 
             //test entity
@@ -196,6 +199,7 @@ namespace AgeOfEmpires.States
                             if (component.Equals(noClickState))
                             {
                                 component.Draw(gameTime, _spriteBatch);
+                                
                             }
                             break;
                         case 2:

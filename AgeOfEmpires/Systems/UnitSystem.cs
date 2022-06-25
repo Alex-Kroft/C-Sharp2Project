@@ -71,6 +71,7 @@ namespace AgeOfEmpires.Systems
                        
                         if (Vector2.Distance(position.VectorPosition, clickWorldPos)<= size.EntityRadius) {
                             selectedUnit = entity;
+                            BuildingSystem.selectedBuilding = -1;
                             if (grinding != null) {
                                 GamePlay._itemSelected = 2;
                                 return;
@@ -112,7 +113,7 @@ namespace AgeOfEmpires.Systems
                             var farm = GamePlay._world.CreateEntity();
                             farm.Attach(new HealthPoints(50));
                             farm.Attach(new Position(clickWorldPos));
-                            farm.Attach(new BuildingArea(64));
+                            farm.Attach(new BuildingArea(189));
                             farm.Attach(new Level());
                             farm.Attach(new BuildingSkin(Game.Content.Load<Texture2D>(GamePlay.buildingToBeConstructed)));
                             GamePlay.Resource.addFood(20);
@@ -128,7 +129,7 @@ namespace AgeOfEmpires.Systems
                             var barack = GamePlay._world.CreateEntity();
                             barack.Attach(new HealthPoints(300));
                             barack.Attach(new Position(clickWorldPos));
-                            barack.Attach(new BuildingArea(64));
+                            barack.Attach(new BuildingArea(189));
                             barack.Attach(new Level());
                             barack.Attach(new UnitCreation());
                             barack.Attach(new BuildingSkin(Game.Content.Load<Texture2D>(GamePlay.buildingToBeConstructed)));
@@ -136,7 +137,7 @@ namespace AgeOfEmpires.Systems
                             GamePlay.Resource.setGold(GamePlay.Resource.getGold() - 10);
                             GamePlay.Resource.setFood(GamePlay.Resource.getFood() - 50);
                         }
-                       
+
                     }
                     GamePlay.buildingToBeConstructed = null;
                 }

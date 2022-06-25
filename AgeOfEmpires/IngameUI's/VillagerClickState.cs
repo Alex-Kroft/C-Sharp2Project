@@ -112,81 +112,80 @@ namespace AgeOfEmpires.IngameUI_s
             isHoveringFarm = false;
             isHoveringBarracks = false;
 
-
-            if (mouseRectangle.Intersects(RectangleBuildHouse))
+            if(GamePlay._itemSelected == 2)
             {
-                isHoveringHouse = true;
-                // If a click is needed for an update here
-                if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
+                if (mouseRectangle.Intersects(RectangleBuildHouse))
                 {
-                    GamePlay.buildingToBeConstructed = "building";
-
-                    Thread newThread = new Thread(new ThreadStart(() =>
+                    isHoveringHouse = true;
+                    // If a click is needed for an update here
+                    if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
                     {
-                        while (GamePlay.buildingToBeConstructed != null)
-                        {
-                            
-                            Debug.WriteLine(GamePlay.buildingToBeConstructed + "");
-                            Thread.Sleep(1000);
-                        }
+                        GamePlay.buildingToBeConstructed = "building";
 
-                    }));
-                    newThread.Start();
+                        Thread newThread = new Thread(new ThreadStart(() =>
+                        {
+                            while (GamePlay.buildingToBeConstructed != null)
+                            {
+
+                                Debug.WriteLine(GamePlay.buildingToBeConstructed + "");
+                                Thread.Sleep(1000);
+                            }
+
+                        }));
+                        newThread.Start();
+                    }
+                }
+                if (mouseRectangle.Intersects(RectangleBuildFarm))
+                {
+                    isHoveringFarm = true;
+
+                    // If a click is needed for an update here
+                    if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
+                    {
+                        GamePlay.buildingToBeConstructed = "farm";
+
+                        Thread newThread = new Thread(new ThreadStart(() =>
+                        {
+                            while (GamePlay.buildingToBeConstructed != null)
+                            {
+
+                                Debug.WriteLine(GamePlay.buildingToBeConstructed + "");
+                                Thread.Sleep(1000);
+                            }
+
+                        }));
+                        newThread.Start();
+                    }
+                }
+                if (mouseRectangle.Intersects(RectangleBuildbarracks))
+                {
+                    isHoveringBarracks = true;
+
+                    // If a click is needed for an update here
+                    if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
+                    {
+                        GamePlay.buildingToBeConstructed = "barrack";
+
+                        Thread newThread = new Thread(new ThreadStart(() =>
+                        {
+                            while (GamePlay.buildingToBeConstructed != null)
+                            {
+
+                                Debug.WriteLine(GamePlay.buildingToBeConstructed + "");
+                                Thread.Sleep(1000);
+                            }
+
+                        }));
+                        newThread.Start();
+                    }
+                }
+
+                //if backspace then drop action
+                if (Keyboard.GetState().IsKeyDown(Keys.Back) && GamePlay.buildingToBeConstructed != null)
+                {
+                    GamePlay.buildingToBeConstructed = null;
                 }
             }
-            if (mouseRectangle.Intersects(RectangleBuildFarm))
-            {
-                isHoveringFarm = true;
-                
-                // If a click is needed for an update here
-                if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
-                {
-                    GamePlay.buildingToBeConstructed = "farm";
-
-                    Thread newThread = new Thread(new ThreadStart(() =>
-                    {
-                        while (GamePlay.buildingToBeConstructed !=null)
-                        {
-
-                            Debug.WriteLine(GamePlay.buildingToBeConstructed + "");
-                            Thread.Sleep(1000);
-                        }
-
-                    }));
-                    newThread.Start();
-                }
-            }
-            if (mouseRectangle.Intersects(RectangleBuildbarracks))
-            {
-                isHoveringBarracks = true;
-                
-                // If a click is needed for an update here
-                if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
-                {
-                    GamePlay.buildingToBeConstructed = "barrack";
-
-                    Thread newThread = new Thread(new ThreadStart(() =>
-                    {
-                        while (GamePlay.buildingToBeConstructed != null)
-                        {
-
-                            Debug.WriteLine(GamePlay.buildingToBeConstructed + "");
-                            Thread.Sleep(1000);
-                        }
-
-                    }));
-                    newThread.Start();
-                }
-            }
-
-            //if backspace then drop action
-            if (Keyboard.GetState().IsKeyDown(Keys.Back) && GamePlay.buildingToBeConstructed != null)
-            {
-                GamePlay.buildingToBeConstructed = null;
-            }
-
-            
-
         }
     }
 }
