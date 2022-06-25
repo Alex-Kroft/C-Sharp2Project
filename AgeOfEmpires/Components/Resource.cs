@@ -13,6 +13,26 @@ namespace AgeOfEmpires.Components
 
         public Resource() { }
 
+        public void setWood(int wood)
+        {
+            this.wood = wood;
+        }
+
+        public void setStone(int stone)
+        {
+            this.stone = stone;
+        }
+
+        public void setGold(int gold)
+        {
+            this.gold = gold;
+        }
+
+        public void setFood(int food)
+        {
+            this.food = food;
+        }
+
         public int getWood()
         {
             return this.wood;

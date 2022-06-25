@@ -119,7 +119,7 @@ namespace AgeOfEmpires.IngameUI_s
                 // If a click is needed for an update here
                 if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
                 {
-                    GamePlay.mouseTaken = "Building";
+                    GamePlay.mouseTaken = "building";
 
                     Thread newThread = new Thread(new ThreadStart(() =>
                     {
@@ -141,7 +141,7 @@ namespace AgeOfEmpires.IngameUI_s
                 // If a click is needed for an update here
                 if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
                 {
-                    GamePlay.mouseTaken = "Farm";
+                    GamePlay.mouseTaken = "farm";
 
                     Thread newThread = new Thread(new ThreadStart(() =>
                     {
@@ -163,7 +163,7 @@ namespace AgeOfEmpires.IngameUI_s
                 // If a click is needed for an update here
                 if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
                 {
-                    GamePlay.mouseTaken = "Barrack";
+                    GamePlay.mouseTaken = "barrack";
 
                     Thread newThread = new Thread(new ThreadStart(() =>
                     {

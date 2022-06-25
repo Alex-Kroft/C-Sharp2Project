@@ -37,7 +37,9 @@ namespace AgeOfEmpires.IngameUI_s
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
+       
             spriteBatch.Draw(_buttonContainer, new Rectangle(0, graphicsDevice.Adapter.CurrentDisplayMode.Height - _buttonContainer.Height + 60, _buttonContainer.Width - 50, _buttonContainer.Height - 80), Color.White);
+           
         }
 
         public override void Update(GameTime gameTime)

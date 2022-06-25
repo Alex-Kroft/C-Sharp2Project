@@ -19,6 +19,7 @@ namespace AgeOfEmpires.Systems
         private ComponentMapper<HealthPoints> _healthPointsMapper;
         private ComponentMapper<Skin> _skinMapper;
         private ComponentMapper<Position> _positionMapper;
+        private ComponentMapper<BuildingSkin> _buildingSkinMapper;
 
         private GamePlay _gamePlay;
         
@@ -27,7 +28,7 @@ namespace AgeOfEmpires.Systems
         //private Vector2 spritePosition;
 
         public RenderSystem(GraphicsDevice graphicsDevice, GamePlay gamePlay) 
-            : base(Aspect.All(typeof(Skin))) 
+            : base(Aspect.One(typeof(Skin),typeof(BuildingSkin))) 
         {
             _graphicsDevice = graphicsDevice;
             _gamePlay = gamePlay;
@@ -40,6 +41,7 @@ namespace AgeOfEmpires.Systems
             _healthPointsMapper = mapperService.GetMapper<HealthPoints>();
             _skinMapper = mapperService.GetMapper<Skin>();
             _positionMapper = mapperService.GetMapper<Position>();
+            _buildingSkinMapper = mapperService.GetMapper<BuildingSkin>();
         }
 
         public override void Draw(GameTime gameTime)
@@ -49,9 +51,22 @@ namespace AgeOfEmpires.Systems
 
             foreach (var entity in ActiveEntities)
             {
+                
                 var skin = _skinMapper.Get(entity);
                 var position = _positionMapper.Get(entity);
-                _spriteBatch.Draw(skin.villager, position.VectorPosition);
+
+                var buildingSkin = _buildingSkinMapper.Get(entity);
+                if (skin == null)
+                {
+                    _spriteBatch.Draw(buildingSkin.skin, position.VectorPosition, Color.White);
+                }
+                else
+                {
+                    _spriteBatch.Draw(skin.villager, position.VectorPosition);
+                }
+                
+                
+
             }
 
             _spriteBatch.End();

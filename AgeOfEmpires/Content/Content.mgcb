@@ -10,9 +10,45 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:..\..\..\..\..\.nuget\packages\monogame.extended.content.pipeline\3.8.0\tools\MonoGame.Extended.Content.Pipeline.dll
+/reference:C:\Users\matte\.nuget\packages\monogame.extended.content.pipeline\3.8.0\tools\MonoGame.Extended.Content.Pipeline.dll
 
 #---------------------------------- Content ---------------------------------#
+
+#begin 008_50730.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:008_50730.png
+
+#begin 012_50730.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:012_50730.png
+
+#begin 017_50730.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:017_50730.png
 
 #begin 019_.png
 /importer:TextureImporter
@@ -37,6 +73,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:031_.png
+
+#begin 035_farm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:035_farm.png;farm.png
+
+#begin barracks.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:barracks.png;barrack.png
 
 #begin berrybush (1).png
 /importer:TextureImporter
@@ -121,6 +181,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:bottombar.png
+
+#begin building.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:building.png
 
 #begin bush (1).png
 /importer:TextureImporter
@@ -216,18 +288,6 @@
 /processorParam:TextureFormat=Color
 /build:grass_tileset_16x16.png
 
-#begin grass_tileset_16x16.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:grass_tileset_16x16.png
-
 #begin mainmenu_bg.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -241,9 +301,7 @@
 /build:mainmenu_bg.png
 
 #begin map.tmx
-/importer:TiledMapImporter
-/processor:TiledMapProcessor
-/build:map.tmx
+/copy:map.tmx
 
 #begin map-panel_full.png
 /importer:TextureImporter

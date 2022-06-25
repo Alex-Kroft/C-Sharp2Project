@@ -1,6 +1,7 @@
 ﻿using AgeOfEmpires.Components;
 using AgeOfEmpires.States;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonoGame.Extended;
 using MonoGame.Extended.Entities;
@@ -86,6 +87,52 @@ namespace AgeOfEmpires.Systems
 
                     //Create building entity here
                     //check building type with mouseTaken variable
+                    if (GamePlay.mouseTaken == "building")
+                    {
+                        if (GamePlay.Resource.getWood() >=20)
+                        {
+                            var house = GamePlay._world.CreateEntity();
+                            house.Attach(new HealthPoints(200));
+                            house.Attach(new Position(clickWorldPos));
+                            house.Attach(new Components.Size(64));
+                            house.Attach(new Level());
+                            house.Attach(new BuildingSkin(Game.Content.Load<Texture2D>(GamePlay.mouseTaken)));
+                            GamePlay.Resource.setWood(GamePlay.Resource.getWood() - 20);
+                            GamePlay.noOfHouses = GamePlay.noOfHouses + 1;
+                        }
+                       
+                    }
+                    if (GamePlay.mouseTaken == "farm")
+                    {
+                        if(GamePlay.Resource.getWood() >= 30 && GamePlay.Resource.getGold() >= 10)
+                        {
+                            var farm = GamePlay._world.CreateEntity();
+                            farm.Attach(new HealthPoints(50));
+                            farm.Attach(new Position(clickWorldPos));
+                            farm.Attach(new Components.Size(64));
+                            farm.Attach(new Level());
+                            farm.Attach(new BuildingSkin(Game.Content.Load<Texture2D>(GamePlay.mouseTaken)));
+                            GamePlay.Resource.setWood(GamePlay.Resource.getWood() - 30);
+                            GamePlay.Resource.setGold(GamePlay.Resource.getGold() - 10);
+                        }
+                      
+                    }
+                    if (GamePlay.mouseTaken == "barrack")
+                    {
+                        if (GamePlay.Resource.getStone() >= 20 && GamePlay.Resource.getGold() >= 10 && GamePlay.Resource.getFood() >= 50)
+                        {
+                            var farm = GamePlay._world.CreateEntity();
+                            farm.Attach(new HealthPoints(300));
+                            farm.Attach(new Position(clickWorldPos));
+                            farm.Attach(new Components.Size(64));
+                            farm.Attach(new Level());
+                            farm.Attach(new BuildingSkin(Game.Content.Load<Texture2D>(GamePlay.mouseTaken)));
+                            GamePlay.Resource.setStone(GamePlay.Resource.getStone() - 20);
+                            GamePlay.Resource.setGold(GamePlay.Resource.getGold() - 10);
+                            GamePlay.Resource.setFood(GamePlay.Resource.getFood() - 50);
+                        }
+                       
+                    }
                     GamePlay.mouseTaken = null;
 
                 }

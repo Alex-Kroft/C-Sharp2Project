@@ -227,7 +227,6 @@ E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\command-p
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\map-panel_full.xnb
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\resource-panel_full.xnb
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Square.png
-E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Autofac.dll
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\miniMap.xnb
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\miniMapRect.xnb
 E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Gold.xnb
@@ -309,3 +308,16 @@ C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcorea
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\grass_tileset_16x16_0.xnb
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\mine_0.xnb
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\tree (1) (1)_0.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Collisions.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Animations.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Gui.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Particles.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Tweening.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\008_50730.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\012_50730.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\017_50730.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\building.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\035_farm.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\farm.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\barracks.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\barrack.xnb
