@@ -24,7 +24,7 @@ using System.Threading;
 
 namespace AgeOfEmpires.IngameUI_s
 {
-    class VillagerClickState : Component
+    class PeasantClickState : Component
     {
         private GraphicsDevice graphicsDevice;
         private Texture2D _buttonContainer;
@@ -68,7 +68,7 @@ namespace AgeOfEmpires.IngameUI_s
             }
         }
 
-        public VillagerClickState(GraphicsDevice graphicsDevice, Texture2D buttonConatiner, Texture2D buildHouse, Texture2D buildBarracks, Texture2D buildFarm)
+        public PeasantClickState(GraphicsDevice graphicsDevice, Texture2D buttonConatiner, Texture2D buildHouse, Texture2D buildBarracks, Texture2D buildFarm)
         {
             this._buttonContainer = buttonConatiner;
             this.graphicsDevice = graphicsDevice;
@@ -164,19 +164,22 @@ namespace AgeOfEmpires.IngameUI_s
                     // If a click is needed for an update here
                     if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
                     {
-                        GamePlay.buildingToBeConstructed = "barrack";
-
-                        Thread newThread = new Thread(new ThreadStart(() =>
-                        {
-                            while (GamePlay.buildingToBeConstructed != null)
+                        if (GamePlay.barackCounter == 0) {
+                            GamePlay.buildingToBeConstructed = "barrack";
+                            GamePlay.barackCounter++;
+                            Thread newThread = new Thread(new ThreadStart(() =>
                             {
+                                while (GamePlay.buildingToBeConstructed != null)
+                                {
 
-                                Debug.WriteLine(GamePlay.buildingToBeConstructed + "");
-                                Thread.Sleep(1000);
-                            }
+                                    Debug.WriteLine(GamePlay.buildingToBeConstructed + "");
+                                    Thread.Sleep(1000);
+                                }
 
-                        }));
-                        newThread.Start();
+                            }));
+                            newThread.Start();
+                        }
+                        
                     }
                 }
 

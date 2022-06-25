@@ -31,7 +31,8 @@ namespace AgeOfEmpires.Systems
         private ComponentMapper<Movement> _movementMapper;
         private ComponentMapper<Resource> _resourceMapper;
         private ComponentMapper<Skin> _skinMapper;
-        private ComponentMapper<UnitDistance> _unitDistance;
+        private ComponentMapper<UnitDistance> _unitDistanceMapper;
+        private ComponentMapper<Faction> _factionMapper;
         //no unit selected at the moment
         public static int selectedUnit = -1;
         //no focus unit selected at
@@ -55,7 +56,8 @@ namespace AgeOfEmpires.Systems
             _movementMapper = mapperService.GetMapper<Movement>();
             _resourceMapper = mapperService.GetMapper<Resource>();
             _skinMapper = mapperService.GetMapper<Skin>();
-            _unitDistance = mapperService.GetMapper<UnitDistance>();
+            _unitDistanceMapper = mapperService.GetMapper<UnitDistance>();
+            _factionMapper = mapperService.GetMapper<Faction>();
 
             
             Game.mouseListener.MouseClicked += (sender, args) => {
@@ -98,11 +100,13 @@ namespace AgeOfEmpires.Systems
                             var house = GamePlay._world.CreateEntity();
                             house.Attach(new HealthPoints(200));
                             house.Attach(new Position(clickWorldPos));
-                            house.Attach(new Components.Size(64));
+                            house.Attach(new Components.Size(189));
                             house.Attach(new Level());
                             house.Attach(new BuildingSkin(Game.Content.Load<Texture2D>(GamePlay.buildingToBeConstructed)));
+                            house.Attach(new Faction("blue"));
                             GamePlay.Resource.setWood(GamePlay.Resource.getWood() - 20);
-                            GamePlay.noOfHouses = GamePlay.noOfHouses + 1;
+                            GamePlay.noOfHouses = GamePlay.noOfHouses + 10;
+                            GamePlay.buildingToBeConstructed = null;
                         }
                        
                     }
@@ -116,16 +120,18 @@ namespace AgeOfEmpires.Systems
                             farm.Attach(new BuildingArea(189));
                             farm.Attach(new Level());
                             farm.Attach(new BuildingSkin(Game.Content.Load<Texture2D>(GamePlay.buildingToBeConstructed)));
+                            farm.Attach(new Faction("blue"));
                             GamePlay.Resource.addFood(20);
                             GamePlay.Resource.setWood(GamePlay.Resource.getWood() - 30);
                             GamePlay.Resource.setGold(GamePlay.Resource.getGold() - 10);
+                            GamePlay.buildingToBeConstructed = null;
                         }
                       
                     }
                     if (GamePlay.buildingToBeConstructed == "barrack")
                     {
-                        if (GamePlay.Resource.getStone() >= 20 && GamePlay.Resource.getGold() >= 10 && GamePlay.Resource.getFood() >= 50)
-                        {
+                        //if (GamePlay.Resource.getStone() >= 20 && GamePlay.Resource.getGold() >= 10 && GamePlay.Resource.getFood() >= 50)
+                        //{
                             var barack = GamePlay._world.CreateEntity();
                             barack.Attach(new HealthPoints(300));
                             barack.Attach(new Position(clickWorldPos));
@@ -133,13 +139,15 @@ namespace AgeOfEmpires.Systems
                             barack.Attach(new Level());
                             barack.Attach(new UnitCreation());
                             barack.Attach(new BuildingSkin(Game.Content.Load<Texture2D>(GamePlay.buildingToBeConstructed)));
+                            barack.Attach(new Faction("blue"));
                             GamePlay.Resource.setStone(GamePlay.Resource.getStone() - 20);
                             GamePlay.Resource.setGold(GamePlay.Resource.getGold() - 10);
                             GamePlay.Resource.setFood(GamePlay.Resource.getFood() - 50);
-                        }
+                            GamePlay.buildingToBeConstructed = null;
+                        //}
 
                     }
-                    GamePlay.buildingToBeConstructed = null;
+                    
                 }
 
                 //Perform right click event related to one of the unit
@@ -153,9 +161,9 @@ namespace AgeOfEmpires.Systems
                     var selectedPosition = _positionMapper.Get(selectedUnit);
                     var selectedMovement = _movementMapper.Get(selectedUnit);
                     var selectedSkin = _skinMapper.Get(selectedUnit);
-                    var selectedUnitDistance = _unitDistance.Get(selectedUnit);
+                    var selectedUnitDistance = _unitDistanceMapper.Get(selectedUnit);
                     var melleeAttack = _meleeAttackMapper.Get(selectedUnit);
-
+                    var selectedFaction = _factionMapper.Get(selectedUnit);
                     var peasantGrinding = _grindingMapper.Get(selectedUnit);
 
                     //if moving while combat current attack/current grinding stops
@@ -169,17 +177,22 @@ namespace AgeOfEmpires.Systems
                     {
                             var position = _positionMapper.Get(entity);
                             var size = _sizeMapper.Get(entity);
+                            var focusFaction = _factionMapper.Get(entity);
 
-                            if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= size.EntityRadius && entity != selectedUnit)
+                        if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= size.EntityRadius && entity != selectedUnit)
+                        {
+                            focusUnit = entity;
+                            var focusSkin = _skinMapper.Get(focusUnit);
+                            var focusHealthPoints = _healthPointsMapper.Get(focusUnit);
+
+                            //Attack
+                            if (!selectedFaction.Name.Equals(focusFaction.Name))
                             {
-                                focusUnit = entity;
-                                var focusSkin = _skinMapper.Get(focusUnit);
-                                var focusHealthPoints = _healthPointsMapper.Get(focusUnit);
-                                
-                                //Attack
                                 selectedMovement.GoSomeWhereAttack(clickWorldPos, selectedPosition, selectedSkin, selectedUnitDistance, melleeAttack, focusUnit, focusSkin, focusHealthPoints, position);
                                 return;
                             }
+                        }
+                            
                     }
                     //No attack then just move to location
                     selectedMovement.GoSomeWhere(clickWorldPos, selectedPosition, selectedSkin, peasantGrinding);
@@ -189,13 +202,20 @@ namespace AgeOfEmpires.Systems
         public override void Update(GameTime gameTime)
         {
             deltaSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
-
+            int counter = 0;
             foreach (var entity in ActiveEntities)
             {
                 var skin = _skinMapper.Get(entity);
+                var faction = _factionMapper.Get(entity);
                 skin.unit.Update(deltaSeconds);
                 skin.unit.Play(skin.animationName);
+                if (faction.Name.Equals("blue")) {
+                    counter++;
+                }
+                GamePlay.blueEntityCounter = counter;
+               
             }
+
         }
 
         //this method checks if there is something on the tiledmap which blocks moving

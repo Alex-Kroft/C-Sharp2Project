@@ -43,6 +43,10 @@ namespace AgeOfEmpires.States
         public static String buildingToBeConstructed = null;
         //barbarian, archer, swordman
         public static String characterTobeDeployed = null;
+        //barack counter
+        public static int barackCounter = 0;
+
+        public static int blueEntityCounter = 0;
 
         private GraphicsDeviceManager _graphics;
         public SpriteBatch _spriteBatch;
@@ -50,7 +54,7 @@ namespace AgeOfEmpires.States
         private Vector2 _cameraPosition;
         private List<Component> _uiComponents;
         private NoClickState noClickState;
-        private VillagerClickState VillagerClickState;
+        private PeasantClickState VillagerClickState;
         private BarracksClickState BarracksClickState;
         private Texture2D _resourcesCover;
         private Texture2D _buttonContainer;
@@ -115,17 +119,19 @@ namespace AgeOfEmpires.States
             peasant.Attach(new Movement(10));
             peasant.Attach(new Grinding());
             peasant.Attach(new Components.Size(64));
+            peasant.Attach(new Faction("blue"));
 
             //test enemy
             var archer = _world.CreateEntity();
             archer.Attach(new Skin(baseGame.Content, "idle", "BlueArcher.sf"));
             archer.Attach(new HealthPoints(100));
             archer.Attach(new Level());
-            archer.Attach(new Combat(5, 1100));
+            archer.Attach(new Combat(50, 1100));
             archer.Attach(new Position(new Vector2(2400, 1500)));
-            archer.Attach(new UnitDistance(10, 50));
+            archer.Attach(new UnitDistance(10, 300));
             archer.Attach(new Movement(10));
             archer.Attach(new Components.Size(64));
+            archer.Attach(new Faction("red"));
 
             baseGame.Components.Add(_world);
 
@@ -161,7 +167,7 @@ namespace AgeOfEmpires.States
 
             // init the click states for when a villager or building is clicked
             noClickState = new NoClickState(GraphicsDevice, _buttonContainer);
-            VillagerClickState = new VillagerClickState(GraphicsDevice,_buttonContainer,_buildHouse,_buildBarracks,_buildFarm);
+            VillagerClickState = new PeasantClickState(GraphicsDevice,_buttonContainer,_buildHouse,_buildBarracks,_buildFarm);
             this.BarracksClickState = new BarracksClickState(GraphicsDevice, _buttonContainer, _barbarian, _archer, _swordMan);
             // adding the states to the LIST
             _uiComponents.Add(noClickState);
@@ -188,7 +194,7 @@ namespace AgeOfEmpires.States
             _spriteBatch.DrawString(_fontResources, Resource.getStone().ToString(), new Vector2(((_resourcesCover.Width) / 3) + 80, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
             _spriteBatch.Draw(_age, new Rectangle(_resourcesCover.Width / 2, 0, _age.Width, _age.Height), Color.White);
             _spriteBatch.Draw(_villagersCount, new Rectangle((_resourcesCover.Width / 2) - 160, _resourcesCover.Height / 7, _villagersCount.Width + 35, _villagersCount.Height + 20), Color.White);
-            _spriteBatch.DrawString(_fontResources, $"0/{noOfHouses*10}", new Vector2((_resourcesCover.Width / 2) - 70, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 1.5f, SpriteEffects.None, 0.1f);
+            _spriteBatch.DrawString(_fontResources, $"{blueEntityCounter}/{noOfHouses+10}", new Vector2((_resourcesCover.Width / 2) - 70, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0, 0), 1.5f, SpriteEffects.None, 0.1f);
            
             // Looping through all the click states to change the state depending on the item selected number
                 foreach (var component in _uiComponents)
