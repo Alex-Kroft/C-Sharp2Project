@@ -35,7 +35,7 @@ namespace AgeOfEmpires.States
 
         //wood,stone,gold,food
         public static Resource Resource;
-        // 1 = none, 2 = villager, 3 = barack
+        // 1 = none, 2 = villager, 3 = barrack
         public static int _itemSelected;
         //to calculate the max amount of population
         public static int noOfHouses;
@@ -54,8 +54,9 @@ namespace AgeOfEmpires.States
         private Vector2 _cameraPosition;
         private List<Component> _uiComponents;
         private NoClickState noClickState;
-        private PeasantClickState VillagerClickState;
+        public static PeasantClickState VillagerClickState;
         private BarracksClickState BarracksClickState;
+        public static UnitBuildingInfo UnitBuildingInfo;
         private Texture2D _resourcesCover;
         private Texture2D _buttonContainer;
         private Texture2D _bottomBar;
@@ -71,6 +72,8 @@ namespace AgeOfEmpires.States
         private Texture2D _barbarian;
         private Texture2D _archer;
         private Texture2D _swordMan;
+        private Texture2D _health;
+        private Texture2D _level;
 
         public Vector2 getMiniMapPos()
         {
@@ -111,7 +114,7 @@ namespace AgeOfEmpires.States
             //test entity
             var peasant = _world.CreateEntity();
             peasant.Attach(new Skin(baseGame.Content, "idle", "BluePeasant.sf"));
-            peasant.Attach(new HealthPoints(100));
+            peasant.Attach(new HealthPoints(20));
             peasant.Attach(new Level());
             peasant.Attach(new Combat(20, 1100));
             peasant.Attach(new Position(new Vector2(2300, 1400)));
@@ -132,6 +135,14 @@ namespace AgeOfEmpires.States
             archer.Attach(new Movement(10));
             archer.Attach(new Components.Size(64));
             archer.Attach(new Faction("red"));
+
+            var townHall = _world.CreateEntity();
+            townHall.Attach(new HealthPoints(500));
+            townHall.Attach(new Position(new Vector2(2050, 1500)));
+            townHall.Attach(new Components.Size(189));
+            townHall.Attach(new Level());
+            townHall.Attach(new BuildingSkin(Content.Load<Texture2D>("townHall")));
+            townHall.Attach(new Faction("blue"));
 
             baseGame.Components.Add(_world);
 
@@ -165,14 +176,20 @@ namespace AgeOfEmpires.States
             _archer = Content.Load<Texture2D>("017_50730");
             _swordMan = Content.Load<Texture2D>("012_50730");
 
+            _health = Content.Load<Texture2D>("Health");
+            _level = Content.Load<Texture2D>("lvl");
+
             // init the click states for when a villager or building is clicked
             noClickState = new NoClickState(GraphicsDevice, _buttonContainer);
-            VillagerClickState = new PeasantClickState(GraphicsDevice,_buttonContainer,_buildHouse,_buildBarracks,_buildFarm);
+            VillagerClickState = new PeasantClickState(GraphicsDevice,_buttonContainer,_buildHouse,_buildBarracks,_buildFarm, _health, _level, _fontResources);
             this.BarracksClickState = new BarracksClickState(GraphicsDevice, _buttonContainer, _barbarian, _archer, _swordMan);
+            UnitBuildingInfo = new UnitBuildingInfo(GraphicsDevice, _buttonContainer, _health, _level, _fontResources);
+
             // adding the states to the LIST
             _uiComponents.Add(noClickState);
             _uiComponents.Add(VillagerClickState);
             _uiComponents.Add(this.BarracksClickState);
+            _uiComponents.Add(UnitBuildingInfo);
           
             base.LoadContent();
         }
@@ -185,7 +202,7 @@ namespace AgeOfEmpires.States
             _tiledMapRenderer.Draw(_camera.GetViewMatrix());
             _spriteBatch.Begin();
             _spriteBatch.Draw(_bottomBar, new Rectangle(_buttonContainer.Width -100, GraphicsDevice.Adapter.CurrentDisplayMode.Height - _bottomBar.Height, _bottomBar.Width, _bottomBar.Height), Color.White);
-            _spriteBatch.Draw(_miniMap, new Rectangle((GraphicsDevice.Adapter.CurrentDisplayMode.Width - _miniMap.Width), (GraphicsDevice.Adapter.CurrentDisplayMode.Height - _miniMap.Height), _miniMap.Width, _miniMap.Height), Color.White);
+            _spriteBatch.Draw(_miniMap, new Rectangle((GraphicsDevice.Adapter.CurrentDisplayMode.Width - _miniMap.Width), (GraphicsDevice.Adapter.CurrentDisplayMode.Height - _miniMap.Height), _miniMap.Width, _miniMap.Height ), Color.White);
             _spriteBatch.Draw(_resourcesCover, new Rectangle(0, 0, _resourcesCover.Width, _resourcesCover.Height), Color.White);
             _spriteBatch.Draw(_miniMapCam, new Rectangle((int)_miniMapCamPos.X, (int)_miniMapCamPos.Y, (GraphicsDevice.Adapter.CurrentDisplayMode.Width) / 30, (GraphicsDevice.Adapter.CurrentDisplayMode.Height) / 30), Color.White);
             _spriteBatch.DrawString(_fontResources, Resource.getFood().ToString(), new Vector2((_resourcesCover.Width)/14, _resourcesCover.Height / 5), Color.White, 0, new Vector2(0,0),2.0f,SpriteEffects.None, 0.1f);
@@ -216,6 +233,12 @@ namespace AgeOfEmpires.States
                             break;
                         case 3:
                             if (component.Equals(this.BarracksClickState))
+                            {
+                                component.Draw(gameTime, _spriteBatch);
+                            }
+                            break;
+                        case 4:
+                            if (component.Equals(UnitBuildingInfo))
                             {
                                 component.Draw(gameTime, _spriteBatch);
                             }

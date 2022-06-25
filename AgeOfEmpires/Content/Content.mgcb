@@ -288,6 +288,30 @@
 /processorParam:TextureFormat=Color
 /build:grass_tileset_16x16.png
 
+#begin Health.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Health.png
+
+#begin lvl.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:lvl.png
+
 #begin mainmenu_bg.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -386,6 +410,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Standard Green Raw Tiles.png
+
+#begin townHall.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:townHall.png
 
 #begin tree (1) (1).png
 /importer:TextureImporter

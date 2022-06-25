@@ -1,39 +1,42 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/008_50730.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/008_50730.xnb","TextureProcessor","Texture2DContent",85623,262229,0.144082
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/012_50730.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/012_50730.xnb","TextureProcessor","Texture2DContent",74874,262229,0.0135114
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/017_50730.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/017_50730.xnb","TextureProcessor","Texture2DContent",68486,262229,0.0132789
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/019_.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/019_.xnb","TextureProcessor","Texture2DContent",20911,25685,0.0090677
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/031_.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/031_.xnb","TextureProcessor","Texture2DContent",22069,25685,0.0058291
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/035_farm.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/farm.xnb","TextureProcessor","Texture2DContent",177882,262229,0.131706
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/barracks.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/barrack.xnb","TextureProcessor","Texture2DContent",60955,146245,0.1382707
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/berrybush (1).png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/berrybush (1).xnb","TextureProcessor","Texture2DContent",10316,160085,0.0085012
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueArcher.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/BlueArcher.xnb","TextureProcessor","Texture2DContent",275287,2352325,0.0774189
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueArcher.sf","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\BlueArcher.sf","CopyItem","File",444,444,0.0024555
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueBarbarian.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/BlueBarbarian.xnb","TextureProcessor","Texture2DContent",171117,2156305,0.0678464
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueBarbarian.sf","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\BlueBarbarian.sf","CopyItem","File",637,637,0.0012505
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BluePeasant.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/BluePeasant.xnb","TextureProcessor","Texture2DContent",353033,3446869,0.1162406
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BluePeasant.sf","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\BluePeasant.sf","CopyItem","File",637,637,0.0014302
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueSwordsman.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/BlueSwordsman.xnb","TextureProcessor","Texture2DContent",231457,2352325,0.0565448
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueSwordsman.sf","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\BlueSwordsman.sf","CopyItem","File",448,448,0.0015886
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bottombar.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/bottombar.xnb","TextureProcessor","Texture2DContent",182642,560725,0.0229647
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/building.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/building.xnb","TextureProcessor","Texture2DContent",187345,142969,0.1270649
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bush (1).png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/bush (1).xnb","TextureProcessor","Texture2DContent",10200,160085,0.0075483
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/command-panel_collapsed.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/command-panel_collapsed.xnb","TextureProcessor","Texture2DContent",470357,1090405,0.031269
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/CR-004.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/CR-004.xnb","TextureProcessor","Texture2DContent",199683,262229,0.018492
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/CR-005.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/CR-005.xnb","TextureProcessor","Texture2DContent",199683,262229,0.0133403
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/CR-010.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/CR-010.xnb","TextureProcessor","Texture2DContent",199683,262229,0.0108369
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Cursor.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Cursor.xnb","TextureProcessor","Texture2DContent",737,4181,0.0047933
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/editedTilesSet.tmx","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\editedTilesSet.tmx","CopyItem","File",25101,25101,0.0018024
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Gold.spritefont","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Gold.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21538,0.1008538
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/grass_tileset_16x16.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/grass_tileset_16x16.xnb","TextureProcessor","Texture2DContent",680,160085,0.0057969
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mainmenu_bg.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/mainmenu_bg.xnb","TextureProcessor","Texture2DContent",21227506,44236885,1.2823946
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/map.tmx","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\map.tmx","CopyItem","File",102708,102708,0.0068479
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/map-panel_full.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/map-panel_full.xnb","TextureProcessor","Texture2DContent",265628,835589,0.0866244
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mine.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/mine.xnb","TextureProcessor","Texture2DContent",33994,160085,0.0103089
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/miniMap.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/miniMap.xnb","TextureProcessor","Texture2DContent",230889,551189,0.0195509
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/miniMapRect.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/miniMapRect.xnb","TextureProcessor","Texture2DContent",2963,7104973,0.177448
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/resource-panel_full.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/resource-panel_full.xnb","TextureProcessor","Texture2DContent",212777,1764805,0.0433099
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/shield_dark_age_slav_normal.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/shield_dark_age_slav_normal.xnb","TextureProcessor","Texture2DContent",34528,78085,0.006222
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Standard Green Raw Tiles.xnb","TextureProcessor","Texture2DContent",84068,1048661,0.0256826
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/tree (1) (1).png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/tree (1) (1).xnb","TextureProcessor","Texture2DContent",48452,160085,0.0207345
-"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/villagers.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/villagers.xnb","TextureProcessor","Texture2DContent",2769,5205,0.0020248
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/008_50730.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/008_50730.xnb","TextureProcessor","Texture2DContent",85623,262229,0.2373116
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/012_50730.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/012_50730.xnb","TextureProcessor","Texture2DContent",74874,262229,0.0197459
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/017_50730.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/017_50730.xnb","TextureProcessor","Texture2DContent",68486,262229,0.020736
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/019_.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/019_.xnb","TextureProcessor","Texture2DContent",20911,25685,0.0116323
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/031_.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/031_.xnb","TextureProcessor","Texture2DContent",22069,25685,0.0086171
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/035_farm.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/farm.xnb","TextureProcessor","Texture2DContent",177882,262229,0.0275132
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/barracks.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/barrack.xnb","TextureProcessor","Texture2DContent",60955,146245,0.0134163
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/berrybush (1).png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/berrybush (1).xnb","TextureProcessor","Texture2DContent",10316,160085,0.0161274
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueArcher.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/BlueArcher.xnb","TextureProcessor","Texture2DContent",275287,2352325,0.1118829
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueArcher.sf","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\BlueArcher.sf","CopyItem","File",444,444,0.0041738
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueBarbarian.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/BlueBarbarian.xnb","TextureProcessor","Texture2DContent",171117,2156305,0.0920803
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueBarbarian.sf","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\BlueBarbarian.sf","CopyItem","File",637,637,0.001629
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BluePeasant.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/BluePeasant.xnb","TextureProcessor","Texture2DContent",353033,3446869,0.146924
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BluePeasant.sf","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\BluePeasant.sf","CopyItem","File",637,637,0.0017805
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueSwordsman.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/BlueSwordsman.xnb","TextureProcessor","Texture2DContent",231457,2352325,0.0882728
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueSwordsman.sf","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\BlueSwordsman.sf","CopyItem","File",448,448,0.0015985
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bottombar.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/bottombar.xnb","TextureProcessor","Texture2DContent",182642,560725,0.0346007
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/building.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/building.xnb","TextureProcessor","Texture2DContent",187345,142969,0.0134422
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bush (1).png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/bush (1).xnb","TextureProcessor","Texture2DContent",10200,160085,0.0151541
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/command-panel_collapsed.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/command-panel_collapsed.xnb","TextureProcessor","Texture2DContent",470357,1090405,0.0504499
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/CR-004.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/CR-004.xnb","TextureProcessor","Texture2DContent",199683,262229,0.0119499
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/CR-005.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/CR-005.xnb","TextureProcessor","Texture2DContent",199683,262229,0.0154455
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/CR-010.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/CR-010.xnb","TextureProcessor","Texture2DContent",199683,262229,0.0130244
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Cursor.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Cursor.xnb","TextureProcessor","Texture2DContent",737,4181,0.00805
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/editedTilesSet.tmx","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\editedTilesSet.tmx","CopyItem","File",25101,25101,0.0026802
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Gold.spritefont","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Gold.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21538,0.1684217
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/grass_tileset_16x16.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/grass_tileset_16x16.xnb","TextureProcessor","Texture2DContent",680,160085,0.009361
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Health.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Health.xnb","TextureProcessor","Texture2DContent",48142,18219093,0.5678987
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/lvl.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/lvl.xnb","TextureProcessor","Texture2DContent",27709,5143909,0.1548167
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mainmenu_bg.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/mainmenu_bg.xnb","TextureProcessor","Texture2DContent",21227506,44236885,1.8096247
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/map.tmx","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\map.tmx","CopyItem","File",102708,102708,0.0087474
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/map-panel_full.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/map-panel_full.xnb","TextureProcessor","Texture2DContent",265628,835589,0.092793
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mine.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/mine.xnb","TextureProcessor","Texture2DContent",33994,160085,0.0105795
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/miniMap.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/miniMap.xnb","TextureProcessor","Texture2DContent",237660,544869,0.2240038
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/miniMapRect.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/miniMapRect.xnb","TextureProcessor","Texture2DContent",2963,7104973,0.2210866
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/resource-panel_full.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/resource-panel_full.xnb","TextureProcessor","Texture2DContent",212777,1764805,0.0558347
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/shield_dark_age_slav_normal.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/shield_dark_age_slav_normal.xnb","TextureProcessor","Texture2DContent",34528,78085,0.0060238
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Standard Green Raw Tiles.xnb","TextureProcessor","Texture2DContent",84068,1048661,0.0417573
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/townHall.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/townHall.xnb","TextureProcessor","Texture2DContent",85626,176485,0.2197851
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/tree (1) (1).png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/tree (1) (1).xnb","TextureProcessor","Texture2DContent",48452,160085,0.0156509
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/villagers.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/villagers.xnb","TextureProcessor","Texture2DContent",2769,5205,0.0034919

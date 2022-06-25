@@ -26,6 +26,8 @@
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Cursor.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Gold.spritefont</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/grass_tileset_16x16.png</File>
+    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Health.png</File>
+    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/lvl.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mainmenu_bg.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/map-panel_full.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mine.png</File>
@@ -34,6 +36,7 @@
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/resource-panel_full.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/shield_dark_age_slav_normal.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles.png</File>
+    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/townHall.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/tree (1) (1).png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/villagers.png</File>
   </SourceFiles>
@@ -45,6 +48,9 @@
     <File xsi:nil="true" />
     <File>farm.png</File>
     <File>barrack.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

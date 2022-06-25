@@ -332,3 +332,6 @@ C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcorea
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Gui.dll
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Particles.dll
 C:\Users\Máté\Documents\GitHub\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\MonoGame.Extended.Tweening.dll
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\Health.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\lvl.xnb
+E:\Github\C-Sharp2Project\AgeOfEmpires\bin\Debug\netcoreapp3.1\Content\townHall.xnb

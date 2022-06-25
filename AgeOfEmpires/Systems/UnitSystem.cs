@@ -75,12 +75,20 @@ namespace AgeOfEmpires.Systems
                             selectedUnit = entity;
                             BuildingSystem.selectedBuilding = -1;
                             if (grinding != null) {
+                                //setting the health here for the peasant, might want to change
+                                GamePlay.VillagerClickState.setOverallHealth(20);
+                                var health = _healthPointsMapper.Get(entity);
+                                GamePlay.VillagerClickState.setHealth(health.Hp);
                                 GamePlay._itemSelected = 2;
                                 return;
                             }
-                            GamePlay._itemSelected = 3;
+                            var healthArmy = _healthPointsMapper.Get(entity);
+                            GamePlay.UnitBuildingInfo.setHealth(healthArmy.Hp);
+                            GamePlay.UnitBuildingInfo.setOverallHealth(100);
+                            GamePlay._itemSelected = 4;
                             return;
                         }
+                        GamePlay._itemSelected = 1;
                     }
                 }
 

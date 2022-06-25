@@ -41,10 +41,46 @@ namespace AgeOfEmpires.IngameUI_s
         private bool isHoveringBarracks;
         private bool isHoveringFarm;
 
+        private SpriteFont SpriteFont;
+
+        private Texture2D _health;
+        private Texture2D _level;
+
+        private int Health;
+        private int Level;
+        private int OverallHealth;
+
         public event EventHandler Click;
         
+        public void setHealth(int health)
+        {
+            this.Health = health;
+        }
 
+        public int getHealth()
+        {
+            return this.Health;
+        }
 
+        public void setLevel(int level)
+        {
+            this.Level = level;
+        }
+
+        public int getLevel()
+        {
+            return this.Level;
+        }
+
+        public void setOverallHealth(int overallhealth)
+        {
+            this.OverallHealth = overallhealth;
+        }
+
+        public int getOverallHealth()
+        {
+            return this.OverallHealth;
+        }
 
         public Rectangle RectangleBuildHouse
         {
@@ -68,13 +104,19 @@ namespace AgeOfEmpires.IngameUI_s
             }
         }
 
-        public PeasantClickState(GraphicsDevice graphicsDevice, Texture2D buttonConatiner, Texture2D buildHouse, Texture2D buildBarracks, Texture2D buildFarm)
+        public PeasantClickState(GraphicsDevice graphicsDevice, Texture2D buttonConatiner, Texture2D buildHouse, Texture2D buildBarracks, Texture2D buildFarm, Texture2D health, Texture2D level, SpriteFont spriteFont)
         {
             this._buttonContainer = buttonConatiner;
             this.graphicsDevice = graphicsDevice;
             this._buildHouse = buildHouse;
             this._buildBarracks = buildBarracks;
             this._buildFarm = buildFarm;
+            this._health = health;
+            this._level = level;
+            this.SpriteFont = spriteFont;
+            this.Health = 0;
+            this.Level = 1;
+            this.OverallHealth = 0;
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -99,6 +141,10 @@ namespace AgeOfEmpires.IngameUI_s
             spriteBatch.Draw(_buildHouse, RectangleBuildHouse, buttonColourHouse);
             spriteBatch.Draw(_buildFarm, RectangleBuildFarm, buttonColourFarm);
             spriteBatch.Draw(_buildBarracks, RectangleBuildbarracks, buttonColourBarracks);
+            spriteBatch.Draw(_health, new Rectangle(_buttonContainer.Width / 6, _buttonContainer.Height + 550, 40, 40), Color.White);
+            spriteBatch.DrawString(this.SpriteFont, $"{Health}/{OverallHealth}", new Vector2((_buttonContainer.Width / 4) + 10, _buttonContainer.Height + 550), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
+            spriteBatch.Draw(_level, new Rectangle((_buttonContainer.Width / 3) + 60, _buttonContainer.Height + 550, 40, 40), Color.White);
+            spriteBatch.DrawString(this.SpriteFont, $"{Level}/5", new Vector2((_buttonContainer.Width / 3) + 120, _buttonContainer.Height + 550), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
 
         }
 
