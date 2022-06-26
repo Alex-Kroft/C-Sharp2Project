@@ -86,18 +86,6 @@
 /processorParam:TextureFormat=Color
 /build:031_.png
 
-#begin 035_farm.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:035_farm.png;farm.png
-
 #begin age-2.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -328,6 +316,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:ENDAsset 2.png
+
+#begin farm.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:farm.png
 
 #begin Gold.spritefont
 /importer:FontDescriptionImporter

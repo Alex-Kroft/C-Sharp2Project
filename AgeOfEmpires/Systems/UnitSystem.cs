@@ -123,8 +123,8 @@ namespace AgeOfEmpires.Systems
                     }
                     if (GamePlay.buildingToBeConstructed == "farm")
                     {
-                        //if(GamePlay.Resource.getWood() >= 30 && GamePlay.Resource.getGold() >= 10)
-                        //{
+                        if (GamePlay.Resource.getWood() >= 30 && GamePlay.Resource.getGold() >= 10)
+                        {
                             var farm = GamePlay._world.CreateEntity();
                             farm.Attach(new HealthPoints(50));
                             farm.Attach(new Position(clickWorldPos));
@@ -136,13 +136,13 @@ namespace AgeOfEmpires.Systems
                             GamePlay.Resource.setWood(GamePlay.Resource.getWood() - 30);
                             GamePlay.Resource.setGold(GamePlay.Resource.getGold() - 10);
                             GamePlay.buildingToBeConstructed = null;
-                        //}
-                      
+                        }
+
                     }
                     if (GamePlay.buildingToBeConstructed == "barrack")
                     {
-                        //if (GamePlay.Resource.getStone() >= 20 && GamePlay.Resource.getGold() >= 10 && GamePlay.Resource.getFood() >= 50)
-                        //{
+                        if (GamePlay.Resource.getStone() >= 20 && GamePlay.Resource.getGold() >= 10 && GamePlay.Resource.getFood() >= 50)
+                        {
                             var barack = GamePlay._world.CreateEntity();
                             barack.Attach(new HealthPoints(300));
                             barack.Attach(new Position(clickWorldPos));
@@ -155,7 +155,7 @@ namespace AgeOfEmpires.Systems
                             GamePlay.Resource.setGold(GamePlay.Resource.getGold() - 10);
                             GamePlay.Resource.setFood(GamePlay.Resource.getFood() - 50);
                             GamePlay.buildingToBeConstructed = null;
-                        //}
+                        }
 
                     }
                     

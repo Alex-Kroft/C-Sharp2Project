@@ -10,7 +10,6 @@
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/017_50730.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/019_.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/031_.png</File>
-    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/035_farm.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/age-2.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/age-3.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/age-4.png</File>
@@ -29,6 +28,7 @@
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/CR-010.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Cursor.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/ENDAsset 2.png</File>
+    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/farm.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Gold.spritefont</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/grass_tileset_16x16.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Health.png</File>
@@ -55,11 +55,11 @@
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
-    <File>farm.png</File>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File>barrack.png</File>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/012_50730.png</SourceFile>
-  <SourceTime>2022-06-24T01:57:35.111048+02:00</SourceTime>
+  <SourceTime>2022-06-26T20:12:57.6021022+02:00</SourceTime>
   <DestFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/012_50730.xnb</DestFile>
-  <DestTime>2022-06-25T15:39:01.8750638+02:00</DestTime>
+  <DestTime>2022-06-26T20:13:37.9396018+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

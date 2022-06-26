@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/BlueArcher.png</SourceFile>
-  <SourceTime>2022-06-24T14:24:57.1654909+02:00</SourceTime>
+  <SourceTime>2022-06-26T20:12:57.6081042+02:00</SourceTime>
   <DestFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/BlueArcher.xnb</DestFile>
-  <DestTime>2022-06-26T18:32:06.5683461+02:00</DestTime>
+  <DestTime>2022-06-26T20:15:08.3484863+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
