@@ -57,6 +57,7 @@ namespace AgeOfEmpires.States
         public static PeasantClickState VillagerClickState;
         private BarracksClickState BarracksClickState;
         public static UnitBuildingInfo UnitBuildingInfo;
+        private TownHallClickState TownHallClickState;
         private Texture2D _resourcesCover;
         private Texture2D _buttonContainer;
         private Texture2D _bottomBar;
@@ -74,6 +75,8 @@ namespace AgeOfEmpires.States
         private Texture2D _swordMan;
         private Texture2D _health;
         private Texture2D _level;
+        private Texture2D _newVillager;
+        private Texture2D _upgradeButton;
 
         public Vector2 getMiniMapPos()
         {
@@ -89,7 +92,7 @@ namespace AgeOfEmpires.States
             _graphics.PreferredBackBufferWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
             _graphics.PreferredBackBufferHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
             _graphics.ApplyChanges();
-            _itemSelected = 1;
+            _itemSelected = 5;
             noOfHouses = 0;
         }
 
@@ -124,6 +127,7 @@ namespace AgeOfEmpires.States
             peasant.Attach(new Components.Size(64));
             peasant.Attach(new Faction("blue"));
 
+
             //test enemy
             var archer = _world.CreateEntity();
             archer.Attach(new Skin(baseGame.Content, "idle", "BlueArcher.sf"));
@@ -143,6 +147,11 @@ namespace AgeOfEmpires.States
             townHall.Attach(new Level());
             townHall.Attach(new BuildingSkin(Content.Load<Texture2D>("townHall")));
             townHall.Attach(new Faction("blue"));
+            
+            
+
+
+
 
             baseGame.Components.Add(_world);
 
@@ -179,17 +188,22 @@ namespace AgeOfEmpires.States
             _health = Content.Load<Texture2D>("Health");
             _level = Content.Load<Texture2D>("lvl");
 
+            _newVillager = Content.Load<Texture2D>("015_50730");
+            _upgradeButton = Content.Load<Texture2D>($"age-{2}");
+
             // init the click states for when a villager or building is clicked
             noClickState = new NoClickState(GraphicsDevice, _buttonContainer);
             VillagerClickState = new PeasantClickState(GraphicsDevice,_buttonContainer,_buildHouse,_buildBarracks,_buildFarm, _health, _level, _fontResources);
             this.BarracksClickState = new BarracksClickState(GraphicsDevice, _buttonContainer, _barbarian, _archer, _swordMan);
             UnitBuildingInfo = new UnitBuildingInfo(GraphicsDevice, _buttonContainer, _health, _level, _fontResources);
+            this.TownHallClickState = new TownHallClickState(GraphicsDevice, _buttonContainer, _newVillager, _upgradeButton, _health, _level, _fontResources);
 
             // adding the states to the LIST
             _uiComponents.Add(noClickState);
             _uiComponents.Add(VillagerClickState);
             _uiComponents.Add(this.BarracksClickState);
             _uiComponents.Add(UnitBuildingInfo);
+            _uiComponents.Add(this.TownHallClickState);
           
             base.LoadContent();
         }
@@ -239,6 +253,12 @@ namespace AgeOfEmpires.States
                             break;
                         case 4:
                             if (component.Equals(UnitBuildingInfo))
+                            {
+                                component.Draw(gameTime, _spriteBatch);
+                            }
+                            break;
+                        case 5:
+                            if (component.Equals(this.TownHallClickState))
                             {
                                 component.Draw(gameTime, _spriteBatch);
                             }

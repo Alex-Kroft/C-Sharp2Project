@@ -144,7 +144,7 @@ namespace AgeOfEmpires.IngameUI_s
             spriteBatch.Draw(_health, new Rectangle(_buttonContainer.Width / 6, _buttonContainer.Height + 550, 40, 40), Color.White);
             spriteBatch.DrawString(this.SpriteFont, $"{Health}/{OverallHealth}", new Vector2((_buttonContainer.Width / 4) + 10, _buttonContainer.Height + 550), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
             spriteBatch.Draw(_level, new Rectangle((_buttonContainer.Width / 3) + 60, _buttonContainer.Height + 550, 40, 40), Color.White);
-            spriteBatch.DrawString(this.SpriteFont, $"{Level}/5", new Vector2((_buttonContainer.Width / 3) + 120, _buttonContainer.Height + 550), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
+            spriteBatch.DrawString(this.SpriteFont, $"{Level}/4", new Vector2((_buttonContainer.Width / 3) + 120, _buttonContainer.Height + 550), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
 
         }
 

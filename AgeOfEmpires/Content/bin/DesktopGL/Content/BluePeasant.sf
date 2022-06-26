@@ -6,28 +6,44 @@
   },
   "cycles": {
     "attack": {
-      "frames": [0,1,2,3,4,5,6,7]
+      "frames": [0,1,2,3,4,5,6,7],
+      "isLooping": false,
+      "frameDuration": 0.0800000057
     },
     "dead": {
-      "frames": [10,11,12,13,14,15]
+      "frames": [10,11,12,13,14,15],
+      "isLooping": false,
+      "frameDuration": 0.230000049
     },
     "idle": {
-      "frames": [20,21,22,23]
+      "frames": [20,21,22,23],
+      "isLooping": false,
+      "frameDuration": 0.13
     },
     "move": {
-      "frames": [30,31,32,33,34,35,36,37,38,39]
+      "frames": [30,31,32,33,34,35,36,37,38,39],
+      "isLooping": false,
+      "frameDuration": 0.11999999
     },
     "wounded": {
-      "frames": [40,41,42,43,44]
+      "frames": [40,41,42,43,44],
+      "isLooping": false,
+      "frameDuration": 0.12
     },
     "collect": {
-      "frames": [50,51,52,53,54,55,56,57]
+      "frames": [50,51,52,53,54,55,56,57],
+      "isLooping": false,
+      "frameDuration": 0.160000011
     },
     "mine": {
-      "frames": [60,61,62,63,64,65,66,67]
+      "frames": [60,61,62,63,64,65,66,67],
+      "isLooping": false,
+      "frameDuration": 0.200000033
     },
     "wood": {
-      "frames": [70,71,72,73,74,75,76]
+      "frames": [70,71,72,73,74,75,76],
+      "isLooping": false,
+      "frameDuration": 0.15
     }
   }
 }
