@@ -28,6 +28,7 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/CR-010.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/CR-010.xnb","TextureProcessor","Texture2DContent",199683,262229,0.0090214
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Cursor.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Cursor.xnb","TextureProcessor","Texture2DContent",737,4181,0.004565
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/editedTilesSet.tmx","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\editedTilesSet.tmx","CopyItem","File",25101,25101,0.0017835
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/ENDAsset 2.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/ENDAsset 2.xnb","TextureProcessor","Texture2DContent",4887,248545,0.1289202
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Gold.spritefont","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Gold.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21538,0.0826755
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/grass_tileset_16x16.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/grass_tileset_16x16.xnb","TextureProcessor","Texture2DContent",680,160085,0.0054967
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Health.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Health.xnb","TextureProcessor","Texture2DContent",48142,18219093,0.4526734
@@ -41,6 +42,7 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/resource-panel_full.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/resource-panel_full.xnb","TextureProcessor","Texture2DContent",212777,1764805,0.0405822
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/shield_dark_age_slav_normal.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/shield_dark_age_slav_normal.xnb","TextureProcessor","Texture2DContent",34528,78085,0.003796
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Standard Green Raw Tiles.xnb","TextureProcessor","Texture2DContent",84068,1048661,0.0311397
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/STARTAsset 1.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/STARTAsset 1.xnb","TextureProcessor","Texture2DContent",5830,250565,0.0098131
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/townHall.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/townHall.xnb","TextureProcessor","Texture2DContent",85626,176485,0.0217135
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/tree (1) (1).png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/tree (1) (1).xnb","TextureProcessor","Texture2DContent",48452,160085,0.0056405
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/villagers.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/villagers.xnb","TextureProcessor","Texture2DContent",2769,5205,0.0020585

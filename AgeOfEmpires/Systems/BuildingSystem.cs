@@ -21,6 +21,7 @@ namespace AgeOfEmpires.Systems
         private ComponentMapper<BuildingArea> _buildingAreaMapper;
         private ComponentMapper<Level> _levelMapper;
         private ComponentMapper<UnitCreation> _unitCreationMapper;
+        private ComponentMapper<Identifier> _identifierMapper;
 
         public BuildingSystem(Game1 game)
             : base(Aspect.All(typeof(BuildingArea)))
@@ -34,6 +35,7 @@ namespace AgeOfEmpires.Systems
             _buildingAreaMapper = mapperService.GetMapper<BuildingArea>();
             _levelMapper = mapperService.GetMapper<Level>();
             _unitCreationMapper = mapperService.GetMapper<UnitCreation>();
+            _identifierMapper = mapperService.GetMapper<Identifier>();
         }
 
         public override void Update(GameTime gameTime)
@@ -48,6 +50,20 @@ namespace AgeOfEmpires.Systems
                         var unitCreation = _unitCreationMapper.Get(entity);
                         var position = _positionMapper.Get(entity);
                         var buildingArea = _buildingAreaMapper.Get(entity);
+                        var Identifier = _identifierMapper.Get(entity);
+                        var health = _healthPointsMapper.Get(entity);
+                        if (unitCreation != null && buildingArea != null && Identifier.getIdentity() == "townhall")
+                        {
+                            if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= buildingArea.Radius)
+                            {
+                                selectedBuilding = entity;
+                                UnitSystem.selectedUnit = -1;
+                                GamePlay._itemSelected = 5;
+                                GamePlay.TownHallClickState.setOverallHealth(500);
+                                GamePlay.TownHallClickState.setHealth(health.Hp);
+                                return;
+                            }
+                        }
                         if (unitCreation != null && buildingArea != null) {
                             if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= buildingArea.Radius) {
                                 selectedBuilding = entity;

@@ -317,6 +317,18 @@
 #begin editedTilesSet.tmx
 /copy:editedTilesSet.tmx
 
+#begin ENDAsset 2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:ENDAsset 2.png
+
 #begin Gold.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
@@ -458,6 +470,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Standard Green Raw Tiles.png
+
+#begin STARTAsset 1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:STARTAsset 1.png
 
 #begin townHall.png
 /importer:TextureImporter

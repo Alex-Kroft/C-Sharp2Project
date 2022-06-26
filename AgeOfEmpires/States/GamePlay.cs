@@ -57,7 +57,7 @@ namespace AgeOfEmpires.States
         public static PeasantClickState VillagerClickState;
         public static BarracksClickState BarracksClickState;
         public static UnitBuildingInfo UnitBuildingInfo;
-        private TownHallClickState TownHallClickState;
+        public static TownHallClickState TownHallClickState;
         private Texture2D _resourcesCover;
         private Texture2D _buttonContainer;
         private Texture2D _bottomBar;
@@ -149,6 +149,7 @@ namespace AgeOfEmpires.States
             townHall.Attach(new Faction("blue"));
             townHall.Attach(new BuildingArea(189));
             townHall.Attach(new UnitCreation());
+            townHall.Attach(new Identifier("townhall"));
             
             
 
@@ -198,14 +199,14 @@ namespace AgeOfEmpires.States
             VillagerClickState = new PeasantClickState(GraphicsDevice,_buttonContainer,_buildHouse,_buildBarracks,_buildFarm, _health, _level, _fontResources);
             BarracksClickState = new BarracksClickState(GraphicsDevice, _buttonContainer, _barbarian, _archer, _swordMan, _health, _level, _fontResources);
             UnitBuildingInfo = new UnitBuildingInfo(GraphicsDevice, _buttonContainer, _health, _level, _fontResources);
-            this.TownHallClickState = new TownHallClickState(GraphicsDevice, _buttonContainer, _newVillager, _upgradeButton, _health, _level, _fontResources);
+            TownHallClickState = new TownHallClickState(GraphicsDevice, _buttonContainer, _newVillager, _upgradeButton, _health, _level, _fontResources);
 
             // adding the states to the LIST
             _uiComponents.Add(noClickState);
             _uiComponents.Add(VillagerClickState);
             _uiComponents.Add(BarracksClickState);
             _uiComponents.Add(UnitBuildingInfo);
-            _uiComponents.Add(this.TownHallClickState);
+            _uiComponents.Add(TownHallClickState);
           
             base.LoadContent();
         }
@@ -260,7 +261,7 @@ namespace AgeOfEmpires.States
                             }
                             break;
                         case 5:
-                            if (component.Equals(this.TownHallClickState))
+                            if (component.Equals(TownHallClickState))
                             {
                                 component.Draw(gameTime, _spriteBatch);
                             }

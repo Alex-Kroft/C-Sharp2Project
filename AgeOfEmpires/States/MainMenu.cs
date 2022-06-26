@@ -30,6 +30,15 @@ namespace AgeOfEmpires.States
         private Texture2D button;
         private SpriteFont font2;
         private Texture2D Background;
+        private Texture2D startButton;
+        private Texture2D endButton;
+
+        private bool isStartHovering;
+        private bool isEndHovering;
+
+        private MouseState _previousMouse;
+
+        private MouseState _currentMouse;
 
         public MainMenu(Game1 game) : base(game) 
         {
@@ -40,15 +49,32 @@ namespace AgeOfEmpires.States
             
         }
 
+        public Rectangle RectangleStartButton
+        {
+            get
+            {
+                return new Rectangle((GraphicsDevice.Adapter.CurrentDisplayMode.Width - startButton.Width) / 2, 400, startButton.Width, startButton.Height);
+            }
+        }
+
+        public Rectangle RectangleEndButton
+        {
+            get
+            {
+                return new Rectangle((GraphicsDevice.Adapter.CurrentDisplayMode.Width - startButton.Width) / 2, 600, endButton.Width, startButton.Height);
+            }
+        }
         public override void LoadContent()
         {
             button = Content.Load<Texture2D>("Controls/Button");
             font2 = Content.Load<SpriteFont>("Fonts/Font2");
             Background = Content.Load<Texture2D>("mainmenu_bg");
+            startButton = Content.Load<Texture2D>("STARTAsset 1");
+            endButton = Content.Load<Texture2D>("ENDAsset 2");
 
             var newGameButton = new Button(button, font2)
             {
-                Position = new Vector2(GraphicsDevice.Adapter.CurrentDisplayMode.Width / 2, GraphicsDevice.Adapter.CurrentDisplayMode.Height / 2),
+                Position = new Vector2((GraphicsDevice.Adapter.CurrentDisplayMode.Width - button.Width) / 2, 0),
             };
             newGameButton.Click += NewGameButton_Click;
 
@@ -60,13 +86,49 @@ namespace AgeOfEmpires.States
         {
             foreach (var component in _components)
                 component.Update(gameTime);
+
+            isStartHovering = false;
+            isEndHovering = false;
+            _previousMouse = _currentMouse;
+            _currentMouse = Mouse.GetState();
+
+            var mouseRectangle = new Rectangle(_currentMouse.X, _currentMouse.Y, 1, 1);
+
+            if (mouseRectangle.Intersects(RectangleStartButton))
+            {
+                isStartHovering = true;
+                if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
+                {
+                    Game.LoadGamePlay();
+                }
+            }
+            if (mouseRectangle.Intersects(RectangleEndButton))
+            {
+                isEndHovering = true;
+                if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
+                {
+                    Game.Exit();
+                }
+            }
         }
 
         public override void Draw(GameTime gameTime)
         {
+            var colourStartButton = Color.White;
+            var colourEndButton = Color.White;
+            if(isStartHovering)
+            {
+                colourStartButton = Color.Gray;
+            }
+            if(isEndHovering)
+            {
+                colourEndButton = Color.Gray;
+            }
+
             _spriteBatch.Begin();
             _spriteBatch.Draw(Background, new Rectangle((int)fontCoord.X,(int)fontCoord.Y, GraphicsDevice.Adapter.CurrentDisplayMode.Width, GraphicsDevice.Adapter.CurrentDisplayMode.Height), Color.White);
-            
+            _spriteBatch.Draw(startButton,RectangleStartButton, colourStartButton);
+            _spriteBatch.Draw(endButton, RectangleEndButton, colourEndButton);
             foreach (var component in _components)
             {
                 component.Draw(gameTime, _spriteBatch);
