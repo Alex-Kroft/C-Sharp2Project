@@ -1,0 +1,33 @@
+{
+  "textureAtlas": {
+    "texture": "BluePeasant.png",
+    "regionWidth": 99,
+    "regionHeight": 99
+  },
+  "cycles": {
+    "attack": {
+      "frames": [0,1,2,3,4,5,6,7]
+    },
+    "dead": {
+      "frames": [10,11,12,13,14,15]
+    },
+    "idle": {
+      "frames": [20,21,22,23]
+    },
+    "move": {
+      "frames": [30,31,32,33,34,35,36,37,38,39]
+    },
+    "wounded": {
+      "frames": [40,41,42,43,44]
+    },
+    "collect": {
+      "frames": [50,51,52,53,54,55,56,57]
+    },
+    "mine": {
+      "frames": [60,61,62,63,64,65,66,67]
+    },
+    "wood": {
+      "frames": [70,71,72,73,74,75,76]
+    }
+  }
+}
