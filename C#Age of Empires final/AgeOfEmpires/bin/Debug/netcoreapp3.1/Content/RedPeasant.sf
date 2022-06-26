@@ -1,0 +1,49 @@
+{
+  "textureAtlas": {
+    "texture": "RedPeasant.png",
+    "regionWidth": 99,
+    "regionHeight": 99
+  },
+  "cycles": {
+    "attack": {
+      "frames": [0,1,2,3,4,5,6,7],
+      "isLooping": false,
+      "frameDuration": 0.2
+    },
+    "dead": {
+      "frames": [12,13,14,15,16,17],
+      "isLooping": false,
+      "frameDuration": 0.2
+    },
+    "idle": {
+      "frames": [24,25,26,27],
+      "isLooping": false,
+      "frameDuration": 0.2
+    },
+    "move": {
+      "frames": [36,37,38,39,40,41,42,43,44,45,46,47],
+      "isLooping": false,
+      "frameDuration": 0.2
+    },
+    "wounded": {
+      "frames": [48,49,50,51,52,53],
+      "isLooping": false,
+      "frameDuration": 0.2
+    },
+    "collect": {
+      "frames": [60,61,62,63,64,65,66,67],
+      "isLooping": false,
+      "frameDuration": 0.2
+    },
+    "mine": {
+      "frames": [72,73,74,75,76,77,78,79],
+      "isLooping": false,
+      "frameDuration": 0.2
+    },
+    "wood": {
+      "frames": [84,85,86,87,88,89,90],
+      "isLooping": false,
+      "frameDuration": 0.2
+    }
+  }
+}
