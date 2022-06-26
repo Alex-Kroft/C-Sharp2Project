@@ -1,4 +1,5 @@
 ﻿using AgeOfEmpires.Components;
+using AgeOfEmpires.IngameUI_s;
 using AgeOfEmpires.States;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -33,6 +34,7 @@ namespace AgeOfEmpires.Systems
         private ComponentMapper<Skin> _skinMapper;
         private ComponentMapper<UnitDistance> _unitDistanceMapper;
         private ComponentMapper<Faction> _factionMapper;
+        private ComponentMapper<Combat> _combatMapper;
         //no unit selected at the moment
         public static int selectedUnit = -1;
         //no focus unit selected at
@@ -58,6 +60,7 @@ namespace AgeOfEmpires.Systems
             _skinMapper = mapperService.GetMapper<Skin>();
             _unitDistanceMapper = mapperService.GetMapper<UnitDistance>();
             _factionMapper = mapperService.GetMapper<Faction>();
+            _combatMapper = mapperService.GetMapper<Combat>();
 
             
             Game.mouseListener.MouseClicked += (sender, args) => {
@@ -75,7 +78,7 @@ namespace AgeOfEmpires.Systems
                             selectedUnit = entity;
                             BuildingSystem.selectedBuilding = -1;
                             if (grinding != null) {
-                                //setting the health here for the peasant, might want to change
+                                //setting the health here for the peasant
                                 GamePlay.VillagerClickState.setOverallHealth(20);
                                 var health = _healthPointsMapper.Get(entity);
                                 GamePlay.VillagerClickState.setHealth(health.Hp);
@@ -84,7 +87,7 @@ namespace AgeOfEmpires.Systems
                             }
                             var healthArmy = _healthPointsMapper.Get(entity);
                             GamePlay.UnitBuildingInfo.setHealth(healthArmy.Hp);
-                            GamePlay.UnitBuildingInfo.setOverallHealth(100);
+                            GamePlay.UnitBuildingInfo.setOverallHealth(healthArmy.TotalHP);
                             GamePlay._itemSelected = 4;
                             return;
                         }
@@ -120,8 +123,8 @@ namespace AgeOfEmpires.Systems
                     }
                     if (GamePlay.buildingToBeConstructed == "farm")
                     {
-                        if(GamePlay.Resource.getWood() >= 30 && GamePlay.Resource.getGold() >= 10)
-                        {
+                        //if(GamePlay.Resource.getWood() >= 30 && GamePlay.Resource.getGold() >= 10)
+                        //{
                             var farm = GamePlay._world.CreateEntity();
                             farm.Attach(new HealthPoints(50));
                             farm.Attach(new Position(clickWorldPos));
@@ -133,7 +136,7 @@ namespace AgeOfEmpires.Systems
                             GamePlay.Resource.setWood(GamePlay.Resource.getWood() - 30);
                             GamePlay.Resource.setGold(GamePlay.Resource.getGold() - 10);
                             GamePlay.buildingToBeConstructed = null;
-                        }
+                        //}
                       
                     }
                     if (GamePlay.buildingToBeConstructed == "barrack")
@@ -211,18 +214,41 @@ namespace AgeOfEmpires.Systems
         {
             deltaSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
             int counter = 0;
+            int upgradeCounter = 0;
             foreach (var entity in ActiveEntities)
             {
                 var skin = _skinMapper.Get(entity);
                 var faction = _factionMapper.Get(entity);
+                var level = _levelMapper.Get(entity);
+                var hp = _healthPointsMapper.Get(entity);
+                var combat = _combatMapper.Get(entity);
                 skin.unit.Update(deltaSeconds);
                 skin.unit.Play(skin.animationName);
                 if (faction.Name.Equals("blue")) {
                     counter++;
+                    if (TownHallClickState.upgradeOn )
+                    {
+                        if (TownHallClickState.Level < 4)
+                        {
+                            
+                            ++upgradeCounter;
+                            
+                            level.upgradeHP(hp);
+                            level.upgradeCombat(combat);
+                            if (upgradeCounter <= 1)
+                            {
+                                ++TownHallClickState.Level;
+                            }
+                        }
+                        
+                    }
+
                 }
                 GamePlay.blueEntityCounter = counter;
-               
+                
             }
+            
+            TownHallClickState.upgradeOn = false;
 
         }
 

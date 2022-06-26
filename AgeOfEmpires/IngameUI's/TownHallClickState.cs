@@ -43,8 +43,10 @@ namespace AgeOfEmpires.IngameUI_s
         private Texture2D _level;
 
         private int Health;
-        private int Level;
+        public static int Level;
         private int OverallHealth;
+
+        public static bool upgradeOn;
 
         public void setHealth(int health)
         {
@@ -58,12 +60,12 @@ namespace AgeOfEmpires.IngameUI_s
 
         public void setLevel(int level)
         {
-            this.Level = level;
+            Level = level;
         }
 
         public int getLevel()
         {
-            return this.Level;
+            return Level;
         }
 
         public void setOverallHealth(int overallhealth)
@@ -102,8 +104,9 @@ namespace AgeOfEmpires.IngameUI_s
             this._level = level;
             this.SpriteFont = spriteFont;
             this.Health = 0;
-            this.Level = 1;
+            Level = 1;
             this.OverallHealth = 0;
+            upgradeOn = false;
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -125,13 +128,14 @@ namespace AgeOfEmpires.IngameUI_s
             spriteBatch.Draw(_newVillager, RectangleNewVillager, buttonColourNewVillager);
             spriteBatch.Draw(_upgrade, RectangleUpgrade, buttonColourUpgrade);
             spriteBatch.Draw(_health, new Rectangle(_buttonContainer.Width / 6, _buttonContainer.Height + 550, 40, 40), Color.White);
-            spriteBatch.DrawString(this.SpriteFont, $"{Health}/{OverallHealth}", new Vector2((_buttonContainer.Width / 4) + 10, _buttonContainer.Height + 550), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
+            spriteBatch.DrawString(this.SpriteFont, $"{Health}/{OverallHealth}", new Vector2((_buttonContainer.Width / 4) - 5, _buttonContainer.Height + 550), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
             spriteBatch.Draw(_level, new Rectangle((_buttonContainer.Width / 3) + 60, _buttonContainer.Height + 550, 40, 40), Color.White);
             spriteBatch.DrawString(this.SpriteFont, $"{Level}/4", new Vector2((_buttonContainer.Width / 3) + 120, _buttonContainer.Height + 550), Color.White, 0, new Vector2(0, 0), 2.0f, SpriteEffects.None, 0.1f);
         }
 
         public override void Update(GameTime gameTime)
         {
+            
             _previousMouse = _currentMouse;
             _currentMouse = Mouse.GetState();
 
@@ -142,11 +146,19 @@ namespace AgeOfEmpires.IngameUI_s
             if (mouseRectangle.Intersects(RectangleNewVillager))
             {
                 isHoveringNewVillager = true;
+                if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
+                {
+                    GamePlay.characterTobeDeployed = "peasant";
+                }
             }
 
             if (mouseRectangle.Intersects(RectangleUpgrade))
             {
                 isHoveringUpgrade = true;
+                if (_currentMouse.LeftButton == ButtonState.Released && _previousMouse.LeftButton == ButtonState.Pressed)
+                {
+                    upgradeOn = true;
+                }
             }
 
             

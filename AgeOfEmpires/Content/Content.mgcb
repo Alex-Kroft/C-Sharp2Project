@@ -435,6 +435,24 @@
 /processorParam:TextureFormat=Color
 /build:miniMapRect.png
 
+#begin RedPeasant.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:RedPeasant.png
+
+#begin RedPeasant.sf
+/importer:SpriteFactoryContentImporter
+/processor:SpriteFactoryContentProcessor
+/processorParam:ContentType=MonoGame.Extended MonoGame.Extended.Animations.SpriteFactory.SpriteFactoryFileReader, MonoGame.Extended.Animations
+/build:RedPeasant.sf
+
 #begin resource-panel_full.png
 /importer:TextureImporter
 /processor:TextureProcessor

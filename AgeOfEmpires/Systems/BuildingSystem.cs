@@ -1,4 +1,5 @@
 ﻿using AgeOfEmpires.Components;
+using AgeOfEmpires.IngameUI_s;
 using AgeOfEmpires.States;
 using Microsoft.Xna.Framework;
 using MonoGame.Extended.Entities;
@@ -22,6 +23,7 @@ namespace AgeOfEmpires.Systems
         private ComponentMapper<Level> _levelMapper;
         private ComponentMapper<UnitCreation> _unitCreationMapper;
         private ComponentMapper<Identifier> _identifierMapper;
+        private ComponentMapper<Faction> _factionMapper;
 
         public BuildingSystem(Game1 game)
             : base(Aspect.All(typeof(BuildingArea)))
@@ -36,10 +38,30 @@ namespace AgeOfEmpires.Systems
             _levelMapper = mapperService.GetMapper<Level>();
             _unitCreationMapper = mapperService.GetMapper<UnitCreation>();
             _identifierMapper = mapperService.GetMapper<Identifier>();
+            _factionMapper = mapperService.GetMapper<Faction>();
         }
 
         public override void Update(GameTime gameTime)
         {
+            foreach(var entity in ActiveEntities)
+            {
+                var health = _healthPointsMapper.Get(entity);
+
+                var faction = _factionMapper.Get(entity);
+                var level = _levelMapper.Get(entity);
+                if (faction.Name.Equals("blue"))
+                {
+
+                    if (TownHallClickState.upgradeOn)
+                    {
+                        
+                        level.upgradeHP(health);
+                        
+
+                    }
+
+                }
+            }
             Game.mouseListener.MouseClicked += (sender, args) => {
                 if (args.Button == MonoGame.Extended.Input.MouseButton.Left && GamePlay.characterTobeDeployed == null)
                 {
@@ -52,17 +74,25 @@ namespace AgeOfEmpires.Systems
                         var buildingArea = _buildingAreaMapper.Get(entity);
                         var Identifier = _identifierMapper.Get(entity);
                         var health = _healthPointsMapper.Get(entity);
-                        if (unitCreation != null && buildingArea != null && Identifier.getIdentity() == "townhall")
+
+                        
+                        
+                        
+                        if (unitCreation != null && buildingArea != null && Identifier != null)
                         {
-                            if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= buildingArea.Radius)
+                            if (Identifier.getIdentity() == "townhall")
                             {
-                                selectedBuilding = entity;
-                                UnitSystem.selectedUnit = -1;
-                                GamePlay._itemSelected = 5;
-                                GamePlay.TownHallClickState.setOverallHealth(500);
-                                GamePlay.TownHallClickState.setHealth(health.Hp);
-                                return;
+                                if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= buildingArea.Radius)
+                                {
+                                    selectedBuilding = entity;
+                                    UnitSystem.selectedUnit = -1;
+                                    GamePlay._itemSelected = 5;
+                                    GamePlay.TownHallClickState.setOverallHealth(health.TotalHP);
+                                    GamePlay.TownHallClickState.setHealth(health.Hp);
+                                    return;
+                                }
                             }
+                            
                         }
                         if (unitCreation != null && buildingArea != null) {
                             if (Vector2.Distance(position.VectorPosition, clickWorldPos) <= buildingArea.Radius) {
@@ -73,6 +103,7 @@ namespace AgeOfEmpires.Systems
                             }
                             
                         }
+                        
                     }
                 }
 

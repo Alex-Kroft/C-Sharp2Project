@@ -23,7 +23,7 @@ namespace AgeOfEmpires.Components
                     entity.Attach(new Combat(25, 1100));
                     entity.Attach(new Position(position));
                     entity.Attach(new UnitDistance(10, 25));
-                    entity.Attach(new Movement(90));
+                    entity.Attach(new Movement(15));
                     entity.Attach(new Components.Size(64));
                     entity.Attach(new Faction("blue"));
                     GamePlay.characterTobeDeployed = null;
@@ -39,7 +39,7 @@ namespace AgeOfEmpires.Components
                     entity.Attach(new Combat(15, 800));
                     entity.Attach(new Position(position));
                     entity.Attach(new UnitDistance(10, 70));
-                    entity.Attach(new Movement(120));
+                    entity.Attach(new Movement(10));
                     entity.Attach(new Components.Size(64));
                     entity.Attach(new Faction("blue"));
                     GamePlay.characterTobeDeployed = null;
@@ -55,7 +55,7 @@ namespace AgeOfEmpires.Components
                     entity.Attach(new Combat(25, 800));
                     entity.Attach(new Position(position));
                     entity.Attach(new UnitDistance(10, 25));
-                    entity.Attach(new Movement(100));
+                    entity.Attach(new Movement(10));
                     entity.Attach(new Components.Size(64));
                     entity.Attach(new Faction("blue"));
                     GamePlay.characterTobeDeployed = null;
@@ -69,7 +69,7 @@ namespace AgeOfEmpires.Components
                     entity.Attach(new Level());
                     entity.Attach(new Position(position));
                     entity.Attach(new UnitDistance(10, 25));
-                    entity.Attach(new Movement(140));
+                    entity.Attach(new Movement(10));
                     entity.Attach(new Grinding());
                     entity.Attach(new Components.Size(64));
                     entity.Attach(new Faction("blue"));

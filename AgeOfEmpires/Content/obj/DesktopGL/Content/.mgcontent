@@ -38,6 +38,8 @@
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mine.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/miniMap.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/miniMapRect.png</File>
+    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/RedPeasant.png</File>
+    <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/RedPeasant.sf</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/resource-panel_full.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/shield_dark_age_slav_normal.png</File>
     <File>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Standard Green Raw Tiles.png</File>
@@ -58,6 +60,8 @@
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File>barrack.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

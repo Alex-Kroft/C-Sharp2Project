@@ -8,9 +8,11 @@ namespace AgeOfEmpires.Components
     {
 
         public int Hp;
+        public int TotalHP;
 
         public HealthPoints(int healthpoints) {
             Hp = healthpoints;
+            TotalHP = healthpoints;
         }
     }
 }

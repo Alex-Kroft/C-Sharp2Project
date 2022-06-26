@@ -87,7 +87,7 @@ namespace AgeOfEmpires.IngameUI_s
             this._level = level;
             this.SpriteFont = spriteFont;
             Health = 0;
-            Level = 1;
+            this.Level = TownHallClickState.Level;
             OverallHealth = 0;
         }
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -119,6 +119,7 @@ namespace AgeOfEmpires.IngameUI_s
 
         public override void Update(GameTime gameTime)
         {
+            this.Level = TownHallClickState.Level;
             _previousMouse = _currentMouse;
             _currentMouse = Mouse.GetState();
 

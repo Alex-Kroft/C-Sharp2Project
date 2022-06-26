@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/RedPeasant.sf</SourceFile>
+  <SourceTime>2022-06-26T18:32:02.7477107+02:00</SourceTime>
+  <DestFile>E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/RedPeasant.xnb</DestFile>
+  <DestTime>2022-06-26T18:36:58.7505464+02:00</DestTime>
+  <Importer>SpriteFactoryContentImporter</Importer>
+  <ImporterTime>2020-08-29T19:17:30+02:00</ImporterTime>
+  <Processor>SpriteFactoryContentProcessor</Processor>
+  <ProcessorTime>2020-08-29T19:17:30+02:00</ProcessorTime>
+  <Parameters>
+    <Key>ContentType</Key>
+    <Value>MonoGame.Extended MonoGame.Extended.Animations.SpriteFactory.SpriteFactoryFileReader, MonoGame.Extended.Animations</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

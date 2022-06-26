@@ -92,7 +92,7 @@ namespace AgeOfEmpires.States
             _graphics.PreferredBackBufferWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
             _graphics.PreferredBackBufferHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
             _graphics.ApplyChanges();
-            _itemSelected = 3;
+            _itemSelected = 1;
             noOfHouses = 0;
         }
 
@@ -128,7 +128,7 @@ namespace AgeOfEmpires.States
             peasant.Attach(new Faction("blue"));
 
 
-            //test enemy
+            //test attack
             var archer = _world.CreateEntity();
             archer.Attach(new Skin(baseGame.Content, "idle", "BlueArcher.sf"));
             archer.Attach(new HealthPoints(100));
@@ -138,11 +138,11 @@ namespace AgeOfEmpires.States
             archer.Attach(new UnitDistance(10, 300));
             archer.Attach(new Movement(10));
             archer.Attach(new Components.Size(99));
-            archer.Attach(new Faction("red"));
+            archer.Attach(new Faction("blue"));
 
             var townHall = _world.CreateEntity();
             townHall.Attach(new HealthPoints(500));
-            townHall.Attach(new Position(new Vector2(2080, 1550)));
+            townHall.Attach(new Position(new Vector2(2800, 1550)));
             townHall.Attach(new Components.Size(189));
             townHall.Attach(new Level());
             townHall.Attach(new BuildingSkin(Content.Load<Texture2D>("townHall")));
@@ -150,8 +150,18 @@ namespace AgeOfEmpires.States
             townHall.Attach(new BuildingArea(189));
             townHall.Attach(new UnitCreation());
             townHall.Attach(new Identifier("townhall"));
-            
-            
+
+            var peasantEnemy = _world.CreateEntity();
+            peasantEnemy.Attach(new Skin(baseGame.Content, "idle", "BluePeasant.sf"));
+            peasantEnemy.Attach(new HealthPoints(20));
+            peasantEnemy.Attach(new Level());
+            peasantEnemy.Attach(new Combat(20, 1100));
+            peasantEnemy.Attach(new Position(new Vector2(3000, 1900)));
+            peasantEnemy.Attach(new UnitDistance(10, 50));
+            peasantEnemy.Attach(new Movement(10));
+            peasantEnemy.Attach(new Grinding());
+            peasantEnemy.Attach(new Components.Size(99));
+            peasantEnemy.Attach(new Faction("red"));
 
 
 
