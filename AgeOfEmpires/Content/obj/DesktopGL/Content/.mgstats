@@ -29,6 +29,7 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/Health.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/Health.xnb","TextureProcessor","Texture2DContent",48142,18219093,0.5499168
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/lvl.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/lvl.xnb","TextureProcessor","Texture2DContent",27709,5143909,0.1242825
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mainmenu_bg.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/mainmenu_bg.xnb","TextureProcessor","Texture2DContent",21227506,44236885,1.3033077
+"E:/Github/C-Sharp2Project/AgeOfEmpires/Content/map.tmx","E:\Github\C-Sharp2Project\AgeOfEmpires\Content\bin\DesktopGL\Content\map.tmx","CopyItem","File",102709,102709,0.0047374
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/map-panel_full.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/map-panel_full.xnb","TextureProcessor","Texture2DContent",265628,835589,0.0849567
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/mine.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/mine.xnb","TextureProcessor","Texture2DContent",33994,160085,0.0106412
 "E:/Github/C-Sharp2Project/AgeOfEmpires/Content/miniMap.png","E:/Github/C-Sharp2Project/AgeOfEmpires/Content/bin/DesktopGL/Content/miniMap.xnb","TextureProcessor","Texture2DContent",237660,544869,0.2461682

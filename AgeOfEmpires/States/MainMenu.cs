@@ -35,7 +35,7 @@ namespace AgeOfEmpires.States
         {
             _components = new List<Component>();
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            fontCoord = new Vector2(0, 0);
+            fontCoord = new Vector2(0,0);
 
             
         }
@@ -48,7 +48,7 @@ namespace AgeOfEmpires.States
 
             var newGameButton = new Button(button, font2)
             {
-                Position = new Vector2(0, 0),
+                Position = new Vector2(GraphicsDevice.Adapter.CurrentDisplayMode.Width / 2, GraphicsDevice.Adapter.CurrentDisplayMode.Height / 2),
             };
             newGameButton.Click += NewGameButton_Click;
 

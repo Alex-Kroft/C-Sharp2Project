@@ -22,6 +22,8 @@ namespace AgeOfEmpires.Systems
         private ComponentMapper<Skin> _skinMapper;
         private ComponentMapper<Position> _positionMapper;
         private ComponentMapper<BuildingSkin> _buildingSkinMapper;
+        private ComponentMapper<BuildingArea> _buildingAreamapper;
+        private ComponentMapper<Size> _sizeMapper;
 
         public RenderSystem(GraphicsDevice graphicsDevice, GamePlay gamePlay)
             : base(Aspect.One(typeof(Skin), typeof(BuildingSkin)))
@@ -37,6 +39,8 @@ namespace AgeOfEmpires.Systems
             _skinMapper = mapperService.GetMapper<Skin>();
             _positionMapper = mapperService.GetMapper<Position>();
             _buildingSkinMapper = mapperService.GetMapper<BuildingSkin>();
+            _buildingAreamapper = mapperService.GetMapper<BuildingArea>();
+            _sizeMapper = mapperService.GetMapper<Size>();
         }
 
         public override void Draw(GameTime gameTime)
@@ -49,17 +53,18 @@ namespace AgeOfEmpires.Systems
                 
                 var skin = _skinMapper.Get(entity);
                 var position = _positionMapper.Get(entity);
-
+                var buildingArea = _buildingAreamapper.Get(entity);
+                var size = _sizeMapper.Get(entity);
                 var buildingSkin = _buildingSkinMapper.Get(entity);
                 if (skin == null)
                 {
                     //drawing building
-                    _spriteBatch.Draw(buildingSkin.skin, position.VectorPosition, Color.White);
+                    _spriteBatch.Draw(buildingSkin.skin,new Vector2(position.VectorPosition.X - buildingArea.Radius, position.VectorPosition.Y - buildingArea.Radius), Color.White);
                 }
                 else
                 {
                     //drawing unit
-                    _spriteBatch.Draw(skin.unit, position.VectorPosition);
+                    _spriteBatch.Draw(skin.unit,position.VectorPosition);
                 }
             }
             _spriteBatch.End();

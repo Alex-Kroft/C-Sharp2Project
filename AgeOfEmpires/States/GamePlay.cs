@@ -55,7 +55,7 @@ namespace AgeOfEmpires.States
         private List<Component> _uiComponents;
         private NoClickState noClickState;
         public static PeasantClickState VillagerClickState;
-        private BarracksClickState BarracksClickState;
+        public static BarracksClickState BarracksClickState;
         public static UnitBuildingInfo UnitBuildingInfo;
         private TownHallClickState TownHallClickState;
         private Texture2D _resourcesCover;
@@ -92,7 +92,7 @@ namespace AgeOfEmpires.States
             _graphics.PreferredBackBufferWidth = GraphicsDevice.Adapter.CurrentDisplayMode.Width;
             _graphics.PreferredBackBufferHeight = GraphicsDevice.Adapter.CurrentDisplayMode.Height;
             _graphics.ApplyChanges();
-            _itemSelected = 5;
+            _itemSelected = 3;
             noOfHouses = 0;
         }
 
@@ -120,11 +120,11 @@ namespace AgeOfEmpires.States
             peasant.Attach(new HealthPoints(20));
             peasant.Attach(new Level());
             peasant.Attach(new Combat(20, 1100));
-            peasant.Attach(new Position(new Vector2(2300, 1400)));
+            peasant.Attach(new Position(new Vector2(2800, 1900)));
             peasant.Attach(new UnitDistance(10, 50));
             peasant.Attach(new Movement(10));
             peasant.Attach(new Grinding());
-            peasant.Attach(new Components.Size(64));
+            peasant.Attach(new Components.Size(99));
             peasant.Attach(new Faction("blue"));
 
 
@@ -137,16 +137,18 @@ namespace AgeOfEmpires.States
             archer.Attach(new Position(new Vector2(2400, 1500)));
             archer.Attach(new UnitDistance(10, 300));
             archer.Attach(new Movement(10));
-            archer.Attach(new Components.Size(64));
+            archer.Attach(new Components.Size(99));
             archer.Attach(new Faction("red"));
 
             var townHall = _world.CreateEntity();
             townHall.Attach(new HealthPoints(500));
-            townHall.Attach(new Position(new Vector2(2050, 1500)));
+            townHall.Attach(new Position(new Vector2(2080, 1550)));
             townHall.Attach(new Components.Size(189));
             townHall.Attach(new Level());
             townHall.Attach(new BuildingSkin(Content.Load<Texture2D>("townHall")));
             townHall.Attach(new Faction("blue"));
+            townHall.Attach(new BuildingArea(189));
+            townHall.Attach(new UnitCreation());
             
             
 
@@ -194,14 +196,14 @@ namespace AgeOfEmpires.States
             // init the click states for when a villager or building is clicked
             noClickState = new NoClickState(GraphicsDevice, _buttonContainer);
             VillagerClickState = new PeasantClickState(GraphicsDevice,_buttonContainer,_buildHouse,_buildBarracks,_buildFarm, _health, _level, _fontResources);
-            this.BarracksClickState = new BarracksClickState(GraphicsDevice, _buttonContainer, _barbarian, _archer, _swordMan);
+            BarracksClickState = new BarracksClickState(GraphicsDevice, _buttonContainer, _barbarian, _archer, _swordMan, _health, _level, _fontResources);
             UnitBuildingInfo = new UnitBuildingInfo(GraphicsDevice, _buttonContainer, _health, _level, _fontResources);
             this.TownHallClickState = new TownHallClickState(GraphicsDevice, _buttonContainer, _newVillager, _upgradeButton, _health, _level, _fontResources);
 
             // adding the states to the LIST
             _uiComponents.Add(noClickState);
             _uiComponents.Add(VillagerClickState);
-            _uiComponents.Add(this.BarracksClickState);
+            _uiComponents.Add(BarracksClickState);
             _uiComponents.Add(UnitBuildingInfo);
             _uiComponents.Add(this.TownHallClickState);
           
@@ -246,7 +248,7 @@ namespace AgeOfEmpires.States
                             }
                             break;
                         case 3:
-                            if (component.Equals(this.BarracksClickState))
+                            if (component.Equals(BarracksClickState))
                             {
                                 component.Draw(gameTime, _spriteBatch);
                             }
